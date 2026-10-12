@@ -283,11 +283,104 @@
     });
   }
 
-  // 7. Initialize
+  // 7. Store Menu Drawer (Shop.app / Apple Minimalist Style)
+  function initStoreMenuDrawer() {
+    var menuBtn = document.querySelector('[data-testid="store-menu-button"]');
+    var scrim = document.getElementById('store-menu-scrim');
+    var overlay = document.getElementById('store-menu-overlay');
+    var dialog = document.getElementById('store-menu-dialog');
+    var closeBtn = document.getElementById('store-menu-close-btn');
+    var shareBtn = document.getElementById('store-menu-share-btn');
+
+    function openDrawer() {
+      if (scrim) scrim.classList.add('open');
+      if (overlay) overlay.classList.add('open');
+      if (dialog) dialog.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeDrawer() {
+      if (scrim) scrim.classList.remove('open');
+      if (overlay) overlay.classList.remove('open');
+      if (dialog) dialog.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    if (menuBtn) {
+      menuBtn.onclick = function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        openDrawer();
+      };
+    }
+
+    if (closeBtn) {
+      closeBtn.onclick = function(e) {
+        e.preventDefault();
+        closeDrawer();
+      };
+    }
+
+    if (scrim) scrim.onclick = closeDrawer;
+    if (overlay) overlay.onclick = closeDrawer;
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && dialog && dialog.classList.contains('open')) {
+        closeDrawer();
+      }
+    });
+
+    // Drawer Nav items
+    document.querySelectorAll('[data-drawer-nav]').forEach(function(item) {
+      item.onclick = function(e) {
+        var target = item.getAttribute('data-drawer-nav');
+        if (target === 'location') {
+          switchMainTab('overview', false);
+          closeDrawer();
+          setTimeout(function() {
+            var locEl = document.getElementById('lawyer-office-location');
+            if (locEl) locEl.scrollIntoView({ behavior: 'smooth' });
+          }, 250);
+        } else {
+          switchMainTab(target, true);
+          try { history.replaceState(null, '', '#' + target); } catch(err) {}
+          closeDrawer();
+        }
+      };
+    });
+
+    // Share Button Handler
+    if (shareBtn) {
+      shareBtn.onclick = function(e) {
+        e.preventDefault();
+        var shareData = {
+          title: 'مكتب الأستاذ كريم هشام جميل - المحامي بالاستئناف العالي ومجلس الدولة',
+          text: 'استشارات قانونية موثقة وقضايا جنائية ومدنية وأسرة وتأسيس شركات',
+          url: window.location.href
+        };
+        if (navigator.share) {
+          navigator.share(shareData).catch(function() {});
+        } else {
+          try {
+            navigator.clipboard.writeText(window.location.href).then(function() {
+              alert('تم نسخ رابط صفحة المكتب بنجاح!');
+            }).catch(function() {
+              window.open('https://wa.me/?text=' + encodeURIComponent(shareData.title + ' ' + shareData.url), '_blank');
+            });
+          } catch(err) {
+            window.open('https://wa.me/?text=' + encodeURIComponent(shareData.title + ' ' + shareData.url), '_blank');
+          }
+        }
+      };
+    }
+  }
+
+  // 8. Initialize
   function init() {
     initFaqAccordion();
     initBookingForm();
     initVerifiedBadge();
+    initStoreMenuDrawer();
     bindAllDirectListeners();
 
     var hash = window.location.hash.replace('#', '');

@@ -252,11 +252,290 @@ menu::-webkit-scrollbar, [data-testid="store-navigation-bar"]::-webkit-scrollbar
   direction: rtl !important;
   text-align: right !important;
 }
+
+/* Store Menu Side Sheet Drawer (Shop.app / Apple Minimalist Style) */
+#store-menu-scrim, #store-menu-overlay {
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0;
+  pointer-events: none;
+}
+#store-menu-scrim.open, #store-menu-overlay.open {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+#store-menu-dialog {
+  position: fixed !important;
+  top: 12px !important;
+  bottom: 12px !important;
+  right: 12px !important;
+  left: auto !important;
+  width: 440px !important;
+  max-width: calc(100vw - 24px) !important;
+  height: calc(100vh - 24px) !important;
+  z-index: 101 !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease-out !important;
+  transform: translateX(115%) !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+#store-menu-dialog.open {
+  transform: translateX(0) !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+@media (max-width: 639px) {
+  #store-menu-dialog {
+    top: 0 !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    height: 100dvh !important;
+  }
+  #store-menu-dialog > div {
+    border-radius: 0 !important;
+    border: none !important;
+  }
+}
+
+/* Force crisp white text and clean styles inside drawer */
+#store-menu-dialog,
+#store-menu-dialog h2,
+#store-menu-dialog h3,
+#store-menu-dialog p,
+#store-menu-dialog span,
+#store-menu-dialog button,
+#store-menu-dialog a {
+  color: #ffffff;
+}
+#store-menu-dialog [data-drawer-subtext] {
+  color: rgba(255, 255, 255, 0.72) !important;
+}
+#store-menu-dialog [data-drawer-muted] {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+#store-menu-dialog [data-drawer-verified] {
+  color: #4ade80 !important;
+}
+#store-menu-dialog .btn-drawer-direct-call {
+  background-color: #ffffff !important;
+  color: #111111 !important;
+}
+#store-menu-dialog .btn-drawer-direct-call svg,
+#store-menu-dialog .btn-drawer-direct-call span {
+  color: #111111 !important;
+  stroke: #111111 !important;
+}
 </style>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
-</head><body class=""><div class="w-full lg:grid lg:grid-cols-[4.75rem_1fr] lg:bg-bg"><div class="pointer-events-auto fixed bottom-0 z-40 w-full rounded-[28px_28px_0_0] max-lg:z-[60] max-lg:border-[0.5px] max-lg:border-border-image max-lg:bg-bg-fill max-lg:shadow-[0_2px_16px_0_rgba(0,0,0,0.08)] lg:sticky lg:top-0 lg:h-screen lg:hover:z-[60]" data-testid="HeaderWrapper" style="view-transition-name:header-wrapper"><div class="relative h-full"><header class="relative mx-auto my-space-0 h-full max-w-largePageWidth py-space-12 transition-all max-lg:px-space-16 lg:py-space-20" data-testid="header"><div class="flex h-full items-center justify-center max-lg:gap-space-20 lg:flex-col lg:justify-between"><div class="flex h-space-32 w-space-32 items-center justify-center gap-space-40 max-lg:hidden lg:flex-col transition-scale duration-300 ease-in-out hover:scale-105 relative p-space-8"><a data-discover="true" data-testid="ShopLogoLink" href="https://vorocom.com" rel="noopener noreferrer" style="display:flex;align-items:center;justify-content:center;" target="_blank" title="VoroCom"><img alt="VoroCom" src="/assets/vorocom_logo.png" style="max-height:22px;max-width:38px;object-fit:contain;"/></a></div><div class="pointer-events-none flex items-center gap-space-20 lg:flex-col lg:[&amp;:hover_[data-tooltip]]:visible lg:[&amp;:hover_[data-tooltip]]:[transition:opacity_150ms_0ms,visibility_150ms_800ms]"><div class="pointer-events-auto relative flex items-center lg:[&amp;:hover&gt;[data-tooltip]]:opacity-100 lg:[&amp;:hover&gt;[data-tooltip]]:[transition:opacity_150ms_0ms,visibility_150ms_0ms]"><a aria-label="الرئيسية" class="transition relative flex items-center justify-center active:scale-[0.96] p-space-12 opacity-35 hover:opacity-100 hover:scale-105" data-discover="true" data-testid="HeaderLink-Home" href="/?_m_home=1"><svg class="text-text-fixed-dark" data-testid="icon-home-filled" fill="none" height="24" stroke="none" style="width:24px;height:24px" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M12.4919 1.79131C12.1691 1.70937 11.8309 1.70937 11.508 1.79131C11.1337 1.88631 10.813 2.11797 10.5574 2.30261L10.4865 2.35369L1.91784 8.48811C1.46877 8.8096 1.36536 9.43427 1.68685 9.88333C2.00834 10.3324 2.633 10.4358 3.08207 10.1143L3.99997 9.45718L3.99997 15.2413C3.99995 16.0463 3.99994 16.7106 4.04416 17.2518C4.09009 17.8139 4.18865 18.3306 4.43594 18.816C4.81944 19.5686 5.43136 20.1805 6.18401 20.564C6.66934 20.8113 7.18604 20.9099 7.74814 20.9558C8.28933 21 8.95368 21 9.75864 21H14.2413C15.0463 21 15.7106 21 16.2518 20.9558C16.8139 20.9099 17.3306 20.8113 17.8159 20.564C18.5686 20.1805 19.1805 19.5686 19.564 18.816C19.8113 18.3306 19.9098 17.8139 19.9558 17.2518C20 16.7106 20 16.0463 20 15.2413V9.45718L20.9179 10.1143C21.3669 10.4358 21.9916 10.3324 22.3131 9.88333C22.6346 9.43427 22.5312 8.8096 22.0821 8.48811L13.5135 2.35369L13.4425 2.30261C13.187 2.11797 12.8663 1.88631 12.4919 1.79131Z" fill="currentColor"></path></svg></a><div aria-hidden="true" class="pointer-events-none invisible absolute left-[calc(100%+6px)] flex flex-col items-center justify-center rounded-full border-[0.5px] border-border-image bg-bg-fill p-space-4 px-space-10 whitespace-nowrap opacity-0 shadow-s max-lg:hidden lg:[transition:opacity_150ms_0ms,visibility_150ms_0ms]" data-tooltip="true"><p class="font-caption text-caption">الرئيسية</p></div></div><div class="pointer-events-auto relative flex items-center lg:[&amp;:hover&gt;[data-tooltip]]:opacity-100 lg:[&amp;:hover&gt;[data-tooltip]]:[transition:opacity_150ms_0ms,visibility_150ms_0ms]"><a aria-label="استكشف" class="transition relative flex items-center justify-center active:scale-[0.96] p-space-12 opacity-35 hover:opacity-100 hover:scale-105" data-discover="true" data-testid="HeaderLink-Explore" href="/categories"><svg class="text-text-fixed-dark" data-testid="icon-grid-filled" fill="none" height="24" stroke="none" style="width:24px;height:24px" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M4.28174 11.1675C3.5083 11.1675 2.92822 10.9777 2.5415 10.5981C2.16195 10.2114 1.97217 9.61702 1.97217 8.81494V4.32471C1.97217 3.52979 2.16195 2.93896 2.5415 2.55225C2.92822 2.16553 3.5083 1.97217 4.28174 1.97217H8.84717C9.62061 1.97217 10.2007 2.16553 10.5874 2.55225C10.9741 2.93896 11.1675 3.52979 11.1675 4.32471V8.81494C11.1675 9.61702 10.9741 10.2114 10.5874 10.5981C10.2007 10.9777 9.62061 11.1675 8.84717 11.1675H4.28174ZM15.1528 11.1675C14.3794 11.1675 13.7993 10.9777 13.4126 10.5981C13.0259 10.2114 12.8325 9.61702 12.8325 8.81494V4.32471C12.8325 3.52979 13.0259 2.93896 13.4126 2.55225C13.7993 2.16553 14.3794 1.97217 15.1528 1.97217H19.7183C20.4917 1.97217 21.0682 2.16553 21.4478 2.55225C21.8345 2.93896 22.0278 3.52979 22.0278 4.32471V8.81494C22.0278 9.61702 21.8345 10.2114 21.4478 10.5981C21.0682 10.9777 20.4917 11.1675 19.7183 11.1675H15.1528ZM4.28174 22.0278C3.5083 22.0278 2.92822 21.8345 2.5415 21.4478C2.16195 21.0682 1.97217 20.4774 1.97217 19.6753V15.1958C1.97217 14.4009 2.16195 13.8101 2.5415 13.4233C2.92822 13.0366 3.5083 12.8433 4.28174 12.8433H8.84717C9.62061 12.8433 10.2007 13.0366 10.5874 13.4233C10.9741 13.8101 11.1675 14.4009 11.1675 15.1958V19.6753C11.1675 20.4774 10.9741 21.0682 10.5874 21.4478C10.2007 21.8345 9.62061 22.0278 8.84717 22.0278H4.28174ZM15.1528 22.0278C14.3794 22.0278 13.7993 21.8345 13.4126 21.4478C13.0259 21.0682 12.8325 20.4774 12.8325 19.6753V15.1958C12.8325 14.4009 13.0259 13.8101 13.4126 13.4233C13.7993 13.0366 14.3794 12.8433 15.1528 12.8433H19.7183C20.4917 12.8433 21.0682 13.0366 21.4478 13.4233C21.8345 13.8101 22.0278 14.4009 22.0278 15.1958V19.6753C22.0278 20.4774 21.8345 21.0682 21.4478 21.4478C21.0682 21.8345 20.4917 22.0278 19.7183 22.0278H15.1528Z" fill="black"></path></svg></a><div aria-hidden="true" class="pointer-events-none invisible absolute left-[calc(100%+6px)] flex flex-col items-center justify-center rounded-full border-[0.5px] border-border-image bg-bg-fill p-space-4 px-space-10 whitespace-nowrap opacity-0 shadow-s max-lg:hidden lg:[transition:opacity_150ms_0ms,visibility_150ms_0ms]" data-tooltip="true"><p class="font-caption text-caption">استكشف</p></div></div><div class="pointer-events-auto relative flex items-center lg:[&amp;:hover&gt;[data-tooltip]]:opacity-100 lg:[&amp;:hover&gt;[data-tooltip]]:[transition:opacity_150ms_0ms,visibility_150ms_0ms]"><a aria-label="عرض السلة" class='transition relative grid place-items-center justify-center active:[transform:scale(0.96)] p-space-12 rounded-full before:absolute before:inset-0 before:scale-50 before:rounded-full before:bg-bg-fill-brand before:opacity-0 before:shadow-l before:transition-all before:duration-100 before:ease-in-out before:content-[""] opacity-35 hover:[transform:scale(1.05)] hover:opacity-100' data-discover="true" data-testid="cart-indicator" href="/cart"><svg class="relative col-start-1 row-start-1 text-text-fixed-dark" data-testid="icon-cart-filled" fill="none" height="24" stroke="none" style="width:24px;height:24px" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7.2207 20.0986C8.244 20.0988 9.07399 20.9289 9.07422 21.9521C9.0741 22.9755 8.24407 23.8055 7.2207 23.8057C6.1974 23.8055 5.36731 22.9755 5.36719 21.9521C5.36742 20.9289 6.19747 20.0988 7.2207 20.0986ZM17.7764 20.0986C18.7997 20.0988 19.6297 20.9289 19.6299 21.9521C19.6298 22.9755 18.7997 23.8055 17.7764 23.8057C16.7531 23.8055 15.923 22.9755 15.9229 21.9521C15.9231 20.9289 16.7531 20.0988 17.7764 20.0986ZM4.34082 1.19824C4.78369 1.23766 5.15287 1.56749 5.23535 2.01172L5.88672 5.52441H19.5928C20.8152 5.52463 21.7515 6.61231 21.5703 7.82129L20.502 14.9443C20.2083 16.9022 18.5265 18.3512 16.5469 18.3516H9.5918C7.66976 18.3516 6.01889 16.9841 5.66113 15.0957L4.07324 6.71094L4.07227 6.70703L3.41992 3.19434H1.00391C0.451621 3.19434 0.00390625 2.74662 0.00390625 2.19434C0.00390625 1.64205 0.451621 1.19434 1.00391 1.19434H4.25195L4.34082 1.19824Z" fill="currentColor"></path></svg></a><div aria-hidden="true" class="pointer-events-none invisible absolute left-[calc(100%+6px)] flex flex-col items-center justify-center rounded-full border-[0.5px] border-border-image bg-bg-fill p-space-4 px-space-10 whitespace-nowrap opacity-0 shadow-s max-lg:hidden lg:[transition:opacity_150ms_0ms,visibility_150ms_0ms]" data-tooltip="true"><p class="font-caption text-caption">عرض السلة</p></div></div><div class="pointer-events-auto relative flex items-center lg:[&amp;:hover&gt;[data-tooltip]]:opacity-100 lg:[&amp;:hover&gt;[data-tooltip]]:[transition:opacity_150ms_0ms,visibility_150ms_0ms]"><a aria-label="العروض" class="transition relative flex items-center justify-center active:scale-[0.96] p-space-12 opacity-35 hover:opacity-100 hover:scale-105" data-discover="true" data-testid="HeaderLink-Deals" href="/offers"><svg class="text-text-fixed-dark" data-testid="icon-tag-filled" fill="none" height="24" stroke="none" style="width:24px;height:24px" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M10.6719 2C11.4674 2.00008 12.2304 2.31637 12.793 2.87891L20.793 10.8789C21.9643 12.0504 21.9643 13.9496 20.793 15.1211L15.1211 20.793C13.9496 21.9643 12.0504 21.9643 10.8789 20.793L2.87891 12.793C2.31637 12.2304 2.00008 11.4674 2 10.6719V6.32812C2.00008 5.53258 2.31637 4.76957 2.87891 4.20703L4.20703 2.87891C4.76957 2.31637 5.53258 2.00008 6.32812 2H10.6719ZM8 6C6.89543 6 6 6.89543 6 8C6 9.10457 6.89543 10 8 10C9.10457 10 10 9.10457 10 8C10 6.89543 9.10457 6 8 6Z" fill="currentColor"></path></svg></a><div aria-hidden="true" class="pointer-events-none invisible absolute left-[calc(100%+6px)] flex flex-col items-center justify-center rounded-full border-[0.5px] border-border-image bg-bg-fill p-space-4 px-space-10 whitespace-nowrap opacity-0 shadow-s max-lg:hidden lg:[transition:opacity_150ms_0ms,visibility_150ms_0ms]" data-tooltip="true"><p class="font-caption text-caption">العروض</p></div></div><div class="max-lg:hidden pointer-events-auto relative flex items-center lg:[&amp;:hover&gt;[data-tooltip]]:opacity-100 lg:[&amp;:hover&gt;[data-tooltip]]:[transition:opacity_150ms_0ms,visibility_150ms_0ms]"><a aria-label="الطلبات" class="transition relative flex items-center justify-center active:scale-[0.96] p-space-12 opacity-35 hover:opacity-100 hover:scale-105" data-discover="true" data-testid="HeaderLink-Orders" href="/orders"><svg class="text-text-fixed-dark" data-testid="icon-order-filled" fill="none" height="24" stroke="none" style="width:24px;height:24px" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15.9297 3C16.9327 3.00002 17.8694 3.50136 18.4258 4.33594L20.4961 7.44141C20.8246 7.93419 21 8.51322 21 9.10547V17C21 19.2091 19.2091 21 17 21H7C4.79086 21 3 19.2091 3 17V9.10547C3.00002 8.51322 3.17539 7.93419 3.50391 7.44141L5.57422 4.33594C6.13061 3.50136 7.06727 3.00002 8.07031 3H15.9297ZM12 4C11.4477 4 11 4.44772 11 5V8H6C5.44772 8 5 8.44772 5 9C5 9.55228 5.44772 10 6 10H18C18.5523 10 19 9.55228 19 9C19 8.44772 18.5523 8 18 8H13V5C13 4.44772 12.5523 4 12 4Z" fill="currentColor"></path></svg></a><div aria-hidden="true" class="pointer-events-none invisible absolute left-[calc(100%+6px)] flex flex-col items-center justify-center rounded-full border-[0.5px] border-border-image bg-bg-fill p-space-4 px-space-10 whitespace-nowrap opacity-0 shadow-s max-lg:hidden lg:[transition:opacity_150ms_0ms,visibility_150ms_0ms]" data-tooltip="true"><p class="font-caption text-caption">الطلبات</p></div></div></div><div class="flex items-center gap-space-8 lg:flex-col"><div class="transition-scale duration-300 ease-in-out hover:scale-105 relative p-space-8"><a data-discover="true" href="/account"><div class="rounded-radius-max hover:shadow-s"><div class="relative flex items-center justify-center overflow-hidden text-text-fixed-light rounded-radius-max after:pointer-events-none after:absolute after:inset-0 after:rounded-[inherit] after:border-[0.5px] after:border-solid after:border-border-image size-space-32" data-testid="avatar" style="background-color:var(--bg-fill-fixed-light);background-image:radial-gradient(ellipse 80% 80% at 23.9% 18.8%, rgba(247, 245, 255, 0.36708) 0%, rgba(247, 245, 255, 0.3382) 12.5%, rgba(247, 245, 255, 0.2793) 25%, rgba(247, 245, 255, 0.19456) 37.5%, rgba(247, 245, 255, 0.1083) 50%, rgba(247, 245, 255, 0.04598) 62.5%, rgba(247, 245, 255, 0.01482) 75%, rgba(247, 245, 255, 0.00342) 87.5%, rgba(247, 245, 255, 0.00076) 100%), linear-gradient(rgba(156, 131, 248, 0.8), rgba(156, 131, 248, 0.8))"><span class="relative text-center font-bodyTitleLarge text-bodyTitleLarge">A</span></div></div></a></div></div></div></header></div></div><div class="relative col-start-2 row-start-1 w-full lg:max-w-[calc(100vw-4.75rem)] lg:p-space-8 lg:pl-0" data-id="content-wrapper-root"><div class="pointer-events-none sticky top-space-8 left-0 z-30 mb-[calc(-100dvh+16px)] grid h-[calc(100dvh-16px)] w-full rounded-radius-28 border border-[#EBEBEB] shadow-[0px_2px_8px_0px_rgba(0,0,0,0.06),0px_-1px_30px_0px_#F2F4F5,0_0_0_40px_#FCFCFC] max-lg:hidden" style="clip-path:inset(-12px)"></div><div class="w-full relative min-h-full overflow-x-clip lg:bg-bg-fill"><div class="z-10 h-fit overflow-hidden"></div><div class="fixed bottom-space-36 z-[50] flex justify-center lg:pointer-events-none lg:right-space-8 lg:left-[4.75rem]" data-testid="bottom-omnibox-container"><div class="pointer-events-auto relative w-full max-w-[600px] lg:pointer-events-none"><div class="relative"><div class="relative lg:block lg:w-full lg:h-[64px] lg:pointer-events-none lg:mx-auto lg:max-w-[512px] lg:transition-[max-width] lg:duration-[320ms] lg:ease-[cubic-bezier(.2,0,0,1)]"><div class="group rounded-[32px] outline-hidden lg:pointer-events-auto lg:absolute p-space-12 lg:p-space-12 lg:w-full lg:transition-[height,max-height,box-shadow] lg:duration-[320ms] lg:ease-[cubic-bezier(.2,0,0,1)] lg:overflow-hidden lg:[box-shadow:0px_0px_1px_0px_rgba(0,0,0,0.12),0px_12px_64px_0px_rgba(0,0,0,0.2)] lg:bg-bg-overlay-fixed-light-75 lg:backdrop-blur-lg lg:max-h-[45dvh] lg:bottom-0" data-testid="omnibox-container" style="--omnibox-collapsed-agent-height:160px"><div class="relative overflow-hidden bg-[rgba(255,255,255,0.9)] backdrop-blur-[10px] lg:bg-transparent lg:backdrop-blur-none _agentPreviewContent_18dsa_2" data-testid="typeahead-content-container"><div class="relative z-10 h-auto w-full lg:h-fit lg:max-h-[calc(45dvh-88px)] scrollbar-hide overflow-y-auto overscroll-contain" data-testid="typeahead-content-scrollable-container" style="height:0;mask-image:linear-gradient(to bottom, black 0%, black 100%);-webkit-mask-image:linear-gradient(to bottom, black 0%, black 100%)"><div class="h-auto min-h-0 w-full lg:h-fit lg:overflow-hidden"></div></div></div><div class="hidden lg:block" data-search-mobile-state="closed" data-testid="omnibox-search-shell"><form><div class="flex flex-row gap-space-16 bg-bg-fill lg:bottom-none lg:opacity-100 rounded-[32px] lg:!bg-transparent lg:shadow-none lg:p-space-0 lg:inset-x-space-8 lg:block p-space-8 shadow-m"><div class="flex w-full flex-col"><div class="relative flex w-full flex-col items-center lg:min-h-space-40"><textarea aria-label="Search products and stores" autocomplete="off" class="scrollbar-hide max-h-[90px] min-h-space-40 w-full resize-none overflow-y-auto bg-transparent py-space-8 text-bodyLarge text-text outline-hidden placeholder:text-left placeholder:text-text-tertiary placeholder:overflow-hidden placeholder:text-ellipsis placeholder:whitespace-nowrap pr-space-16 lg:pr-[50px] pl-space-16" data-testid="search-input" enterkeyhint="search" maxlength="2048" name="search" placeholder="What are you shopping for today?" role="searchbox" rows="1"></textarea><div class="z-10 flex w-full justify-end h-space-40 items-end gap-space-8 lg:absolute lg:bottom-0 lg:right-0 lg:w-auto"><button aria-label="مسح البحث" class="group flex h-space-40 items-center justify-center rounded-radius-max px-space-10 transition-[background-color,box-shadow] duration-[320ms] ease-[cubic-bezier(.2,0,0,1)] cursor-not-allowed bg-bg-overlay-fixed-dark-04 shadow-none active:scale-100" data-testid="search-submit-button" disabled="" type="button"><svg class="transition-colors duration-[320ms] ease-[cubic-bezier(.2,0,0,1)] text-text-tertiary hidden lg:block" data-testid="icon-arrow-right" fill="none" height="24" stroke="none" style="width:20px;height:20px" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m14 6 6 6m0 0-6 6m6-6H4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.67"></path></svg><svg class="text-text-tertiary block lg:hidden" data-testid="icon-arrow-up" fill="none" height="24" stroke="none" style="width:20px;height:20px" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m6 10 6-6m0 0 6 6m-6-6v16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.67"></path></svg></button></div></div></div></div></form></div></div></div></div></div></div><div class="relative lg:in-data-navigation-overlay:-ml-(--nav-content-offset) lg:in-data-navigation-overlay:pl-(--nav-content-offset)" data-testid="store-screen-v2" style="background-color:#838778FF"><div class="dark"></div><div class="sticky top-0 left-0 mb-[-200px] w-full md:mb-[max(-600px,-55vh)] lg:in-data-navigation-overlay:-ml-(--nav-content-offset) lg:in-data-navigation-overlay:w-[calc(100%+var(--nav-content-offset))] pt-space-20" data-testid="store-header-background"><div class="transition-all duration-300 opacity-100"><div class="h-[200px] max-h-[600px] w-full md:h-[55vh]"><div class="absolute inset-0"><div class="ml-auto flex h-full" data-testid="store-media-background"><div class="relative flex w-full md:overflow-hidden"><img alt="مكتب الأستاذ كريم هشام جميل - المحامي بالاستئناف" class="absolute size-full object-cover" data-testid="image" fetchpriority="high" loading="eager" sizes="100vw" src="/assets/hero_options/option1_architecture.jpg" srcset="/assets/hero_options/option1_architecture.jpg 800w, /assets/hero_options/option1_architecture.jpg 1600w" style="background-size:cover; object-position: center;"/><div class="absolute size-full transform-gpu bg-bg-overlay-fixed-dark-40 hidden" data-testid="store-media-scrim"></div></div></div><div aria-hidden="true" class="pointer-events-none absolute inset-0" data-testid="store-header-identity-scrim" style="background-color:color-mix(in srgb, #838778FF 20%, transparent);background-image:linear-gradient(180deg, transparent 20%, color-mix(in srgb, #838778FF 85%, transparent) 80%, color-mix(in srgb, #838778FF 85%, transparent) 100%)"></div><div aria-hidden="true" class="pointer-events-none absolute inset-0" data-testid="store-cover-fade" style="background-image:linear-gradient(180deg, transparent 72%, color-mix(in srgb, #838778FF 42%, transparent) 90.2%, #838778FF 100%)"></div></div></div></div></div><div class="dark"><div class="relative _pageLayoutMax_1vltb_1"><div class="absolute right-gutter"><button aria-label="متابَع" class="text-text hover:bg-[rgba(0,0,0,.1)] focus-visible:outline-hidden focus-visible:ring focus-visible:ring-border-input-active focus-visible:ring-offset-2 false glassy-effect text-buttonLarge font-buttonLarge rounded-radius-max min-h-space-44 p-space-12 transition active:scale-[0.99] min-w-0 px-space-12 py-[10px] relative" data-testid="follow-store-button" onclick="var b=document.getElementById('vorocom-verified-badge');if(b){b.style.display=(b.style.display==='block'?'none':'block');event.stopPropagation();}" style="min-height:40px;height:40px;background-color:hsla(76, 5.9%, 58%, 0.85);box-shadow:inset 0 1px 0 0 rgba(255, 255, 255, 0.2), 0 0 1px 0 rgba(0, 0, 0, 0.12), 0 4px 8px 0 rgba(0, 0, 0, 0.12);border:0.5px solid hsl(76, 5.9%, 58%)"><span class=""><svg class="text-text" data-testid="icon-checkmark-verify-filled" fill="none" height="24" stroke="none" style="width:16px;height:16px" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M11.2929 1.29289C11.6834 0.902369 12.3166 0.902369 12.7071 1.29289L15.4142 4H19C19.5523 4 20 4.44772 20 5V8.58579L22.7071 11.2929C23.0976 11.6834 23.0976 12.3166 22.7071 12.7071L20 15.4142V19C20 19.5523 19.5523 20 19 20H15.4142L12.7071 22.7071C12.3166 23.0976 11.6834 23.0976 11.2929 22.7071L8.58579 20H5C4.44772 20 4 19.5523 4 19V15.4142L1.29289 12.7071C0.902369 12.3166 0.902369 11.6834 1.29289 11.2929L4 8.58579V5C4 4.44772 4.44772 4 5 4H8.58579L11.2929 1.29289ZM15.3192 10.3235C15.6359 9.87101 15.5259 9.24748 15.0735 8.93077C14.621 8.61405 13.9975 8.72409 13.6808 9.17654L10.8198 13.2636L9.6585 12.2474C9.24287 11.8837 8.61111 11.9259 8.24742 12.3415C7.88374 12.7571 7.92586 13.3889 8.3415 13.7526L10.3415 15.5026C10.5552 15.6896 10.8384 15.7769 11.1203 15.7427C11.4023 15.7086 11.6564 15.5561 11.8192 15.3235L15.3192 10.3235Z" fill="currentColor" fill-rule="evenodd"></path></svg></span>
+</head><body class="">
+<!-- Store Menu Side Sheet Drawer (Shop.app / Apple Minimalist Style) -->
+<div id="store-menu-scrim" class="fixed inset-0 z-[100] transition-opacity duration-300 ease-out pointer-events-none opacity-0" style="background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 75%); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);" data-drawer-scrim="true"></div>
+<div id="store-menu-overlay" class="fixed inset-0 z-[100] transition-opacity duration-300 ease-out pointer-events-none opacity-0" aria-hidden="true" data-testid="side-sheet-overlay"></div>
+<div id="store-menu-dialog" class="flex flex-col" role="dialog" aria-modal="true" aria-hidden="true" data-testid="side-sheet-dialog" style="overscroll-behavior: contain;">
+  <div class="h-full w-full flex flex-col justify-between overflow-hidden shadow-2xl relative" style="background-color: rgba(26, 32, 24, 0.96); backdrop-filter: blur(28px); -webkit-backdrop-filter: blur(28px); border: 1px solid rgba(255, 255, 255, 0.14); border-radius: 28px; padding: 22px; direction: rtl; text-align: right; font-family: 'Cairo', sans-serif;">
+    
+    <!-- Top Action Bar (Close & Share) -->
+    <div class="flex w-full items-center justify-between pb-3" style="border-bottom: 1px solid rgba(255, 255, 255, 0.08); flex-shrink: 0;">
+      <!-- Close Button X -->
+      <button type="button" id="store-menu-close-btn" class="transition active:scale-[0.94] flex items-center justify-center cursor-pointer shadow-m" aria-label="إغلاق القائمة" data-testid="side-sheet-close-button" style="width: 38px; height: 38px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.18);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Share Button -->
+      <div class="flex items-center gap-2">
+        <button type="button" id="store-menu-share-btn" class="transition active:scale-[0.94] flex items-center justify-center cursor-pointer shadow-m" aria-label="مشاركة صفحة المكتب" style="width: 38px; height: 38px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.18);">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+            <polyline points="16 6 12 2 8 6"></polyline>
+            <line x1="12" y1="2" x2="12" y2="15"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Scrollable Main Content -->
+    <div class="flex-1 overflow-y-auto overscroll-contain py-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" style="min-height: 0;">
+      
+      <!-- Lawyer Branding Info Header -->
+      <div class="flex items-center gap-3 pt-1 pb-4" data-testid="shop-info-header">
+        <div class="relative shrink-0">
+          <div class="relative flex items-center justify-center overflow-hidden w-[54px] h-[54px]" style="border-radius: 50%; background-color: #161b14; border: 1.5px solid rgba(255, 255, 255, 0.25); box-shadow: 0 4px 16px rgba(0,0,0,0.4);">
+            <img src="/assets/lawyer_logo.png" alt="شعار الأستاذ كريم هشام جميل" class="size-full object-contain p-[2px]" style="background-color: #1e241c; border-radius: 50%;">
+          </div>
+        </div>
+        <div class="min-w-0 flex-1">
+          <h2 class="text-[16.5px] font-bold leading-tight" style="font-family: 'Cairo', sans-serif; color: #ffffff !important; margin: 0;">مكتب الأستاذ كريم هشام جميل</h2>
+          <p data-drawer-subtext="true" class="text-[12px] font-medium mt-1 leading-snug" style="font-family: 'Cairo', sans-serif; margin: 2px 0 0 0;">المحامي بالاستئناف العالي ومجلس الدولة</p>
+          <div class="inline-flex items-center gap-1.5 mt-1.5 px-2.5 py-0.5 rounded-full" style="background: rgba(74, 222, 128, 0.12); border: 1px solid rgba(74, 222, 128, 0.28);">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#4ade80]" style="box-shadow: 0 0 6px #4ade80;"></span>
+            <span data-drawer-verified="true" class="text-[11px] font-bold" style="font-family: 'Cairo', sans-serif;">نشاط موثق ومُعتمد من VoroCom</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vertical Minimalist Navigation Card -->
+      <div class="flex flex-col gap-1.5 p-2 mb-3.5" style="border-radius: 20px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.08);">
+        
+        <!-- Item 1: Overview -->
+        <a href="#overview" data-drawer-nav="overview" class="block w-full text-decoration-none" style="text-decoration: none;">
+          <button type="button" class="w-full p-2.5 flex items-center justify-between text-right text-white hover:bg-[rgba(255,255,255,0.1)] active:scale-[0.99] transition cursor-pointer border-none bg-transparent group" style="border-radius: 14px; border: none; background: transparent; cursor: pointer;">
+            <div class="flex items-center gap-3">
+              <div class="size-[34px] rounded-full flex items-center justify-center shrink-0" style="width: 34px; height: 34px; border-radius: 50%; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.14);">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="7" height="7" rx="1.5"></rect>
+                  <rect x="14" y="3" width="7" height="7" rx="1.5"></rect>
+                  <rect x="14" y="14" width="7" height="7" rx="1.5"></rect>
+                  <rect x="3" y="14" width="7" height="7" rx="1.5"></rect>
+                </svg>
+              </div>
+              <span class="text-[14px] font-bold text-white" style="font-family: 'Cairo', sans-serif; color: #ffffff !important;">نظرة عامة والخدمات الرئيسية</span>
+            </div>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:stroke-white group-hover:-translate-x-1 transition-all">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+        </a>
+
+        <!-- Item 2: Contact -->
+        <a href="#contact" data-drawer-nav="contact" class="block w-full text-decoration-none" style="text-decoration: none;">
+          <button type="button" class="w-full p-2.5 flex items-center justify-between text-right text-white hover:bg-[rgba(255,255,255,0.1)] active:scale-[0.99] transition cursor-pointer border-none bg-transparent group" style="border-radius: 14px; border: none; background: transparent; cursor: pointer;">
+            <div class="flex items-center gap-3">
+              <div class="size-[34px] rounded-full flex items-center justify-center shrink-0" style="width: 34px; height: 34px; border-radius: 50%; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.14);">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <span class="text-[14px] font-bold text-white" style="font-family: 'Cairo', sans-serif; color: #ffffff !important;">تواصل مباشر واستشارات فورية</span>
+            </div>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:stroke-white group-hover:-translate-x-1 transition-all">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+        </a>
+
+        <!-- Item 3: Booking -->
+        <a href="#booking" data-drawer-nav="booking" class="block w-full text-decoration-none" style="text-decoration: none;">
+          <button type="button" class="w-full p-2.5 flex items-center justify-between text-right text-white hover:bg-[rgba(255,255,255,0.1)] active:scale-[0.99] transition cursor-pointer border-none bg-transparent group" style="border-radius: 14px; border: none; background: transparent; cursor: pointer;">
+            <div class="flex items-center gap-3">
+              <div class="size-[34px] rounded-full flex items-center justify-center shrink-0" style="width: 34px; height: 34px; border-radius: 50%; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.14);">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+              </div>
+              <span class="text-[14px] font-bold text-white" style="font-family: 'Cairo', sans-serif; color: #ffffff !important;">حجز موعد استشارة بمقر المكتب</span>
+            </div>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:stroke-white group-hover:-translate-x-1 transition-all">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+        </a>
+
+        <!-- Item 4: FAQ -->
+        <a href="#faq" data-drawer-nav="faq" class="block w-full text-decoration-none" style="text-decoration: none;">
+          <button type="button" class="w-full p-2.5 flex items-center justify-between text-right text-white hover:bg-[rgba(255,255,255,0.1)] active:scale-[0.99] transition cursor-pointer border-none bg-transparent group" style="border-radius: 14px; border: none; background: transparent; cursor: pointer;">
+            <div class="flex items-center gap-3">
+              <div class="size-[34px] rounded-full flex items-center justify-center shrink-0" style="width: 34px; height: 34px; border-radius: 50%; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.14);">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                  <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+              </div>
+              <span class="text-[14px] font-bold text-white" style="font-family: 'Cairo', sans-serif; color: #ffffff !important;">الأسئلة الأكثر تداولاً وإجاباتها</span>
+            </div>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:stroke-white group-hover:-translate-x-1 transition-all">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+        </a>
+
+        <!-- Item 5: About Lawyer -->
+        <a href="#about" data-drawer-nav="about" class="block w-full text-decoration-none" style="text-decoration: none;">
+          <button type="button" class="w-full p-2.5 flex items-center justify-between text-right text-white hover:bg-[rgba(255,255,255,0.1)] active:scale-[0.99] transition cursor-pointer border-none bg-transparent group" style="border-radius: 14px; border: none; background: transparent; cursor: pointer;">
+            <div class="flex items-center gap-3">
+              <div class="size-[34px] rounded-full flex items-center justify-center shrink-0" style="width: 34px; height: 34px; border-radius: 50%; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.14);">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </div>
+              <span class="text-[14px] font-bold text-white" style="font-family: 'Cairo', sans-serif; color: #ffffff !important;">السيرة المهنية والاعتماد القضائي</span>
+            </div>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:stroke-white group-hover:-translate-x-1 transition-all">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+        </a>
+
+        <!-- Item 6: Office Location & Hours -->
+        <a href="#lawyer-office-location" data-drawer-nav="location" class="block w-full text-decoration-none" style="text-decoration: none;">
+          <button type="button" class="w-full p-2.5 flex items-center justify-between text-right text-white hover:bg-[rgba(255,255,255,0.1)] active:scale-[0.99] transition cursor-pointer border-none bg-transparent group" style="border-radius: 14px; border: none; background: transparent; cursor: pointer;">
+            <div class="flex items-center gap-3">
+              <div class="size-[34px] rounded-full flex items-center justify-center shrink-0" style="width: 34px; height: 34px; border-radius: 50%; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.14);">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <span class="text-[14px] font-bold text-white" style="font-family: 'Cairo', sans-serif; color: #ffffff !important;">موقع المكتب ومواعيد العمل الرسمية</span>
+            </div>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:stroke-white group-hover:-translate-x-1 transition-all">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+        </a>
+
+      </div>
+
+      <!-- Quick Consultation Direct Action Buttons -->
+      <div class="flex flex-col gap-2 p-2 mb-2" style="border-radius: 18px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.07);">
+        <div class="flex items-center justify-between px-2 pt-1">
+          <span data-drawer-subtext="true" class="text-[12px] font-semibold" style="font-family: 'Cairo', sans-serif;">استشارة مباشرة عاجلة:</span>
+          <span data-drawer-muted="true" class="text-[11.5px]" dir="ltr" style="font-family: 'Cairo', sans-serif;">01124411711</span>
+        </div>
+        <div class="grid grid-cols-2 gap-2">
+          <a href="tel:01124411711" class="text-decoration-none" style="text-decoration: none;">
+            <button type="button" class="btn-drawer-direct-call w-full py-2 px-3 rounded-full flex items-center justify-center gap-2 cursor-pointer transition active:scale-[0.98] border-none" style="border-radius: 9999px; border: none; cursor: pointer; font-family: 'Cairo', sans-serif; font-size: 13px; font-weight: 700;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>اتصال مباشر</span>
+            </button>
+          </a>
+          <a href="https://wa.me/201124411711" target="_blank" rel="noopener noreferrer" class="text-decoration-none" style="text-decoration: none;">
+            <button type="button" class="w-full py-2 px-3 rounded-full flex items-center justify-center gap-2 cursor-pointer transition active:scale-[0.98] border-none" style="border-radius: 9999px; border: none; background: #25D366; color: #ffffff; cursor: pointer; font-family: 'Cairo', sans-serif; font-size: 13px; font-weight: 700;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+              </svg>
+              <span style="color: #ffffff !important;">واتساب</span>
+            </button>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Drawer Footer Info -->
+    <div class="pt-2.5 flex items-center justify-between text-[11px]" style="border-top: 1px solid rgba(255, 255, 255, 0.08); font-family: 'Cairo', sans-serif; flex-shrink: 0;">
+      <span data-drawer-muted="true">مواعيد العمل: السبت - الخميس (10 ص - 10 م)</span>
+      <span data-drawer-muted="true" dir="ltr">VoroCom &copy; 2026</span>
+    </div>
+
+  </div>
+</div>
+<div class="w-full lg:grid lg:grid-cols-[4.75rem_1fr] lg:bg-bg"><div class="pointer-events-auto fixed bottom-0 z-40 w-full rounded-[28px_28px_0_0] max-lg:z-[60] max-lg:border-[0.5px] max-lg:border-border-image max-lg:bg-bg-fill max-lg:shadow-[0_2px_16px_0_rgba(0,0,0,0.08)] lg:sticky lg:top-0 lg:h-screen lg:hover:z-[60]" data-testid="HeaderWrapper" style="view-transition-name:header-wrapper"><div class="relative h-full"><header class="relative mx-auto my-space-0 h-full max-w-largePageWidth py-space-12 transition-all max-lg:px-space-16 lg:py-space-20" data-testid="header"><div class="flex h-full items-center justify-center max-lg:gap-space-20 lg:flex-col lg:justify-between"><div class="flex h-space-32 w-space-32 items-center justify-center gap-space-40 max-lg:hidden lg:flex-col transition-scale duration-300 ease-in-out hover:scale-105 relative p-space-8"><a data-discover="true" data-testid="ShopLogoLink" href="https://vorocom.com" rel="noopener noreferrer" style="display:flex;align-items:center;justify-content:center;" target="_blank" title="VoroCom"><img alt="VoroCom" src="/assets/vorocom_logo.png" style="max-height:22px;max-width:38px;object-fit:contain;"/></a></div><div class="pointer-events-none flex items-center gap-space-20 lg:flex-col lg:[&amp;:hover_[data-tooltip]]:visible lg:[&amp;:hover_[data-tooltip]]:[transition:opacity_150ms_0ms,visibility_150ms_800ms]"><div class="pointer-events-auto relative flex items-center lg:[&amp;:hover&gt;[data-tooltip]]:opacity-100 lg:[&amp;:hover&gt;[data-tooltip]]:[transition:opacity_150ms_0ms,visibility_150ms_0ms]"><a aria-label="الرئيسية" class="transition relative flex items-center justify-center active:scale-[0.96] p-space-12 opacity-35 hover:opacity-100 hover:scale-105" data-discover="true" data-testid="HeaderLink-Home" href="/?_m_home=1"><svg class="text-text-fixed-dark" data-testid="icon-home-filled" fill="none" height="24" stroke="none" style="width:24px;height:24px" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M12.4919 1.79131C12.1691 1.70937 11.8309 1.70937 11.508 1.79131C11.1337 1.88631 10.813 2.11797 10.5574 2.30261L10.4865 2.35369L1.91784 8.48811C1.46877 8.8096 1.36536 9.43427 1.68685 9.88333C2.00834 10.3324 2.633 10.4358 3.08207 10.1143L3.99997 9.45718L3.99997 15.2413C3.99995 16.0463 3.99994 16.7106 4.04416 17.2518C4.09009 17.8139 4.18865 18.3306 4.43594 18.816C4.81944 19.5686 5.43136 20.1805 6.18401 20.564C6.66934 20.8113 7.18604 20.9099 7.74814 20.9558C8.28933 21 8.95368 21 9.75864 21H14.2413C15.0463 21 15.7106 21 16.2518 20.9558C16.8139 20.9099 17.3306 20.8113 17.8159 20.564C18.5686 20.1805 19.1805 19.5686 19.564 18.816C19.8113 18.3306 19.9098 17.8139 19.9558 17.2518C20 16.7106 20 16.0463 20 15.2413V9.45718L20.9179 10.1143C21.3669 10.4358 21.9916 10.3324 22.3131 9.88333C22.6346 9.43427 22.5312 8.8096 22.0821 8.48811L13.5135 2.35369L13.4425 2.30261C13.187 2.11797 12.8663 1.88631 12.4919 1.79131Z" fill="currentColor"></path></svg></a><div aria-hidden="true" class="pointer-events-none invisible absolute left-[calc(100%+6px)] flex flex-col items-center justify-center rounded-full border-[0.5px] border-border-image bg-bg-fill p-space-4 px-space-10 whitespace-nowrap opacity-0 shadow-s max-lg:hidden lg:[transition:opacity_150ms_0ms,visibility_150ms_0ms]" data-tooltip="true"><p class="font-caption text-caption">الرئيسية</p></div></div><div class="pointer-events-auto relative flex items-center lg:[&amp;:hover&gt;[data-tooltip]]:opacity-100 lg:[&amp;:hover&gt;[data-tooltip]]:[transition:opacity_150ms_0ms,visibility_150ms_0ms]"><a aria-label="استكشف" class="transition relative flex items-center justify-center active:scale-[0.96] p-space-12 opacity-35 hover:opacity-100 hover:scale-105" data-discover="true" data-testid="HeaderLink-Explore" href="/categories"><svg class="text-text-fixed-dark" data-testid="icon-grid-filled" fill="none" height="24" stroke="none" style="width:24px;height:24px" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M4.28174 11.1675C3.5083 11.1675 2.92822 10.9777 2.5415 10.5981C2.16195 10.2114 1.97217 9.61702 1.97217 8.81494V4.32471C1.97217 3.52979 2.16195 2.93896 2.5415 2.55225C2.92822 2.16553 3.5083 1.97217 4.28174 1.97217H8.84717C9.62061 1.97217 10.2007 2.16553 10.5874 2.55225C10.9741 2.93896 11.1675 3.52979 11.1675 4.32471V8.81494C11.1675 9.61702 10.9741 10.2114 10.5874 10.5981C10.2007 10.9777 9.62061 11.1675 8.84717 11.1675H4.28174ZM15.1528 11.1675C14.3794 11.1675 13.7993 10.9777 13.4126 10.5981C13.0259 10.2114 12.8325 9.61702 12.8325 8.81494V4.32471C12.8325 3.52979 13.0259 2.93896 13.4126 2.55225C13.7993 2.16553 14.3794 1.97217 15.1528 1.97217H19.7183C20.4917 1.97217 21.0682 2.16553 21.4478 2.55225C21.8345 2.93896 22.0278 3.52979 22.0278 4.32471V8.81494C22.0278 9.61702 21.8345 10.2114 21.4478 10.5981C21.0682 10.9777 20.4917 11.1675 19.7183 11.1675H15.1528ZM4.28174 22.0278C3.5083 22.0278 2.92822 21.8345 2.5415 21.4478C2.16195 21.0682 1.97217 20.4774 1.97217 19.6753V15.1958C1.97217 14.4009 2.16195 13.8101 2.5415 13.4233C2.92822 13.0366 3.5083 12.8433 4.28174 12.8433H8.84717C9.62061 12.8433 10.2007 13.0366 10.5874 13.4233C10.9741 13.8101 11.1675 14.4009 11.1675 15.1958V19.6753C11.1675 20.4774 10.9741 21.0682 10.5874 21.4478C10.2007 21.8345 9.62061 22.0278 8.84717 22.0278H4.28174ZM15.1528 22.0278C14.3794 22.0278 13.7993 21.8345 13.4126 21.4478C13.0259 21.0682 12.8325 20.4774 12.8325 19.6753V15.1958C12.8325 14.4009 13.0259 13.8101 13.4126 13.4233C13.7993 13.0366 14.3794 12.8433 15.1528 12.8433H19.7183C20.4917 12.8433 21.0682 13.0366 21.4478 13.4233C21.8345 13.8101 22.0278 14.4009 22.0278 15.1958V19.6753C22.0278 20.4774 21.8345 21.0682 21.4478 21.4478C21.0682 21.8345 20.4917 22.0278 19.7183 22.0278H15.1528Z" fill="black"></path></svg></a><div aria-hidden="true" class="pointer-events-none invisible absolute left-[calc(100%+6px)] flex flex-col items-center justify-center rounded-full border-[0.5px] border-border-image bg-bg-fill p-space-4 px-space-10 whitespace-nowrap opacity-0 shadow-s max-lg:hidden lg:[transition:opacity_150ms_0ms,visibility_150ms_0ms]" data-tooltip="true"><p class="font-caption text-caption">استكشف</p></div></div><div class="pointer-events-auto relative flex items-center lg:[&amp;:hover&gt;[data-tooltip]]:opacity-100 lg:[&amp;:hover&gt;[data-tooltip]]:[transition:opacity_150ms_0ms,visibility_150ms_0ms]"><a aria-label="عرض السلة" class='transition relative grid place-items-center justify-center active:[transform:scale(0.96)] p-space-12 rounded-full before:absolute before:inset-0 before:scale-50 before:rounded-full before:bg-bg-fill-brand before:opacity-0 before:shadow-l before:transition-all before:duration-100 before:ease-in-out before:content-[""] opacity-35 hover:[transform:scale(1.05)] hover:opacity-100' data-discover="true" data-testid="cart-indicator" href="/cart"><svg class="relative col-start-1 row-start-1 text-text-fixed-dark" data-testid="icon-cart-filled" fill="none" height="24" stroke="none" style="width:24px;height:24px" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7.2207 20.0986C8.244 20.0988 9.07399 20.9289 9.07422 21.9521C9.0741 22.9755 8.24407 23.8055 7.2207 23.8057C6.1974 23.8055 5.36731 22.9755 5.36719 21.9521C5.36742 20.9289 6.19747 20.0988 7.2207 20.0986ZM17.7764 20.0986C18.7997 20.0988 19.6297 20.9289 19.6299 21.9521C19.6298 22.9755 18.7997 23.8055 17.7764 23.8057C16.7531 23.8055 15.923 22.9755 15.9229 21.9521C15.9231 20.9289 16.7531 20.0988 17.7764 20.0986ZM4.34082 1.19824C4.78369 1.23766 5.15287 1.56749 5.23535 2.01172L5.88672 5.52441H19.5928C20.8152 5.52463 21.7515 6.61231 21.5703 7.82129L20.502 14.9443C20.2083 16.9022 18.5265 18.3512 16.5469 18.3516H9.5918C7.66976 18.3516 6.01889 16.9841 5.66113 15.0957L4.07324 6.71094L4.07227 6.70703L3.41992 3.19434H1.00391C0.451621 3.19434 0.00390625 2.74662 0.00390625 2.19434C0.00390625 1.64205 0.451621 1.19434 1.00391 1.19434H4.25195L4.34082 1.19824Z" fill="currentColor"></path></svg></a><div aria-hidden="true" class="pointer-events-none invisible absolute left-[calc(100%+6px)] flex flex-col items-center justify-center rounded-full border-[0.5px] border-border-image bg-bg-fill p-space-4 px-space-10 whitespace-nowrap opacity-0 shadow-s max-lg:hidden lg:[transition:opacity_150ms_0ms,visibility_150ms_0ms]" data-tooltip="true"><p class="font-caption text-caption">عرض السلة</p></div></div><div class="pointer-events-auto relative flex items-center lg:[&amp;:hover&gt;[data-tooltip]]:opacity-100 lg:[&amp;:hover&gt;[data-tooltip]]:[transition:opacity_150ms_0ms,visibility_150ms_0ms]"><a aria-label="العروض" class="transition relative flex items-center justify-center active:scale-[0.96] p-space-12 opacity-35 hover:opacity-100 hover:scale-105" data-discover="true" data-testid="HeaderLink-Deals" href="/offers"><svg class="text-text-fixed-dark" data-testid="icon-tag-filled" fill="none" height="24" stroke="none" style="width:24px;height:24px" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M10.6719 2C11.4674 2.00008 12.2304 2.31637 12.793 2.87891L20.793 10.8789C21.9643 12.0504 21.9643 13.9496 20.793 15.1211L15.1211 20.793C13.9496 21.9643 12.0504 21.9643 10.8789 20.793L2.87891 12.793C2.31637 12.2304 2.00008 11.4674 2 10.6719V6.32812C2.00008 5.53258 2.31637 4.76957 2.87891 4.20703L4.20703 2.87891C4.76957 2.31637 5.53258 2.00008 6.32812 2H10.6719ZM8 6C6.89543 6 6 6.89543 6 8C6 9.10457 6.89543 10 8 10C9.10457 10 10 9.10457 10 8C10 6.89543 9.10457 6 8 6Z" fill="currentColor"></path></svg></a><div aria-hidden="true" class="pointer-events-none invisible absolute left-[calc(100%+6px)] flex flex-col items-center justify-center rounded-full border-[0.5px] border-border-image bg-bg-fill p-space-4 px-space-10 whitespace-nowrap opacity-0 shadow-s max-lg:hidden lg:[transition:opacity_150ms_0ms,visibility_150ms_0ms]" data-tooltip="true"><p class="font-caption text-caption">العروض</p></div></div><div class="max-lg:hidden pointer-events-auto relative flex items-center lg:[&amp;:hover&gt;[data-tooltip]]:opacity-100 lg:[&amp;:hover&gt;[data-tooltip]]:[transition:opacity_150ms_0ms,visibility_150ms_0ms]"><a aria-label="الطلبات" class="transition relative flex items-center justify-center active:scale-[0.96] p-space-12 opacity-35 hover:opacity-100 hover:scale-105" data-discover="true" data-testid="HeaderLink-Orders" href="/orders"><svg class="text-text-fixed-dark" data-testid="icon-order-filled" fill="none" height="24" stroke="none" style="width:24px;height:24px" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15.9297 3C16.9327 3.00002 17.8694 3.50136 18.4258 4.33594L20.4961 7.44141C20.8246 7.93419 21 8.51322 21 9.10547V17C21 19.2091 19.2091 21 17 21H7C4.79086 21 3 19.2091 3 17V9.10547C3.00002 8.51322 3.17539 7.93419 3.50391 7.44141L5.57422 4.33594C6.13061 3.50136 7.06727 3.00002 8.07031 3H15.9297ZM12 4C11.4477 4 11 4.44772 11 5V8H6C5.44772 8 5 8.44772 5 9C5 9.55228 5.44772 10 6 10H18C18.5523 10 19 9.55228 19 9C19 8.44772 18.5523 8 18 8H13V5C13 4.44772 12.5523 4 12 4Z" fill="currentColor"></path></svg></a><div aria-hidden="true" class="pointer-events-none invisible absolute left-[calc(100%+6px)] flex flex-col items-center justify-center rounded-full border-[0.5px] border-border-image bg-bg-fill p-space-4 px-space-10 whitespace-nowrap opacity-0 shadow-s max-lg:hidden lg:[transition:opacity_150ms_0ms,visibility_150ms_0ms]" data-tooltip="true"><p class="font-caption text-caption">الطلبات</p></div></div></div><div class="flex items-center gap-space-8 lg:flex-col"><div class="transition-scale duration-300 ease-in-out hover:scale-105 relative p-space-8"><a data-discover="true" href="/account"><div class="rounded-radius-max hover:shadow-s"><div class="relative flex items-center justify-center overflow-hidden text-text-fixed-light rounded-radius-max after:pointer-events-none after:absolute after:inset-0 after:rounded-[inherit] after:border-[0.5px] after:border-solid after:border-border-image size-space-32" data-testid="avatar" style="background-color:var(--bg-fill-fixed-light);background-image:radial-gradient(ellipse 80% 80% at 23.9% 18.8%, rgba(247, 245, 255, 0.36708) 0%, rgba(247, 245, 255, 0.3382) 12.5%, rgba(247, 245, 255, 0.2793) 25%, rgba(247, 245, 255, 0.19456) 37.5%, rgba(247, 245, 255, 0.1083) 50%, rgba(247, 245, 255, 0.04598) 62.5%, rgba(247, 245, 255, 0.01482) 75%, rgba(247, 245, 255, 0.00342) 87.5%, rgba(247, 245, 255, 0.00076) 100%), linear-gradient(rgba(156, 131, 248, 0.8), rgba(156, 131, 248, 0.8))"><span class="relative text-center font-bodyTitleLarge text-bodyTitleLarge">A</span></div></div></a></div></div></div></header></div></div><div class="relative col-start-2 row-start-1 w-full lg:max-w-[calc(100vw-4.75rem)] lg:p-space-8 lg:pl-0" data-id="content-wrapper-root"><div class="pointer-events-none sticky top-space-8 left-0 z-30 mb-[calc(-100dvh+16px)] grid h-[calc(100dvh-16px)] w-full rounded-radius-28 border border-[#EBEBEB] shadow-[0px_2px_8px_0px_rgba(0,0,0,0.06),0px_-1px_30px_0px_#F2F4F5,0_0_0_40px_#FCFCFC] max-lg:hidden" style="clip-path:inset(-12px)"></div><div class="w-full relative min-h-full overflow-x-clip lg:bg-bg-fill"><div class="z-10 h-fit overflow-hidden"></div><div class="fixed bottom-space-36 z-[50] flex justify-center lg:pointer-events-none lg:right-space-8 lg:left-[4.75rem]" data-testid="bottom-omnibox-container"><div class="pointer-events-auto relative w-full max-w-[600px] lg:pointer-events-none"><div class="relative"><div class="relative lg:block lg:w-full lg:h-[64px] lg:pointer-events-none lg:mx-auto lg:max-w-[512px] lg:transition-[max-width] lg:duration-[320ms] lg:ease-[cubic-bezier(.2,0,0,1)]"><div class="group rounded-[32px] outline-hidden lg:pointer-events-auto lg:absolute p-space-12 lg:p-space-12 lg:w-full lg:transition-[height,max-height,box-shadow] lg:duration-[320ms] lg:ease-[cubic-bezier(.2,0,0,1)] lg:overflow-hidden lg:[box-shadow:0px_0px_1px_0px_rgba(0,0,0,0.12),0px_12px_64px_0px_rgba(0,0,0,0.2)] lg:bg-bg-overlay-fixed-light-75 lg:backdrop-blur-lg lg:max-h-[45dvh] lg:bottom-0" data-testid="omnibox-container" style="--omnibox-collapsed-agent-height:160px"><div class="relative overflow-hidden bg-[rgba(255,255,255,0.9)] backdrop-blur-[10px] lg:bg-transparent lg:backdrop-blur-none _agentPreviewContent_18dsa_2" data-testid="typeahead-content-container"><div class="relative z-10 h-auto w-full lg:h-fit lg:max-h-[calc(45dvh-88px)] scrollbar-hide overflow-y-auto overscroll-contain" data-testid="typeahead-content-scrollable-container" style="height:0;mask-image:linear-gradient(to bottom, black 0%, black 100%);-webkit-mask-image:linear-gradient(to bottom, black 0%, black 100%)"><div class="h-auto min-h-0 w-full lg:h-fit lg:overflow-hidden"></div></div></div><div class="hidden lg:block" data-search-mobile-state="closed" data-testid="omnibox-search-shell"><form><div class="flex flex-row gap-space-16 bg-bg-fill lg:bottom-none lg:opacity-100 rounded-[32px] lg:!bg-transparent lg:shadow-none lg:p-space-0 lg:inset-x-space-8 lg:block p-space-8 shadow-m"><div class="flex w-full flex-col"><div class="relative flex w-full flex-col items-center lg:min-h-space-40"><textarea aria-label="Search products and stores" autocomplete="off" class="scrollbar-hide max-h-[90px] min-h-space-40 w-full resize-none overflow-y-auto bg-transparent py-space-8 text-bodyLarge text-text outline-hidden placeholder:text-left placeholder:text-text-tertiary placeholder:overflow-hidden placeholder:text-ellipsis placeholder:whitespace-nowrap pr-space-16 lg:pr-[50px] pl-space-16" data-testid="search-input" enterkeyhint="search" maxlength="2048" name="search" placeholder="What are you shopping for today?" role="searchbox" rows="1"></textarea><div class="z-10 flex w-full justify-end h-space-40 items-end gap-space-8 lg:absolute lg:bottom-0 lg:right-0 lg:w-auto"><button aria-label="مسح البحث" class="group flex h-space-40 items-center justify-center rounded-radius-max px-space-10 transition-[background-color,box-shadow] duration-[320ms] ease-[cubic-bezier(.2,0,0,1)] cursor-not-allowed bg-bg-overlay-fixed-dark-04 shadow-none active:scale-100" data-testid="search-submit-button" disabled="" type="button"><svg class="transition-colors duration-[320ms] ease-[cubic-bezier(.2,0,0,1)] text-text-tertiary hidden lg:block" data-testid="icon-arrow-right" fill="none" height="24" stroke="none" style="width:20px;height:20px" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m14 6 6 6m0 0-6 6m6-6H4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.67"></path></svg><svg class="text-text-tertiary block lg:hidden" data-testid="icon-arrow-up" fill="none" height="24" stroke="none" style="width:20px;height:20px" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m6 10 6-6m0 0 6 6m-6-6v16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.67"></path></svg></button></div></div></div></div></form></div></div></div></div></div></div><div class="relative lg:in-data-navigation-overlay:-ml-(--nav-content-offset) lg:in-data-navigation-overlay:pl-(--nav-content-offset)" data-testid="store-screen-v2" style="background-color:#838778FF"><div class="dark"></div><div class="sticky top-0 left-0 mb-[-200px] w-full md:mb-[max(-600px,-55vh)] lg:in-data-navigation-overlay:-ml-(--nav-content-offset) lg:in-data-navigation-overlay:w-[calc(100%+var(--nav-content-offset))] pt-space-20" data-testid="store-header-background"><div class="transition-all duration-300 opacity-100"><div class="h-[200px] max-h-[600px] w-full md:h-[55vh]"><div class="absolute inset-0"><div class="ml-auto flex h-full" data-testid="store-media-background"><div class="relative flex w-full md:overflow-hidden"><img alt="مكتب الأستاذ كريم هشام جميل - المحامي بالاستئناف" class="absolute size-full object-cover" data-testid="image" fetchpriority="high" loading="eager" sizes="100vw" src="/assets/hero_options/option1_architecture.jpg" srcset="/assets/hero_options/option1_architecture.jpg 800w, /assets/hero_options/option1_architecture.jpg 1600w" style="background-size:cover; object-position: center;"/><div class="absolute size-full transform-gpu bg-bg-overlay-fixed-dark-40 hidden" data-testid="store-media-scrim"></div></div></div><div aria-hidden="true" class="pointer-events-none absolute inset-0" data-testid="store-header-identity-scrim" style="background-color:color-mix(in srgb, #838778FF 20%, transparent);background-image:linear-gradient(180deg, transparent 20%, color-mix(in srgb, #838778FF 85%, transparent) 80%, color-mix(in srgb, #838778FF 85%, transparent) 100%)"></div><div aria-hidden="true" class="pointer-events-none absolute inset-0" data-testid="store-cover-fade" style="background-image:linear-gradient(180deg, transparent 72%, color-mix(in srgb, #838778FF 42%, transparent) 90.2%, #838778FF 100%)"></div></div></div></div></div><div class="dark"><div class="relative _pageLayoutMax_1vltb_1"><div class="absolute right-gutter"><button aria-label="متابَع" class="text-text hover:bg-[rgba(0,0,0,.1)] focus-visible:outline-hidden focus-visible:ring focus-visible:ring-border-input-active focus-visible:ring-offset-2 false glassy-effect text-buttonLarge font-buttonLarge rounded-radius-max min-h-space-44 p-space-12 transition active:scale-[0.99] min-w-0 px-space-12 py-[10px] relative" data-testid="follow-store-button" onclick="var b=document.getElementById('vorocom-verified-badge');if(b){b.style.display=(b.style.display==='block'?'none':'block');event.stopPropagation();}" style="min-height:40px;height:40px;background-color:hsla(76, 5.9%, 58%, 0.85);box-shadow:inset 0 1px 0 0 rgba(255, 255, 255, 0.2), 0 0 1px 0 rgba(0, 0, 0, 0.12), 0 4px 8px 0 rgba(0, 0, 0, 0.12);border:0.5px solid hsl(76, 5.9%, 58%)"><span class=""><svg class="text-text" data-testid="icon-checkmark-verify-filled" fill="none" height="24" stroke="none" style="width:16px;height:16px" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M11.2929 1.29289C11.6834 0.902369 12.3166 0.902369 12.7071 1.29289L15.4142 4H19C19.5523 4 20 4.44772 20 5V8.58579L22.7071 11.2929C23.0976 11.6834 23.0976 12.3166 22.7071 12.7071L20 15.4142V19C20 19.5523 19.5523 20 19 20H15.4142L12.7071 22.7071C12.3166 23.0976 11.6834 23.0976 11.2929 22.7071L8.58579 20H5C4.44772 20 4 19.5523 4 19V15.4142L1.29289 12.7071C0.902369 12.3166 0.902369 11.6834 1.29289 11.2929L4 8.58579V5C4 4.44772 4.44772 4 5 4H8.58579L11.2929 1.29289ZM15.3192 10.3235C15.6359 9.87101 15.5259 9.24748 15.0735 8.93077C14.621 8.61405 13.9975 8.72409 13.6808 9.17654L10.8198 13.2636L9.6585 12.2474C9.24287 11.8837 8.61111 11.9259 8.24742 12.3415C7.88374 12.7571 7.92586 13.3889 8.3415 13.7526L10.3415 15.5026C10.5552 15.6896 10.8384 15.7769 11.1203 15.7427C11.4023 15.7086 11.6564 15.5561 11.8192 15.3235L15.3192 10.3235Z" fill="currentColor" fill-rule="evenodd"></path></svg></span>
 <div id="vorocom-verified-badge" class="vorocom-follow-tooltip z-[9999]" style="display:none; position:absolute; top:calc(100% + 8px); right:0; white-space: nowrap; background: rgba(22, 28, 20, 0.96); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.2); padding: 8px 14px; border-radius: 9999px; box-shadow: 0 8px 24px rgba(0,0,0,0.5); font-family: 'Cairo', sans-serif; font-size: 13px; font-weight: 700; color: #ffffff; text-align: center;">
 هذا النشاط التجاري موثق ومُعتمد من قبل VoroCom
 <div style="position: absolute; bottom: 100%; right: 14px; border-width: 6px; border-style: solid; border-color: transparent transparent rgba(22, 28, 20, 0.96) transparent;"></div>
@@ -2727,7 +3006,99 @@ $RC=function(a,b){if(b=document.getElementById(b))(a=document.getElementById(a))
     });
   }
 
-  // 7. Direct click binding for tabs and service filters
+  // 7. Store Menu Drawer (Shop.app / Apple Minimalist Style)
+  function initStoreMenuDrawer() {
+    var menuBtn = document.querySelector('[data-testid="store-menu-button"]');
+    var scrim = document.getElementById('store-menu-scrim');
+    var overlay = document.getElementById('store-menu-overlay');
+    var dialog = document.getElementById('store-menu-dialog');
+    var closeBtn = document.getElementById('store-menu-close-btn');
+    var shareBtn = document.getElementById('store-menu-share-btn');
+
+    function openDrawer() {
+      if (scrim) scrim.classList.add('open');
+      if (overlay) overlay.classList.add('open');
+      if (dialog) dialog.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeDrawer() {
+      if (scrim) scrim.classList.remove('open');
+      if (overlay) overlay.classList.remove('open');
+      if (dialog) dialog.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    if (menuBtn) {
+      menuBtn.onclick = function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        openDrawer();
+      };
+    }
+
+    if (closeBtn) {
+      closeBtn.onclick = function(e) {
+        e.preventDefault();
+        closeDrawer();
+      };
+    }
+
+    if (scrim) scrim.onclick = closeDrawer;
+    if (overlay) overlay.onclick = closeDrawer;
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && dialog && dialog.classList.contains('open')) {
+        closeDrawer();
+      }
+    });
+
+    // Drawer Nav items
+    document.querySelectorAll('[data-drawer-nav]').forEach(function(item) {
+      item.onclick = function(e) {
+        var target = item.getAttribute('data-drawer-nav');
+        if (target === 'location') {
+          switchMainTab('overview', false);
+          closeDrawer();
+          setTimeout(function() {
+            var locEl = document.getElementById('lawyer-office-location');
+            if (locEl) locEl.scrollIntoView({ behavior: 'smooth' });
+          }, 250);
+        } else {
+          switchMainTab(target, true);
+          try { history.replaceState(null, '', '#' + target); } catch(err) {}
+          closeDrawer();
+        }
+      };
+    });
+
+    // Share Button Handler
+    if (shareBtn) {
+      shareBtn.onclick = function(e) {
+        e.preventDefault();
+        var shareData = {
+          title: 'مكتب الأستاذ كريم هشام جميل - المحامي بالاستئناف العالي ومجلس الدولة',
+          text: 'استشارات قانونية موثقة وقضايا جنائية ومدنية وأسرة وتأسيس شركات',
+          url: window.location.href
+        };
+        if (navigator.share) {
+          navigator.share(shareData).catch(function() {});
+        } else {
+          try {
+            navigator.clipboard.writeText(window.location.href).then(function() {
+              alert('تم نسخ رابط صفحة المكتب بنجاح!');
+            }).catch(function() {
+              window.open('https://wa.me/?text=' + encodeURIComponent(shareData.title + ' ' + shareData.url), '_blank');
+            });
+          } catch(err) {
+            window.open('https://wa.me/?text=' + encodeURIComponent(shareData.title + ' ' + shareData.url), '_blank');
+          }
+        }
+      };
+    }
+  }
+
+  // 8. Direct click binding for tabs and service filters
   function bindAllDirectListeners() {
     document.querySelectorAll('[data-tab-target]').forEach(function(btn) {
       btn.onclick = function(e) {
@@ -2755,11 +3126,12 @@ $RC=function(a,b){if(b=document.getElementById(b))(a=document.getElementById(a))
     }
   }
 
-  // 8. Initialize
+  // 9. Initialize
   function init() {
     initFaqAccordion();
     initBookingForm();
     initVerifiedBadge();
+    initStoreMenuDrawer();
     bindAllDirectListeners();
 
     var hash = window.location.hash.replace('#', '');
