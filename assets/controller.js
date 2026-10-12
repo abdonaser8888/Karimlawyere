@@ -18,26 +18,28 @@
     filterBtns.forEach(function(btn) {
       var target = btn.getAttribute('data-service-filter');
       var innerDiv = btn.querySelector('div');
-      var pText = btn.querySelector('p');
+      var pText = btn.querySelector('p') || btn;
 
       if (target === filterCategory) {
         btn.classList.add('active');
-        btn.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-        btn.style.borderColor = '#ffffff';
+        btn.style.setProperty('background-color', 'rgba(255, 255, 255, 0.98)', 'important');
+        btn.style.setProperty('border-color', '#ffffff', 'important');
+        btn.style.setProperty('color', '#111111', 'important');
         if (innerDiv) {
-          innerDiv.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-          innerDiv.style.borderColor = '#ffffff';
+          innerDiv.style.setProperty('background-color', 'rgba(255, 255, 255, 0.98)', 'important');
+          innerDiv.style.setProperty('border-color', '#ffffff', 'important');
         }
-        if (pText) pText.style.color = '#111111';
+        if (pText && pText !== btn) pText.style.setProperty('color', '#111111', 'important');
       } else {
         btn.classList.remove('active');
-        btn.style.backgroundColor = 'hsla(76, 5.9%, 58%, 0.85)';
-        btn.style.borderColor = 'hsl(76, 5.9%, 58%)';
+        btn.style.setProperty('background-color', 'hsla(76, 5.9%, 58%, 0.85)', 'important');
+        btn.style.setProperty('border-color', 'hsl(76, 5.9%, 58%)', 'important');
+        btn.style.setProperty('color', '#ffffff', 'important');
         if (innerDiv) {
-          innerDiv.style.backgroundColor = 'hsla(76, 5.9%, 58%, 0.85)';
-          innerDiv.style.borderColor = 'hsl(76, 5.9%, 58%)';
+          innerDiv.style.setProperty('background-color', 'hsla(76, 5.9%, 58%, 0.85)', 'important');
+          innerDiv.style.setProperty('border-color', 'hsl(76, 5.9%, 58%)', 'important');
         }
-        if (pText) pText.style.color = '#ffffff';
+        if (pText && pText !== btn) pText.style.setProperty('color', '#ffffff', 'important');
       }
     });
   }
@@ -252,6 +254,14 @@
         applyServiceFilter(targetFilter);
       };
     });
+
+    var filterIcon = document.querySelector('.filter-icon-btn');
+    if (filterIcon) {
+      filterIcon.onclick = function(e) {
+        e.preventDefault();
+        applyServiceFilter('all');
+      };
+    }
   }
 
   // 7. Initialize
