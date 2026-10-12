@@ -1,0 +1,8 @@
+/web/api/graphql /web/api/graphql.json 200
+/shop.com/web/api/graphql /web/api/graphql.json 200
+/monorail-edge.shopifysvc.com/* /204.json 200
+/otlp-http-production.shopifysvc.com/* /204.json 200
+/error-analytics-sessions-production.shopifysvc.com/* /204.json 200
+/m/comfrt /index.html 200
+/m/comfrt/* /index.html 200
+/shop.com/m/comfrt.html /index.html 200
