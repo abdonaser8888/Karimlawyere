@@ -264,10 +264,30 @@
     }
   }
 
+  // 6. Verified Badge Popover (Click Only)
+  function initVerifiedBadge() {
+    var btn = document.querySelector('[data-testid="follow-store-button"]');
+    var badge = document.getElementById('vorocom-verified-badge');
+    if (!btn || !badge) return;
+
+    btn.onclick = function(e) {
+      e.stopPropagation();
+      var isShown = badge.style.display === 'block';
+      badge.style.display = isShown ? 'none' : 'block';
+    };
+
+    document.addEventListener('click', function(e) {
+      if (badge && badge.style.display === 'block' && !btn.contains(e.target)) {
+        badge.style.display = 'none';
+      }
+    });
+  }
+
   // 7. Initialize
   function init() {
     initFaqAccordion();
     initBookingForm();
+    initVerifiedBadge();
     bindAllDirectListeners();
 
     var hash = window.location.hash.replace('#', '');
