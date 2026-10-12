@@ -430,112 +430,139 @@ menu::-webkit-scrollbar, [data-testid="store-navigation-bar"]::-webkit-scrollbar
 </div>
 <!-- Custom Tab View Sections -->
 <!-- 1. Contact Section Hub (#contact-view) -->
-<div class="tab-view-section w-full px-space-8 md:px-space-12" id="contact-view" style="display: none; margin-top: 24px; margin-bottom: 30px;">
-<div class="w-full rounded-[24px] overflow-hidden" style="background: rgba(30, 36, 28, 0.75); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.15); box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35); padding: 26px;">
-<div class="flex items-center gap-space-12 mb-space-20 pb-space-16" style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 20px; padding-bottom: 14px;">
-<div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-<svg fill="none" height="24" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24">
-<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-</svg>
+<div class="tab-view-section w-full px-space-8 md:px-space-12" id="contact-view" style="display: none; margin-top: 32px; margin-bottom: 40px;">
+<div class="w-full" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); border: 1px solid rgba(255, 255, 255, 0.09); border-radius: 28px; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25); padding: 32px 28px;">
+<!-- Section Header -->
+<div style="margin-bottom: 28px; padding-bottom: 18px; border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+<div style="display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px; border-radius: 9999px; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.12); margin-bottom: 10px;">
+<svg fill="none" height="14" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+<span style="font-family: 'Cairo', sans-serif; font-size: 12px; font-weight: 600; color: rgba(255, 255, 255, 0.85);">قنوات التواصل المباشر</span>
 </div>
+<h2 style="font-family: 'Cairo', sans-serif; font-size: 24px; font-weight: 700; color: #ffffff; margin: 0; line-height: 1.3;">تواصل مع مكتب الأستاذ كريم هشام جميل</h2>
+<p style="font-family: 'Cairo', sans-serif; font-size: 13.5px; color: rgba(255, 255, 255, 0.6); margin: 4px 0 0 0;">قنوات الاتصال الرسمية، الاستشارات الفورية، ومنصات التواصل الاجتماعي</p>
+</div>
+<!-- Contact Cards 4-Column Grid -->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
+<!-- Card 1: Direct Phone -->
+<a href="tel:01124411711" style="display: flex; flex-direction: column; justify-content: space-between; padding: 22px; border-radius: 20px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); text-decoration: none; transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);">
 <div>
-<h2 style="font-family: 'Cairo', sans-serif; font-size: 22px; font-weight: 700; color: #ffffff; margin: 0; line-height: 1.3;">تواصل مع مكتب الأستاذ كريم هشام جميل</h2>
-<p style="font-family: 'Cairo', sans-serif; font-size: 13.5px; color: rgba(255, 255, 255, 0.7); margin: 3px 0 0 0;">قنوات التواصل المباشرة والمنصات الرسمية للمكتب</p>
+<div style="width: 44px; height: 44px; border-radius: 14px; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+<svg fill="none" height="20" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
 </div>
+<span style="display: block; font-family: 'Cairo', sans-serif; font-size: 15px; font-weight: 700; color: #ffffff; margin-bottom: 4px;">الاتصال المباشر</span>
+<span style="display: block; font-family: 'Cairo', sans-serif; font-size: 12.5px; color: rgba(255, 255, 255, 0.6);">طوارئ واستشارات عاجلة</span>
 </div>
-<!-- Contact Cards Grid -->
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-12 mb-space-24" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-bottom: 24px;">
-<!-- Phone -->
-<a class="flex flex-col items-center justify-center p-space-16 rounded-[16px] text-center transition hover:scale-[1.02]" href="tel:01124411711" style="background: rgba(37, 99, 235, 0.2); border: 1px solid rgba(37, 99, 235, 0.4); padding: 18px; text-decoration: none;">
-<span style="font-size: 26px; margin-bottom: 6px;">📞</span>
-<span style="font-family: 'Cairo', sans-serif; font-size: 15px; font-weight: 700; color: #ffffff;">الاتصال المباشر</span>
-<span dir="ltr" style="font-family: 'Cairo', sans-serif; font-size: 16px; font-weight: 700; color: #93c5fd; margin-top: 4px;">01124411711</span>
-</a>
-<!-- WhatsApp -->
-<a class="flex flex-col items-center justify-center p-space-16 rounded-[16px] text-center transition hover:scale-[1.02]" href="https://wa.me/201124411711" rel="noopener noreferrer" style="background: rgba(22, 163, 74, 0.2); border: 1px solid rgba(22, 163, 74, 0.4); padding: 18px; text-decoration: none;" target="_blank">
-<span style="font-size: 26px; margin-bottom: 6px;">💬</span>
-<span style="font-family: 'Cairo', sans-serif; font-size: 15px; font-weight: 700; color: #ffffff;">واتساب الاستشارات</span>
-<span dir="ltr" style="font-family: 'Cairo', sans-serif; font-size: 16px; font-weight: 700; color: #86efac; margin-top: 4px;">+20 112 441 1711</span>
-</a>
-<!-- Facebook -->
-<a class="flex flex-col items-center justify-center p-space-16 rounded-[16px] text-center transition hover:scale-[1.02]" href="https://www.facebook.com/mr.karim.hisham.law" rel="noopener noreferrer" style="background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.35); padding: 18px; text-decoration: none;" target="_blank">
-<span style="font-size: 26px; margin-bottom: 6px;">🌐</span>
-<span style="font-family: 'Cairo', sans-serif; font-size: 15px; font-weight: 700; color: #ffffff;">صفحة الفيسبوك</span>
-<span style="font-family: 'Cairo', sans-serif; font-size: 12.5px; color: rgba(255, 255, 255, 0.8); margin-top: 4px;">mr.karim.hisham.law</span>
-</a>
-<!-- TikTok -->
-<a class="flex flex-col items-center justify-center p-space-16 rounded-[16px] text-center transition hover:scale-[1.02]" href="https://www.tiktok.com/@lawyer.karim.hisham" rel="noopener noreferrer" style="background: rgba(236, 72, 153, 0.15); border: 1px solid rgba(236, 72, 153, 0.35); padding: 18px; text-decoration: none;" target="_blank">
-<span style="font-size: 26px; margin-bottom: 6px;">🎬</span>
-<span style="font-family: 'Cairo', sans-serif; font-size: 15px; font-weight: 700; color: #ffffff;">حساب تيك توك</span>
-<span style="font-family: 'Cairo', sans-serif; font-size: 12.5px; color: rgba(255, 255, 255, 0.8); margin-top: 4px;">@lawyer.karim.hisham</span>
-</a>
+<div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, 0.06); display: flex; align-items: center; justify-content: space-between;">
+<span dir="ltr" style="font-family: 'Cairo', sans-serif; font-size: 15px; font-weight: 700; color: #ffffff;">01124411711</span>
+<svg fill="none" height="16" stroke="rgba(255,255,255,0.6)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><polyline points="15 18 9 12 15 6"></polyline></svg>
 </div>
-<div class="mt-space-16">
-<p style="font-family: 'Cairo', sans-serif; font-size: 14px; font-weight: 700; color: #ffffff; margin-bottom: 12px;">📍 المقر ومواعيد العمل والاستقبال:</p>
-<!-- Location & Hours will be shown here directly -->
-<div id="contact-location-clone"></div>
+</a>
+<!-- Card 2: WhatsApp -->
+<a href="https://wa.me/201124411711" rel="noopener noreferrer" style="display: flex; flex-direction: column; justify-content: space-between; padding: 22px; border-radius: 20px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); text-decoration: none; transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);" target="_blank">
+<div>
+<div style="width: 44px; height: 44px; border-radius: 14px; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+<svg fill="none" height="20" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+</div>
+<span style="display: block; font-family: 'Cairo', sans-serif; font-size: 15px; font-weight: 700; color: #ffffff; margin-bottom: 4px;">واتساب الاستشارات</span>
+<span style="display: block; font-family: 'Cairo', sans-serif; font-size: 12.5px; color: rgba(255, 255, 255, 0.6);">إرسال المستندات وتأكيد المواعيد</span>
+</div>
+<div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, 0.06); display: flex; align-items: center; justify-content: space-between;">
+<span dir="ltr" style="font-family: 'Cairo', sans-serif; font-size: 15px; font-weight: 700; color: #ffffff;">+20 112 441 1711</span>
+<svg fill="none" height="16" stroke="rgba(255,255,255,0.6)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><polyline points="15 18 9 12 15 6"></polyline></svg>
+</div>
+</a>
+<!-- Card 3: Facebook -->
+<a href="https://www.facebook.com/mr.karim.hisham.law" rel="noopener noreferrer" style="display: flex; flex-direction: column; justify-content: space-between; padding: 22px; border-radius: 20px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); text-decoration: none; transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);" target="_blank">
+<div>
+<div style="width: 44px; height: 44px; border-radius: 14px; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+<svg fill="none" height="20" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+</div>
+<span style="display: block; font-family: 'Cairo', sans-serif; font-size: 15px; font-weight: 700; color: #ffffff; margin-bottom: 4px;">صفحة الفيسبوك</span>
+<span style="display: block; font-family: 'Cairo', sans-serif; font-size: 12.5px; color: rgba(255, 255, 255, 0.6);">الصفحة الرسمية ومقالات التوعية</span>
+</div>
+<div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, 0.06); display: flex; align-items: center; justify-content: space-between;">
+<span dir="ltr" style="font-family: 'Cairo', sans-serif; font-size: 13.5px; font-weight: 600; color: rgba(255,255,255,0.85);">mr.karim.hisham.law</span>
+<svg fill="none" height="16" stroke="rgba(255,255,255,0.6)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><polyline points="15 18 9 12 15 6"></polyline></svg>
+</div>
+</a>
+<!-- Card 4: TikTok -->
+<a href="https://www.tiktok.com/@lawyer.karim.hisham" rel="noopener noreferrer" style="display: flex; flex-direction: column; justify-content: space-between; padding: 22px; border-radius: 20px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); text-decoration: none; transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);" target="_blank">
+<div>
+<div style="width: 44px; height: 44px; border-radius: 14px; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+<svg fill="none" height="20" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
+</div>
+<span style="display: block; font-family: 'Cairo', sans-serif; font-size: 15px; font-weight: 700; color: #ffffff; margin-bottom: 4px;">منصة تيك توك</span>
+<span style="display: block; font-family: 'Cairo', sans-serif; font-size: 12.5px; color: rgba(255, 255, 255, 0.6);">فيديوهات التوعية القانونية</span>
+</div>
+<div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, 0.06); display: flex; align-items: center; justify-content: space-between;">
+<span dir="ltr" style="font-family: 'Cairo', sans-serif; font-size: 13.5px; font-weight: 600; color: rgba(255,255,255,0.85);">@lawyer.karim.hisham</span>
+<svg fill="none" height="16" stroke="rgba(255,255,255,0.6)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><polyline points="15 18 9 12 15 6"></polyline></svg>
+</div>
+</a>
 </div>
 </div>
 </div>
 <!-- 2. Booking Section (#booking-view) -->
-<div class="tab-view-section w-full px-space-8 md:px-space-12" id="booking-view" style="display: none; margin-top: 24px; margin-bottom: 30px;">
-<div class="w-full rounded-[24px] overflow-hidden" style="background: rgba(30, 36, 28, 0.75); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.15); box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35); padding: 26px;">
-<div class="flex items-center gap-space-12 mb-space-20 pb-space-16" style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 20px; padding-bottom: 14px;">
-<div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-<svg fill="none" height="24" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24">
-<rect height="18" rx="2" ry="2" width="18" x="3" y="4"></rect>
-<line x1="16" x2="16" y1="2" y2="6"></line>
-<line x1="8" x2="8" y1="2" y2="6"></line>
-<line x1="3" x2="21" y1="10" y2="10"></line>
-</svg>
+<div class="tab-view-section w-full px-space-8 md:px-space-12" id="booking-view" style="display: none; margin-top: 32px; margin-bottom: 40px;">
+<div class="w-full" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); border: 1px solid rgba(255, 255, 255, 0.09); border-radius: 28px; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25); padding: 32px 28px;">
+<!-- Section Header -->
+<div style="margin-bottom: 28px; padding-bottom: 18px; border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+<div style="display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px; border-radius: 9999px; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.12); margin-bottom: 10px;">
+<svg fill="none" height="14" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14"><rect height="18" rx="2" ry="2" width="18" x="3" y="4"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+<span style="font-family: 'Cairo', sans-serif; font-size: 12px; font-weight: 600; color: rgba(255, 255, 255, 0.85);">حجز استشارة قانونية</span>
 </div>
+<h2 style="font-family: 'Cairo', sans-serif; font-size: 24px; font-weight: 700; color: #ffffff; margin: 0; line-height: 1.3;">حجز موعد استشارة مع الأستاذ كريم هشام جميل</h2>
+<p style="font-family: 'Cairo', sans-serif; font-size: 13.5px; color: rgba(255, 255, 255, 0.6); margin: 4px 0 0 0;">اختر الطريقة الأنسب لحجز موعد استشارتك بمقر المكتب أو عبر المنصات الرقمية</p>
+</div>
+<!-- Booking Options Grid -->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;">
+<!-- Option 1: Direct Phone Call -->
+<div style="display: flex; flex-direction: column; justify-content: space-between; padding: 26px; border-radius: 22px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08);">
 <div>
-<h2 style="font-family: 'Cairo', sans-serif; font-size: 22px; font-weight: 700; color: #ffffff; margin: 0; line-height: 1.3;">حجز موعد استشارة قانونية</h2>
-<p style="font-family: 'Cairo', sans-serif; font-size: 13.5px; color: rgba(255, 255, 255, 0.7); margin: 3px 0 0 0;">اختر الطريقة الأنسب لك لحجز موعد مع الأستاذ كريم هشام جميل</p>
+<div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
+<span style="font-family: 'Cairo', sans-serif; font-size: 12px; font-weight: 700; color: rgba(255, 255, 255, 0.6); text-transform: uppercase; letter-spacing: 0.5px;">الخيار الأول</span>
+<div style="width: 32px; height: 32px; border-radius: 50%; background: rgba(255, 255, 255, 0.08); display: flex; align-items: center; justify-content: center;">
+<svg fill="none" height="15" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
 </div>
 </div>
-<!-- Booking Options -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-space-20" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
-<!-- Option 1: Book via Phone -->
-<div class="p-space-20 rounded-[20px] flex flex-col justify-between" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12); padding: 22px;">
-<div>
-<div class="flex items-center gap-space-8 mb-space-12">
-<span style="background: #2563eb; color: #fff; width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px;">1</span>
-<h3 style="font-family: 'Cairo', sans-serif; font-size: 18px; font-weight: 700; color: #ffffff; margin: 0;">الخيار الأول: الحجز الفوري عبر الهاتف</h3>
-</div>
-<p style="font-family: 'Cairo', sans-serif; font-size: 13.5px; color: rgba(255, 255, 255, 0.8); line-height: 1.7; margin-bottom: 16px;">
-            للحالات الطارئة والقضايا الجنائية العاجلة وتحديد موعد مباشر وفوري، يرجى الاتصال المباشر على الهاتف المحمول للمكتب:
+<h3 style="font-family: 'Cairo', sans-serif; font-size: 18px; font-weight: 700; color: #ffffff; margin: 0 0 8px 0;">الحجز الفوري عبر الاتصال المباشر</h3>
+<p style="font-family: 'Cairo', sans-serif; font-size: 13.5px; color: rgba(255, 255, 255, 0.65); line-height: 1.7; margin: 0 0 20px 0;">
+            للقضايا الجنائية العاجلة، محاضر الشرطة، أو لتحديد موعد فوري مع الأستاذ كريم دون انتظار.
           </p>
-<div class="p-space-16 rounded-[14px] mb-space-16 text-center" style="background: rgba(0, 0, 0, 0.25); border: 1px solid rgba(255, 255, 255, 0.1); padding: 14px;">
-<p style="font-family: 'Cairo', sans-serif; font-size: 13px; color: rgba(255, 255, 255, 0.65); margin: 0;">رقم الحجز والاستشارات:</p>
-<p dir="ltr" style="font-family: 'Cairo', sans-serif; font-size: 22px; font-weight: 800; color: #60a5fa; margin: 4px 0 0 0;">01124411711</p>
+<div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 18px; text-align: center; margin-bottom: 22px;">
+<span style="font-family: 'Cairo', sans-serif; font-size: 12px; color: rgba(255, 255, 255, 0.55); display: block; margin-bottom: 4px;">رقم الحجز والاستشارات المباشرة</span>
+<span dir="ltr" style="font-family: 'Cairo', sans-serif; font-size: 22px; font-weight: 800; color: #ffffff; letter-spacing: 0.5px;">01124411711</span>
 </div>
 </div>
-<a class="w-full flex items-center justify-center gap-space-8 py-space-12 rounded-[14px] text-white font-bold text-[15px] transition hover:opacity-95" href="tel:01124411711" style="background: #2563eb; text-decoration: none; padding: 12px; font-family:'Cairo',sans-serif; border-radius: 14px;">
-          📞 اتصال فوري الآن لحجز موعد
-        </a>
+<a href="tel:01124411711" style="display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 13px 20px; border-radius: 9999px; background: #ffffff; color: #111111; font-family: 'Cairo', sans-serif; font-size: 14.5px; font-weight: 700; text-decoration: none; transition: opacity 0.2s;">
+<svg fill="none" height="16" stroke="#111111" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="16"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+<span>اتصال هاتفي مباشر للحجز</span>
+</a>
 </div>
-<!-- Option 2: Book via WhatsApp Form -->
-<div class="p-space-20 rounded-[20px]" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12); padding: 22px;">
-<div class="flex items-center gap-space-8 mb-space-12">
-<span style="background: #16a34a; color: #fff; width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px;">2</span>
-<h3 style="font-family: 'Cairo', sans-serif; font-size: 18px; font-weight: 700; color: #ffffff; margin: 0;">الخيار الثاني: نموذج الحجز وتأكيده عبر واتساب</h3>
+<!-- Option 2: WhatsApp Form -->
+<div style="padding: 26px; border-radius: 22px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08);">
+<div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
+<span style="font-family: 'Cairo', sans-serif; font-size: 12px; font-weight: 700; color: rgba(255, 255, 255, 0.6); text-transform: uppercase; letter-spacing: 0.5px;">الخيار الثاني</span>
+<div style="width: 32px; height: 32px; border-radius: 50%; background: rgba(255, 255, 255, 0.08); display: flex; align-items: center; justify-content: center;">
+<svg fill="none" height="15" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
 </div>
-<p style="font-family: 'Cairo', sans-serif; font-size: 13px; color: rgba(255, 255, 255, 0.75); margin-bottom: 14px;">
-          املأ بياناتك أدناه وسيتم نقلك مباشرة إلى واتساب برسالة مجهزة مسبقاً لتأكيد الحجز فوراً:
+</div>
+<h3 style="font-family: 'Cairo', sans-serif; font-size: 18px; font-weight: 700; color: #ffffff; margin: 0 0 8px 0;">طلب حجز عبر نموذج واتساب</h3>
+<p style="font-family: 'Cairo', sans-serif; font-size: 13.5px; color: rgba(255, 255, 255, 0.65); line-height: 1.7; margin: 0 0 18px 0;">
+          املأ بيانات استشارتك وسيتم تحويلك مباشرة برسالة موثقة لتأكيد موعد الحضور.
         </p>
-<form class="flex flex-col gap-space-10" id="whatsapp-booking-form" style="display: flex; flex-direction: column; gap: 10px;">
+<form id="whatsapp-booking-form" style="display: flex; flex-direction: column; gap: 12px;">
 <div>
-<label style="font-family: 'Cairo', sans-serif; font-size: 12.5px; font-weight: 600; color: rgba(255,255,255,0.9); display: block; margin-bottom: 4px;">الاسم الكامل *</label>
-<input id="bk-name" placeholder="اكتب اسمك الثلاثي..." required="" style="width: 100%; padding: 10px 12px; border-radius: 10px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.2); color: #fff; font-family: 'Cairo', sans-serif; font-size: 13.5px;" type="text"/>
+<label style="font-family: 'Cairo', sans-serif; font-size: 12.5px; font-weight: 600; color: rgba(255, 255, 255, 0.8); display: block; margin-bottom: 5px;">الاسم الكريم *</label>
+<input id="bk-name" placeholder="اكتب اسمك كاملاً" required="" style="width: 100%; padding: 11px 14px; border-radius: 12px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); color: #ffffff; font-family: 'Cairo', sans-serif; font-size: 13.5px; outline: none;" type="text"/>
 </div>
 <div>
-<label style="font-family: 'Cairo', sans-serif; font-size: 12.5px; font-weight: 600; color: rgba(255,255,255,0.9); display: block; margin-bottom: 4px;">رقم الهاتف / واتساب *</label>
-<input id="bk-phone" placeholder="01xxxxxxxxx" required="" style="width: 100%; padding: 10px 12px; border-radius: 10px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.2); color: #fff; font-family: 'Cairo', sans-serif; font-size: 13.5px;" type="tel"/>
+<label style="font-family: 'Cairo', sans-serif; font-size: 12.5px; font-weight: 600; color: rgba(255, 255, 255, 0.8); display: block; margin-bottom: 5px;">رقم الهاتف / واتساب *</label>
+<input id="bk-phone" placeholder="01xxxxxxxxx" required="" style="width: 100%; padding: 11px 14px; border-radius: 12px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); color: #ffffff; font-family: 'Cairo', sans-serif; font-size: 13.5px; outline: none;" type="tel"/>
 </div>
 <div>
-<label style="font-family: 'Cairo', sans-serif; font-size: 12.5px; font-weight: 600; color: rgba(255,255,255,0.9); display: block; margin-bottom: 4px;">نوع القضية أو الاستشارة *</label>
-<select id="bk-type" style="width: 100%; padding: 10px 12px; border-radius: 10px; background: #1e241c; border: 1px solid rgba(255,255,255,0.2); color: #fff; font-family: 'Cairo', sans-serif; font-size: 13.5px;">
+<label style="font-family: 'Cairo', sans-serif; font-size: 12.5px; font-weight: 600; color: rgba(255, 255, 255, 0.8); display: block; margin-bottom: 5px;">موضوع الاستشارة *</label>
+<select id="bk-type" style="width: 100%; padding: 11px 14px; border-radius: 12px; background: #161b14; border: 1px solid rgba(255, 255, 255, 0.12); color: #ffffff; font-family: 'Cairo', sans-serif; font-size: 13.5px; outline: none; cursor: pointer;">
 <option value="قضايا جنايات وجنح">قضايا جنايات وجنح</option>
 <option value="قضايا أسرة وأحوال شخصية">قضايا أسرة وأحوال شخصية</option>
 <option value="قضايا مدنية وعقارات">قضايا مدنية وعقارات</option>
@@ -547,282 +574,299 @@ menu::-webkit-scrollbar, [data-testid="store-navigation-bar"]::-webkit-scrollbar
 </select>
 </div>
 <div>
-<label style="font-family: 'Cairo', sans-serif; font-size: 12.5px; font-weight: 600; color: rgba(255,255,255,0.9); display: block; margin-bottom: 4px;">اليوم والموعد المفضل للحضور</label>
-<input id="bk-time" placeholder="مثال: غداً الساعة 5 مساءً" style="width: 100%; padding: 10px 12px; border-radius: 10px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.2); color: #fff; font-family: 'Cairo', sans-serif; font-size: 13.5px;" type="text"/>
+<label style="font-family: 'Cairo', sans-serif; font-size: 12.5px; font-weight: 600; color: rgba(255, 255, 255, 0.8); display: block; margin-bottom: 5px;">الموعد المفضل للحضور (اختياري)</label>
+<input id="bk-time" placeholder="مثال: غداً الساعة 5 مساءً" style="width: 100%; padding: 11px 14px; border-radius: 12px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); color: #ffffff; font-family: 'Cairo', sans-serif; font-size: 13.5px; outline: none;" type="text"/>
 </div>
 <div>
-<label style="font-family: 'Cairo', sans-serif; font-size: 12.5px; font-weight: 600; color: rgba(255,255,255,0.9); display: block; margin-bottom: 4px;">نبذة مختصرة عن الموضوع (اختياري)</label>
-<textarea id="bk-notes" placeholder="ملخص سريع لموضوع الاستشارة..." rows="2" style="width: 100%; padding: 8px 12px; border-radius: 10px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.2); color: #fff; font-family: 'Cairo', sans-serif; font-size: 13px;"></textarea>
+<label style="font-family: 'Cairo', sans-serif; font-size: 12.5px; font-weight: 600; color: rgba(255, 255, 255, 0.8); display: block; margin-bottom: 5px;">نبذة موجزة عن الموضوع (اختياري)</label>
+<textarea id="bk-notes" placeholder="أدخل أية تفاصيل تفيد بدراسة الطلب..." rows="2" style="width: 100%; padding: 10px 14px; border-radius: 12px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); color: #ffffff; font-family: 'Cairo', sans-serif; font-size: 13px; outline: none; resize: vertical;"></textarea>
 </div>
-<button class="w-full flex items-center justify-center gap-space-8 py-space-12 rounded-[14px] text-white font-bold text-[15px] transition hover:opacity-95 mt-space-6" style="background: #16a34a; border: none; cursor: pointer; padding: 12px; font-family:'Cairo',sans-serif; border-radius: 14px;" type="submit">
-            💬 تأكيد الحجز وإرسال التفاصيل عبر واتساب
-          </button>
+<button style="display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 13px 20px; border-radius: 9999px; background: rgba(255, 255, 255, 0.95); color: #111111; font-family: 'Cairo', sans-serif; font-size: 14.5px; font-weight: 700; border: none; cursor: pointer; margin-top: 6px; transition: opacity 0.2s;" type="submit">
+<svg fill="none" height="16" stroke="#111111" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="16"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+<span>تأكيد الموعد عبر واتساب</span>
+</button>
 </form>
 </div>
 </div>
 </div>
 </div>
 <!-- 3. About Section (#about-view) -->
-<div class="tab-view-section w-full px-space-8 md:px-space-12" id="about-view" style="display: none; margin-top: 24px; margin-bottom: 30px;">
-<div class="w-full rounded-[24px] overflow-hidden" style="background: rgba(30, 36, 28, 0.75); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.15); box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35); padding: 26px;">
-<div class="flex flex-col md:flex-row items-center md:items-start gap-space-24 mb-space-24" style="display: flex; flex-direction: column; gap: 24px; margin-bottom: 24px;">
-<!-- Lawyer Photo -->
-<div class="w-full md:w-1/3 flex justify-center" style="max-width: 320px;">
-<div class="relative rounded-[20px] overflow-hidden shadow-2xl" style="border: 2px solid rgba(255, 255, 255, 0.2); box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);">
+<div class="tab-view-section w-full px-space-8 md:px-space-12" id="about-view" style="display: none; margin-top: 32px; margin-bottom: 40px;">
+<div class="w-full" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); border: 1px solid rgba(255, 255, 255, 0.09); border-radius: 28px; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25); padding: 32px 28px;">
+<!-- Profile & Bio Split -->
+<div class="flex flex-col md:flex-row items-center md:items-start gap-space-24" style="display: flex; gap: 28px;">
+<!-- Portrait Card -->
+<div class="w-full md:w-auto flex justify-center" style="flex-shrink: 0; max-width: 280px; width: 100%;">
+<div style="border-radius: 22px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.12); box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35); position: relative; width: 100%;">
 <img alt="الأستاذ كريم هشام جميل - المحامي بالاستئناف العالي ومجلس الدولة" src="/assets/karim_hisham_portrait.jpg" style="width: 100%; height: auto; display: block; object-fit: cover;"/>
-<div class="absolute bottom-0 inset-x-0 p-space-12 text-center" style="background: linear-gradient(to top, rgba(0,0,0,0.85), transparent); padding: 12px;">
+<div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 16px; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%); text-align: center;">
 <p style="font-family: 'Cairo', sans-serif; font-size: 15px; font-weight: 700; color: #ffffff; margin: 0;">الأستاذ كريم هشام جميل</p>
-<p style="font-family: 'Cairo', sans-serif; font-size: 12px; color: rgba(255, 255, 255, 0.8); margin: 2px 0 0 0;">المحامي بالاستئناف العالي ومجلس الدولة</p>
+<p style="font-family: 'Cairo', sans-serif; font-size: 12px; color: rgba(255, 255, 255, 0.7); margin: 3px 0 0 0;">المحامي بالاستئناف العالي ومجلس الدولة</p>
 </div>
 </div>
 </div>
-<!-- Qualifications and Bio -->
-<div class="w-full md:w-2/3" style="flex: 1;">
-<div class="mb-space-16 pb-space-12" style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 16px; padding-bottom: 12px;">
-<h2 style="font-family: 'Cairo', sans-serif; font-size: 24px; font-weight: 800; color: #ffffff; margin: 0; line-height: 1.3;">نبذة عن الأستاذ كريم هشام جميل</h2>
-<p style="font-family: 'Cairo', sans-serif; font-size: 14.5px; color: #93c5fd; font-weight: 700; margin: 4px 0 0 0;">المحامي المقيد بالاستئناف العالي ومجلس الدولة - جمهورية مصر العربية</p>
+<!-- Bio and Areas of Practice -->
+<div style="flex: 1;">
+<div style="margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+<div style="display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px; border-radius: 9999px; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.12); margin-bottom: 10px;">
+<svg fill="none" height="14" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+<span style="font-family: 'Cairo', sans-serif; font-size: 12px; font-weight: 600; color: rgba(255, 255, 255, 0.85);">السيرة المهنية والاعتماد</span>
 </div>
-<p style="font-family: 'Cairo', sans-serif; font-size: 14px; color: rgba(255, 255, 255, 0.88); line-height: 1.8; margin-bottom: 16px;">
-          محامٍ متخصص يتمتع بخبرة واسعة وسجل حافل بالنجاحات في الترافع والتمثيل القانوني أمام أعلى الدوائر القضائية المصرية. يجمع المكتب بين عمق المعرفة القانونية والرؤية الاستراتيجية الحديثة لحماية مصالح الأفراد والشركات والمستثمرين، مع الالتزام التام بأعلى معايير النزاهة والسرية والاحترافية.
+<h2 style="font-family: 'Cairo', sans-serif; font-size: 24px; font-weight: 700; color: #ffffff; margin: 0; line-height: 1.3;">نبذة عن الأستاذ كريم هشام جميل</h2>
+<p style="font-family: 'Cairo', sans-serif; font-size: 13.5px; color: rgba(255, 255, 255, 0.7); margin: 4px 0 0 0;">المحامي المقيد بجدول الاستئناف العالي ومجلس الدولة - نقابة المحامين المصرية</p>
+</div>
+<p style="font-family: 'Cairo', sans-serif; font-size: 14px; color: rgba(255, 255, 255, 0.8); line-height: 1.85; margin: 0 0 22px 0;">
+          محامٍ متخصص يتمتع بخبرة واسعة وسجل متميز في الترافع والتمثيل القانوني أمام مختلف الدوائر القضائية المصرية. يرتكز عمل المكتب على حماية مصالح الموكلين من الأفراد والشركات والمستثمرين، من خلال تقديم استشارات استباقية وحلول قانونية حاسمة تلتزم بأعلى معايير السرية والأمانة المهنية.
         </p>
-<h3 style="font-family: 'Cairo', sans-serif; font-size: 16px; font-weight: 700; color: #ffffff; margin: 0 0 10px 0;">مجالات الاختصاص والخبرات الرئيسية:</h3>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-8 mb-space-20" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-bottom: 20px;">
-<div class="p-space-8 rounded-[12px]" style="background: rgba(255, 255, 255, 0.05); padding: 8px 12px; border: 1px solid rgba(255, 255, 255, 0.08);">
-<p style="font-family: 'Cairo', sans-serif; font-size: 13px; font-weight: 700; color: #ffffff; margin: 0;">⚖️ قضايا الجنايات والجنح الكبرى</p>
+<h3 style="font-family: 'Cairo', sans-serif; font-size: 15.5px; font-weight: 700; color: #ffffff; margin: 0 0 12px 0;">مجالات الاختصاص والخبرات القضائية:</h3>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; margin-bottom: 24px;">
+<div style="display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 12px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08);">
+<svg fill="none" height="16" stroke="rgba(255,255,255,0.7)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+<span style="font-family: 'Cairo', sans-serif; font-size: 13px; font-weight: 600; color: #ffffff;">قضايا الجنايات والجنح الكبرى</span>
 </div>
-<div class="p-space-8 rounded-[12px]" style="background: rgba(255, 255, 255, 0.05); padding: 8px 12px; border: 1px solid rgba(255, 255, 255, 0.08);">
-<p style="font-family: 'Cairo', sans-serif; font-size: 13px; font-weight: 700; color: #ffffff; margin: 0;">🏛️ محاكم مجلس الدولة والقضاء الإداري</p>
+<div style="display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 12px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08);">
+<svg fill="none" height="16" stroke="rgba(255,255,255,0.7)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M3 21h18M3 10h18M5 10v11M19 10v11M9 10v11M15 10v11M12 3l9 7H3z"></path></svg>
+<span style="font-family: 'Cairo', sans-serif; font-size: 13px; font-weight: 600; color: #ffffff;">محاكم مجلس الدولة والقضاء الإداري</span>
 </div>
-<div class="p-space-8 rounded-[12px]" style="background: rgba(255, 255, 255, 0.05); padding: 8px 12px; border: 1px solid rgba(255, 255, 255, 0.08);">
-<p style="font-family: 'Cairo', sans-serif; font-size: 13px; font-weight: 700; color: #ffffff; margin: 0;">🏢 تأسيس الشركات وهيئة الاستثمار</p>
+<div style="display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 12px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08);">
+<svg fill="none" height="16" stroke="rgba(255,255,255,0.7)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><line x1="9" x2="9" y1="9" y2="9"></line><line x1="15" x2="15" y1="9" y2="9"></line><line x1="9" x2="15" y1="15" y2="15"></line></svg>
+<span style="font-family: 'Cairo', sans-serif; font-size: 13px; font-weight: 600; color: #ffffff;">تأسيس الشركات وهيئة الاستثمار</span>
 </div>
-<div class="p-space-8 rounded-[12px]" style="background: rgba(255, 255, 255, 0.05); padding: 8px 12px; border: 1px solid rgba(255, 255, 255, 0.08);">
-<p style="font-family: 'Cairo', sans-serif; font-size: 13px; font-weight: 700; color: #ffffff; margin: 0;">📜 صياغة ومراجعة العقود التجارية</p>
+<div style="display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 12px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08);">
+<svg fill="none" height="16" stroke="rgba(255,255,255,0.7)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" x2="8" y1="13" y2="13"></line><line x1="16" x2="8" y1="17" y2="17"></line></svg>
+<span style="font-family: 'Cairo', sans-serif; font-size: 13px; font-weight: 600; color: #ffffff;">صياغة ومراجعة العقود التجارية</span>
 </div>
-<div class="p-space-8 rounded-[12px]" style="background: rgba(255, 255, 255, 0.05); padding: 8px 12px; border: 1px solid rgba(255, 255, 255, 0.08);">
-<p style="font-family: 'Cairo', sans-serif; font-size: 13px; font-weight: 700; color: #ffffff; margin: 0;">💍 زواج وخدمات وإقامات الأجانب</p>
+<div style="display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 12px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08);">
+<svg fill="none" height="16" stroke="rgba(255,255,255,0.7)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><circle cx="12" cy="12" r="10"></circle><path d="m4.93 4.93 4.24 4.24M14.83 9.17l4.24-4.24M14.83 14.83l4.24 4.24M4.93 19.07l4.24-4.24"></path></svg>
+<span style="font-family: 'Cairo', sans-serif; font-size: 13px; font-weight: 600; color: #ffffff;">زواج وخدمات وإقامات الأجانب</span>
 </div>
-<div class="p-space-8 rounded-[12px]" style="background: rgba(255, 255, 255, 0.05); padding: 8px 12px; border: 1px solid rgba(255, 255, 255, 0.08);">
-<p style="font-family: 'Cairo', sans-serif; font-size: 13px; font-weight: 700; color: #ffffff; margin: 0;">📊 الضرائب المصرية والتأمينات والنزاعات</p>
-</div>
-</div>
-<!-- Social Media Links -->
-<div class="flex items-center gap-space-12 pt-space-12" style="display: flex; gap: 12px; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 14px;">
-<span style="font-family: 'Cairo', sans-serif; font-size: 13px; color: rgba(255, 255, 255, 0.8);">تابع الأستاذ كريم على:</span>
-<a class="px-space-12 py-space-6 rounded-[8px] font-bold text-[12px] text-white transition hover:opacity-90" href="https://www.facebook.com/mr.karim.hisham.law" rel="noopener noreferrer" style="background: #1877f2; text-decoration: none; padding: 6px 12px; border-radius: 8px; font-family:'Cairo',sans-serif;" target="_blank">
-            فيسبوك
-          </a>
-<a class="px-space-12 py-space-6 rounded-[8px] font-bold text-[12px] text-white transition hover:opacity-90" href="https://www.tiktok.com/@lawyer.karim.hisham" rel="noopener noreferrer" style="background: #000000; border: 1px solid rgba(255,255,255,0.3); text-decoration: none; padding: 6px 12px; border-radius: 8px; font-family:'Cairo',sans-serif;" target="_blank">
-            تيك توك
-          </a>
+<div style="display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 12px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08);">
+<svg fill="none" height="16" stroke="rgba(255,255,255,0.7)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><line x1="18" x2="18" y1="20" y2="10"></line><line x1="12" x2="12" y1="20" y2="4"></line><line x1="6" x2="6" y1="20" y2="14"></line></svg>
+<span style="font-family: 'Cairo', sans-serif; font-size: 13px; font-weight: 600; color: #ffffff;">المنازعات الضريبية والتأمينات</span>
 </div>
 </div>
+<!-- Social Media Buttons Apple Glass -->
+<div style="display: flex; align-items: center; gap: 12px; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.08); flex-wrap: wrap;">
+<span style="font-family: 'Cairo', sans-serif; font-size: 13px; color: rgba(255, 255, 255, 0.65);">تابع الأستاذ كريم:</span>
+<a href="https://www.facebook.com/mr.karim.hisham.law" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 9999px; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.12); color: #ffffff; font-family: 'Cairo', sans-serif; font-size: 13px; font-weight: 600; text-decoration: none; transition: background 0.2s;" target="_blank">
+<svg fill="none" height="14" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+<span>فيسبوك</span>
+</a>
+<a href="https://www.tiktok.com/@lawyer.karim.hisham" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 9999px; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.12); color: #ffffff; font-family: 'Cairo', sans-serif; font-size: 13px; font-weight: 600; text-decoration: none; transition: background 0.2s;" target="_blank">
+<svg fill="none" height="14" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
+<span>تيك توك</span>
+</a>
 </div>
-<!-- Map alone in about section -->
-<div class="mt-space-20 pt-space-16" style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 18px;">
-<h3 style="font-family: 'Cairo', sans-serif; font-size: 17px; font-weight: 700; color: #ffffff; margin: 0 0 12px 0;">مقر المكتب على الخريطة:</h3>
-<div class="w-full overflow-hidden rounded-[16px]" style="border: 1px solid rgba(255, 255, 255, 0.15); height: 320px;">
-<iframe allowfullscreen="" height="100%" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13820.295260127876!2d31.1781785!3d30.0060368!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458470014c4abb9%3A0x953487e5a70ad6c6!2z2YXZg9iq2Kgg2KfZhNin2LPYqtin2LAg2YPYsdmK2YUg2YfYtNin2YUg2KfZhNmF2K3Yp9mF2Yo!5e0!3m2!1sen!2seg!4v1791735142838!5m2!1sen!2seg" style="border:0;" width="100%"></iframe>
 </div>
 </div>
 </div>
 </div>
-<div class="w-full mt-space-32 px-space-8 md:px-space-12" id="lawyer-office-location" style="margin-top: 40px; margin-bottom: 30px;">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-space-16 w-full" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;">
+<div class="w-full mt-space-32 px-space-8 md:px-space-12" id="lawyer-office-location" style="margin-top: 48px; margin-bottom: 40px;">
+<div class="w-full" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;">
 <!-- Box 1: Google Map Location -->
-<div class="w-full rounded-[24px] overflow-hidden flex flex-col justify-between" style="background: rgba(30, 36, 28, 0.75); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.15); box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35); padding: 22px;">
+<div style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); border: 1px solid rgba(255, 255, 255, 0.09); border-radius: 28px; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25); padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
 <div>
-<div class="flex items-center gap-space-12 mb-space-16 pb-space-16" style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 16px; padding-bottom: 12px;">
-<div style="width: 42px; height: 42px; border-radius: 12px; background: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-<svg fill="none" height="22" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22">
-<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
-<circle cx="12" cy="10" r="3"></circle>
-</svg>
+<!-- Card Header -->
+<div style="margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+<div style="display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px; border-radius: 9999px; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.12); margin-bottom: 10px;">
+<svg fill="none" height="14" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+<span style="font-family: 'Cairo', sans-serif; font-size: 12px; font-weight: 600; color: rgba(255, 255, 255, 0.85);">المقر الجغرافي</span>
 </div>
-<div>
-<h2 style="font-family: 'Cairo', sans-serif; font-size: 19px; font-weight: 700; color: #ffffff; margin: 0; line-height: 1.3;">مقر وموقع المكتب</h2>
-<p style="font-family: 'Cairo', sans-serif; font-size: 13px; color: rgba(255, 255, 255, 0.7); margin: 2px 0 0 0;">مكتب الأستاذ كريم هشام جميل للمحاماة والاستشارات القانونية</p>
+<h2 style="font-family: 'Cairo', sans-serif; font-size: 20px; font-weight: 700; color: #ffffff; margin: 0; line-height: 1.3;">مقر وموقع المكتب</h2>
+<p style="font-family: 'Cairo', sans-serif; font-size: 13px; color: rgba(255, 255, 255, 0.6); margin: 3px 0 0 0;">مكتب الأستاذ كريم هشام جميل للمحاماة والاستشارات القانونية</p>
 </div>
-</div>
-<div class="w-full overflow-hidden rounded-[16px]" style="border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25); height: 290px;">
+<!-- Google Maps Iframe -->
+<div style="border-radius: 18px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.09); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25); height: 280px; width: 100%;">
 <iframe allowfullscreen="" height="100%" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13820.295260127876!2d31.1781785!3d30.0060368!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458470014c4abb9%3A0x953487e5a70ad6c6!2z2YXZg9iq2Kgg2KfZhNin2LPYqtin2LAg2YPYsdmK2YUg2YfYtNin2YUg2KfZhNmF2K3Yp9mF2Yo!5e0!3m2!1sen!2seg!4v1791735142838!5m2!1sen!2seg" style="border:0;" width="100%"></iframe>
 </div>
 </div>
-<div class="mt-space-12 pt-space-12 flex justify-between items-center" style="border-top: 1px solid rgba(255, 255, 255, 0.08); margin-top: 14px; padding-top: 12px;">
-<span style="font-family: 'Cairo', sans-serif; font-size: 12px; color: rgba(255, 255, 255, 0.65);">الجيزة / القاهرة - جمهورية مصر العربية</span>
-<a href="https://maps.app.goo.gl/953487e5a70ad6c6" rel="noopener noreferrer" style="font-family: 'Cairo', sans-serif; font-size: 12px; font-weight: 700; color: #ffffff; text-decoration: underline;" target="_blank">فتح في خرائط Google ↗</a>
+<!-- Card Footer -->
+<div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.08); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+<span style="font-family: 'Cairo', sans-serif; font-size: 12.5px; color: rgba(255, 255, 255, 0.65);">الجيزة / القاهرة — جمهورية مصر العربية</span>
+<a href="https://maps.app.goo.gl/953487e5a70ad6c6" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; font-family: 'Cairo', sans-serif; font-size: 12.5px; font-weight: 700; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 9999px; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.14); transition: background 0.2s;" target="_blank">
+<span>فتح في خرائط Google</span>
+<svg fill="none" height="12" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
+</a>
 </div>
 </div>
 <!-- Box 2: Working Hours / مواعيد العمل والاستقبال -->
-<div class="w-full rounded-[24px] overflow-hidden flex flex-col justify-between" style="background: rgba(30, 36, 28, 0.75); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.15); box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35); padding: 22px;">
+<div style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); border: 1px solid rgba(255, 255, 255, 0.09); border-radius: 28px; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25); padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
 <div>
-<div class="flex items-center gap-space-12 mb-space-16 pb-space-16" style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 16px; padding-bottom: 12px;">
-<div style="width: 42px; height: 42px; border-radius: 12px; background: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-<svg fill="none" height="22" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22">
-<circle cx="12" cy="12" r="10"></circle>
-<polyline points="12 6 12 12 16 14"></polyline>
-</svg>
+<!-- Card Header -->
+<div style="margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+<div style="display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px; border-radius: 9999px; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.12); margin-bottom: 10px;">
+<svg fill="none" height="14" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+<span style="font-family: 'Cairo', sans-serif; font-size: 12px; font-weight: 600; color: rgba(255, 255, 255, 0.85);">ساعات الاستقبال</span>
 </div>
-<div>
-<h2 style="font-family: 'Cairo', sans-serif; font-size: 19px; font-weight: 700; color: #ffffff; margin: 0; line-height: 1.3;">مواعيد العمل والاستقبال</h2>
-<p style="font-family: 'Cairo', sans-serif; font-size: 13px; color: rgba(255, 255, 255, 0.7); margin: 2px 0 0 0;">المواعيد الرسمية المعتمدة لاستقبال الموكلين والاستشارات</p>
+<h2 style="font-family: 'Cairo', sans-serif; font-size: 20px; font-weight: 700; color: #ffffff; margin: 0; line-height: 1.3;">مواعيد العمل والاستقبال</h2>
+<p style="font-family: 'Cairo', sans-serif; font-size: 13px; color: rgba(255, 255, 255, 0.6); margin: 3px 0 0 0;">المواعيد الرسمية المعتمدة لاستقبال الموكلين وإجراء الاستشارات</p>
+</div>
+<!-- Schedule Rows -->
+<div style="display: flex; flex-direction: column; gap: 10px;">
+<div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; border-radius: 14px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.07);">
+<div style="display: flex; align-items: center; gap: 10px;">
+<span style="display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #34d399; box-shadow: 0 0 8px rgba(52, 211, 153, 0.5);"></span>
+<span style="font-family: 'Cairo', sans-serif; font-size: 14px; font-weight: 700; color: #ffffff;">السبت – الأربعاء</span>
+</div>
+<span style="font-family: 'Cairo', sans-serif; font-size: 13.5px; color: rgba(255, 255, 255, 0.9);">10:00 ص – 10:00 م</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; border-radius: 14px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.07);">
+<div style="display: flex; align-items: center; gap: 10px;">
+<span style="display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #34d399; box-shadow: 0 0 8px rgba(52, 211, 153, 0.5);"></span>
+<span style="font-family: 'Cairo', sans-serif; font-size: 14px; font-weight: 700; color: #ffffff;">الخميس</span>
+</div>
+<span style="font-family: 'Cairo', sans-serif; font-size: 13.5px; color: rgba(255, 255, 255, 0.9);">10:00 ص – 08:00 م</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; border-radius: 14px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05);">
+<div style="display: flex; align-items: center; gap: 10px;">
+<span style="display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #fbbf24;"></span>
+<span style="font-family: 'Cairo', sans-serif; font-size: 14px; font-weight: 700; color: #ffffff;">الجمعة</span>
+</div>
+<span style="font-family: 'Cairo', sans-serif; font-size: 13px; color: rgba(255, 255, 255, 0.65);">عطلة أسبوعية (طوارئ هاتفية فقط)</span>
+</div>
+<!-- Note -->
+<div style="padding: 12px 14px; border-radius: 14px; background: rgba(255, 255, 255, 0.03); border: 1px dashed rgba(255, 255, 255, 0.12); margin-top: 4px; display: flex; align-items: flex-start; gap: 10px;">
+<svg fill="none" height="16" stroke="rgba(255,255,255,0.7)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;" viewbox="0 0 24 24" width="16"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="16" y2="16"></line><line x1="12" x2="12.01" y1="8" y2="8"></line></svg>
+<p style="font-family: 'Cairo', sans-serif; font-size: 12px; color: rgba(255, 255, 255, 0.75); margin: 0; line-height: 1.6;">
+<strong>تنويه:</strong> يرجى التفضل بحجز الموعد مسبقاً قبل الحضور لضمان تفرغ الأستاذ كريم ودراسة ملف القضية بدقة.
+</p>
 </div>
 </div>
-<div class="flex flex-col gap-space-8" style="display: flex; flex-direction: column; gap: 10px;">
-<div class="flex justify-between items-center p-space-12 rounded-[14px]" style="background: rgba(255, 255, 255, 0.06); padding: 10px 14px; border: 1px solid rgba(255, 255, 255, 0.08);">
-<div class="flex items-center gap-space-8">
-<span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #4ade80;"></span>
-<span style="font-family: 'Cairo', sans-serif; font-size: 14px; font-weight: 700; color: #ffffff;">السبت – الأربعاء:</span>
 </div>
-<span style="font-family: 'Cairo', sans-serif; font-size: 13px; color: rgba(255, 255, 255, 0.9);">10:00 ص – 10:00 م</span>
-</div>
-<div class="flex justify-between items-center p-space-12 rounded-[14px]" style="background: rgba(255, 255, 255, 0.06); padding: 10px 14px; border: 1px solid rgba(255, 255, 255, 0.08);">
-<div class="flex items-center gap-space-8">
-<span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #4ade80;"></span>
-<span style="font-family: 'Cairo', sans-serif; font-size: 14px; font-weight: 700; color: #ffffff;">الخميس:</span>
-</div>
-<span style="font-family: 'Cairo', sans-serif; font-size: 13px; color: rgba(255, 255, 255, 0.9);">10:00 ص – 08:00 م</span>
-</div>
-<div class="flex justify-between items-center p-space-12 rounded-[14px]" style="background: rgba(255, 255, 255, 0.04); padding: 10px 14px; border: 1px solid rgba(255, 255, 255, 0.06);">
-<div class="flex items-center gap-space-8">
-<span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #facc15;"></span>
-<span style="font-family: 'Cairo', sans-serif; font-size: 14px; font-weight: 700; color: #ffffff;">الجمعة:</span>
-</div>
-<span style="font-family: 'Cairo', sans-serif; font-size: 13px; color: rgba(255, 255, 255, 0.75);">عطلة أسبوعية (طوارئ هاتفية فقط)</span>
-</div>
-<div class="p-space-12 rounded-[14px] mt-space-4" style="background: rgba(255, 255, 255, 0.04); padding: 12px; border: 1px dashed rgba(255, 255, 255, 0.18);">
-<p style="font-family: 'Cairo', sans-serif; font-size: 12px; color: rgba(255, 255, 255, 0.85); margin: 0; line-height: 1.6;">
-              💡 <strong>تنويه هام:</strong> يرجى حجز الموعد مسبقاً قبل الحضور إلى مقر المكتب لضمان تفرغ الأستاذ كريم وتخصيص الوقت الكافي لدراسة أوراق قضيتكم بدقة.
-            </p>
-</div>
-</div>
-</div>
-<div class="mt-space-16 pt-space-12 flex gap-space-8" style="display: flex; gap: 10px; margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(255, 255, 255, 0.08);">
-<a class="flex-1 flex items-center justify-center gap-space-4 py-space-8 rounded-[12px] font-bold text-[13px] text-white transition hover:opacity-90" href="tel:01124411711" style="background: #2563eb; font-family:'Cairo',sans-serif; text-decoration: none; padding: 8px 12px; border-radius: 12px;">
-          📞 اتصال مباشر
-        </a>
-<a class="flex-1 flex items-center justify-center gap-space-4 py-space-8 rounded-[12px] font-bold text-[13px] text-white transition hover:opacity-90" href="https://wa.me/201124411711" rel="noopener noreferrer" style="background: #16a34a; font-family:'Cairo',sans-serif; text-decoration: none; padding: 8px 12px; border-radius: 12px;" target="_blank">
-          💬 محادثة واتساب
-        </a>
+<!-- Action Buttons -->
+<div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.08); display: flex; gap: 10px;">
+<a href="tel:01124411711" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px; padding: 11px 16px; border-radius: 9999px; background: #ffffff; color: #111111; font-family: 'Cairo', sans-serif; font-size: 13.5px; font-weight: 700; text-decoration: none; transition: opacity 0.2s;">
+<svg fill="none" height="15" stroke="#111111" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="15"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+<span>اتصال مباشر</span>
+</a>
+<a href="https://wa.me/201124411711" rel="noopener noreferrer" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px; padding: 11px 16px; border-radius: 9999px; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.16); color: #ffffff; font-family: 'Cairo', sans-serif; font-size: 13.5px; font-weight: 600; text-decoration: none; transition: background 0.2s;" target="_blank">
+<svg fill="none" height="15" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+<span>واتساب</span>
+</a>
 </div>
 </div>
 </div>
 </div>
 <div class="flex items-center justify-center"><button class="bg-bg-overlay-highlight stroke-text text-text backdrop-blur-xl hover:bg-bg-overlay-highlight-hover focus-visible:outline-hidden focus-visible:ring focus-visible:ring-border-input-active focus-visible:ring-offset-2 false text-buttonMedium font-buttonMedium rounded-radius-max min-h-space-32 min-w-[72px] p-space-8 transition active:scale-[0.99] my-space-24 self-center relative" data-testid="view-all-collections-btn"><span class="">عرض جميع المجموعات</span></button></div></div><!--/$--><div class="scroll-mt-space-64" data-testid="store-product-search-results-anchor"></div><!--$?--><template id="B:2"></template><div class="mt-space-16" data-testid="StoreProductSearchPlaceHolder"><div class="mb-space-32"><div class="animate-pulse text-sectionTitle"><div class="block rounded-radius-4 bg-bg-overlay-inverse-04"><span class="invisible">المنتجات</span></div></div></div><div data-testid="StoreProductSearchFiltersPlaceHolder"><div class="mt-space-16 flex flex-1 flex-col gap-space-8"><div class="h-space-40 w-4/5 bg-bg-overlay-inverse-04"></div></div></div><div class="mt-space-32" data-testid="StoreProductSearchProductsPlaceHolder" style="min-height:435px"><div class="product-grid contained grid" data-testid="product-grid"><div class="flex flex-1 animate-pulse flex-col gap-space-8"><div class="aspect-square rounded-radius-16 bg-bg-overlay-inverse-04"></div><div class="h-space-16 w-4/5 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-1/2 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-[30%] bg-bg-overlay-inverse-04"></div></div><div class="flex flex-1 animate-pulse flex-col gap-space-8"><div class="aspect-square rounded-radius-16 bg-bg-overlay-inverse-04"></div><div class="h-space-16 w-4/5 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-1/2 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-[30%] bg-bg-overlay-inverse-04"></div></div><div class="flex flex-1 animate-pulse flex-col gap-space-8"><div class="aspect-square rounded-radius-16 bg-bg-overlay-inverse-04"></div><div class="h-space-16 w-4/5 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-1/2 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-[30%] bg-bg-overlay-inverse-04"></div></div><div class="flex flex-1 animate-pulse flex-col gap-space-8"><div class="aspect-square rounded-radius-16 bg-bg-overlay-inverse-04"></div><div class="h-space-16 w-4/5 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-1/2 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-[30%] bg-bg-overlay-inverse-04"></div></div><div class="flex flex-1 animate-pulse flex-col gap-space-8"><div class="aspect-square rounded-radius-16 bg-bg-overlay-inverse-04"></div><div class="h-space-16 w-4/5 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-1/2 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-[30%] bg-bg-overlay-inverse-04"></div></div><div class="flex flex-1 animate-pulse flex-col gap-space-8"><div class="aspect-square rounded-radius-16 bg-bg-overlay-inverse-04"></div><div class="h-space-16 w-4/5 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-1/2 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-[30%] bg-bg-overlay-inverse-04"></div></div><div class="flex flex-1 animate-pulse flex-col gap-space-8"><div class="aspect-square rounded-radius-16 bg-bg-overlay-inverse-04"></div><div class="h-space-16 w-4/5 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-1/2 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-[30%] bg-bg-overlay-inverse-04"></div></div><div class="flex flex-1 animate-pulse flex-col gap-space-8"><div class="aspect-square rounded-radius-16 bg-bg-overlay-inverse-04"></div><div class="h-space-16 w-4/5 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-1/2 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-[30%] bg-bg-overlay-inverse-04"></div></div><div class="flex flex-1 animate-pulse flex-col gap-space-8"><div class="aspect-square rounded-radius-16 bg-bg-overlay-inverse-04"></div><div class="h-space-16 w-4/5 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-1/2 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-[30%] bg-bg-overlay-inverse-04"></div></div><div class="flex flex-1 animate-pulse flex-col gap-space-8"><div class="aspect-square rounded-radius-16 bg-bg-overlay-inverse-04"></div><div class="h-space-16 w-4/5 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-1/2 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-[30%] bg-bg-overlay-inverse-04"></div></div><div class="flex flex-1 animate-pulse flex-col gap-space-8"><div class="aspect-square rounded-radius-16 bg-bg-overlay-inverse-04"></div><div class="h-space-16 w-4/5 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-1/2 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-[30%] bg-bg-overlay-inverse-04"></div></div><div class="flex flex-1 animate-pulse flex-col gap-space-8"><div class="aspect-square rounded-radius-16 bg-bg-overlay-inverse-04"></div><div class="h-space-16 w-4/5 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-1/2 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-[30%] bg-bg-overlay-inverse-04"></div></div><div class="flex flex-1 animate-pulse flex-col gap-space-8"><div class="aspect-square rounded-radius-16 bg-bg-overlay-inverse-04"></div><div class="h-space-16 w-4/5 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-1/2 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-[30%] bg-bg-overlay-inverse-04"></div></div><div class="flex flex-1 animate-pulse flex-col gap-space-8"><div class="aspect-square rounded-radius-16 bg-bg-overlay-inverse-04"></div><div class="h-space-16 w-4/5 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-1/2 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-[30%] bg-bg-overlay-inverse-04"></div></div><div class="flex flex-1 animate-pulse flex-col gap-space-8"><div class="aspect-square rounded-radius-16 bg-bg-overlay-inverse-04"></div><div class="h-space-16 w-4/5 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-1/2 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-[30%] bg-bg-overlay-inverse-04"></div></div><div class="flex flex-1 animate-pulse flex-col gap-space-8"><div class="aspect-square rounded-radius-16 bg-bg-overlay-inverse-04"></div><div class="h-space-16 w-4/5 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-1/2 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-[30%] bg-bg-overlay-inverse-04"></div></div><div class="flex flex-1 animate-pulse flex-col gap-space-8"><div class="aspect-square rounded-radius-16 bg-bg-overlay-inverse-04"></div><div class="h-space-16 w-4/5 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-1/2 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-[30%] bg-bg-overlay-inverse-04"></div></div><div class="flex flex-1 animate-pulse flex-col gap-space-8"><div class="aspect-square rounded-radius-16 bg-bg-overlay-inverse-04"></div><div class="h-space-16 w-4/5 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-1/2 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-[30%] bg-bg-overlay-inverse-04"></div></div><div class="flex flex-1 animate-pulse flex-col gap-space-8"><div class="aspect-square rounded-radius-16 bg-bg-overlay-inverse-04"></div><div class="h-space-16 w-4/5 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-1/2 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-[30%] bg-bg-overlay-inverse-04"></div></div><div class="flex flex-1 animate-pulse flex-col gap-space-8"><div class="aspect-square rounded-radius-16 bg-bg-overlay-inverse-04"></div><div class="h-space-16 w-4/5 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-1/2 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-[30%] bg-bg-overlay-inverse-04"></div></div><div class="flex flex-1 animate-pulse flex-col gap-space-8"><div class="aspect-square rounded-radius-16 bg-bg-overlay-inverse-04"></div><div class="h-space-16 w-4/5 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-1/2 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-[30%] bg-bg-overlay-inverse-04"></div></div><div class="flex flex-1 animate-pulse flex-col gap-space-8"><div class="aspect-square rounded-radius-16 bg-bg-overlay-inverse-04"></div><div class="h-space-16 w-4/5 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-1/2 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-[30%] bg-bg-overlay-inverse-04"></div></div><div class="flex flex-1 animate-pulse flex-col gap-space-8"><div class="aspect-square rounded-radius-16 bg-bg-overlay-inverse-04"></div><div class="h-space-16 w-4/5 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-1/2 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-[30%] bg-bg-overlay-inverse-04"></div></div><div class="flex flex-1 animate-pulse flex-col gap-space-8"><div class="aspect-square rounded-radius-16 bg-bg-overlay-inverse-04"></div><div class="h-space-16 w-4/5 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-1/2 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-[30%] bg-bg-overlay-inverse-04"></div></div><div class="flex flex-1 animate-pulse flex-col gap-space-8"><div class="aspect-square rounded-radius-16 bg-bg-overlay-inverse-04"></div><div class="h-space-16 w-4/5 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-1/2 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-[30%] bg-bg-overlay-inverse-04"></div></div><div class="flex flex-1 animate-pulse flex-col gap-space-8"><div class="aspect-square rounded-radius-16 bg-bg-overlay-inverse-04"></div><div class="h-space-16 w-4/5 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-1/2 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-[30%] bg-bg-overlay-inverse-04"></div></div><div class="flex flex-1 animate-pulse flex-col gap-space-8"><div class="aspect-square rounded-radius-16 bg-bg-overlay-inverse-04"></div><div class="h-space-16 w-4/5 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-1/2 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-[30%] bg-bg-overlay-inverse-04"></div></div><div class="flex flex-1 animate-pulse flex-col gap-space-8"><div class="aspect-square rounded-radius-16 bg-bg-overlay-inverse-04"></div><div class="h-space-16 w-4/5 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-1/2 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-[30%] bg-bg-overlay-inverse-04"></div></div><div class="flex flex-1 animate-pulse flex-col gap-space-8"><div class="aspect-square rounded-radius-16 bg-bg-overlay-inverse-04"></div><div class="h-space-16 w-4/5 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-1/2 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-[30%] bg-bg-overlay-inverse-04"></div></div><div class="flex flex-1 animate-pulse flex-col gap-space-8"><div class="aspect-square rounded-radius-16 bg-bg-overlay-inverse-04"></div><div class="h-space-16 w-4/5 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-1/2 bg-bg-overlay-inverse-04"></div><div class="h-space-8 w-[30%] bg-bg-overlay-inverse-04"></div></div></div></div></div><!--/$--><div class="light"></div></div><!-- FAQ Section (الأسئلة الشائعة) -->
-<div class="w-full mt-space-32 px-space-8 md:px-space-12" id="faq-section" style="margin-top: 40px; margin-bottom: 30px;">
-<div class="w-full rounded-[24px] overflow-hidden" style="background: rgba(30, 36, 28, 0.75); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.15); box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35); padding: 26px;">
-<div class="flex items-center gap-space-12 mb-space-20 pb-space-16" style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 20px; padding-bottom: 14px;">
-<div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-<svg fill="none" height="24" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24">
-<circle cx="12" cy="12" r="10"></circle>
-<path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-<line x1="12" x2="12.01" y1="17" y2="17"></line>
-</svg>
+<div class="w-full mt-space-32 px-space-8 md:px-space-12" id="faq-section" style="margin-top: 48px; margin-bottom: 40px;">
+<div class="w-full" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); border: 1px solid rgba(255, 255, 255, 0.09); border-radius: 28px; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25); padding: 32px 28px;">
+<div style="margin-bottom: 24px; padding-bottom: 18px; border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+<div style="display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px; border-radius: 9999px; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.12); margin-bottom: 10px;">
+<svg fill="none" height="14" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" x2="12.01" y1="17" y2="17"></line></svg>
+<span style="font-family: 'Cairo', sans-serif; font-size: 12px; font-weight: 600; color: rgba(255, 255, 255, 0.85);">إجابات واستشارات قانونية</span>
 </div>
-<div>
-<h2 style="font-family: 'Cairo', sans-serif; font-size: 21px; font-weight: 700; color: #ffffff; margin: 0; line-height: 1.3;">الأسئلة الشائعة والاستشارات القانونية</h2>
-<p style="font-family: 'Cairo', sans-serif; font-size: 13px; color: rgba(255, 255, 255, 0.7); margin: 3px 0 0 0;">إجابات قانونية وافية وموثوقة على أكثر الأسئلة تداولاً لدى موكلينا</p>
+<h2 style="font-family: 'Cairo', sans-serif; font-size: 24px; font-weight: 700; color: #ffffff; margin: 0; line-height: 1.3;">الأسئلة الأكثر تداولاً</h2>
+<p style="font-family: 'Cairo', sans-serif; font-size: 13.5px; color: rgba(255, 255, 255, 0.6); margin: 4px 0 0 0;">إجابات وافية وموثوقة حول التمثيل القضائي، الاستشارات، وتأسيس الشركات</p>
 </div>
-</div>
-<div class="flex flex-col gap-space-8" style="display: flex; flex-direction: column; gap: 10px;">
-<!-- Q1 -->
-<div class="faq-item rounded-[16px] overflow-hidden" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.08);">
-<button class="faq-trigger w-full flex justify-between items-center text-right p-space-16" style="padding: 14px 18px; width: 100%; background: transparent; border: none; cursor: pointer;">
-<span style="font-family: 'Cairo', sans-serif; font-size: 15px; font-weight: 700; color: #ffffff;">1. ما هي درجات المحاكم التي يترافع أمامها الأستاذ كريم هشام؟</span>
-<span class="faq-icon" style="color: #ffffff; font-size: 18px; transition: transform 0.2s;">▾</span>
+<div style="display: flex; flex-direction: column;">
+<div class="faq-item" style="border-bottom: 1px solid rgba(255, 255, 255, 0.07);">
+<button class="faq-trigger" onmouseout="this.style.opacity='1'" onmouseover="this.style.opacity='0.85'" style="width: 100%; display: flex; justify-content: space-between; align-items: center; text-align: right; padding: 18px 4px; background: transparent; border: none; cursor: pointer; transition: opacity 0.2s;">
+<span style="font-family: 'Cairo', sans-serif; font-size: 15.5px; font-weight: 600; color: #ffffff; line-height: 1.5;">ما هي درجات المحاكم التي يترافع أمامها الأستاذ كريم هشام؟</span>
+<span class="faq-icon-badge" style="width: 30px; height: 30px; border-radius: 50%; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-left: 8px;">
+<svg class="faq-icon" fill="none" height="14" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);" viewbox="0 0 24 24" width="14"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</span>
 </button>
-<div class="faq-content px-space-16 pb-space-16" style="padding: 0 18px 14px 18px; display: none;">
-<p style="font-family: 'Cairo', sans-serif; font-size: 13.5px; color: rgba(255, 255, 255, 0.85); line-height: 1.7; margin: 0;">الأستاذ كريم هشام مقيد ومخول بالترافع أمام محاكم الاستئناف العالي ومجلس الدولة (محكمة القضاء الإداري والمحكمة الإدارية العليا)، بالإضافة إلى كافة محاكم الجنايات والجنح والدوائر المدنية والتجارية ومحاكم الأسرة على مستوى جمهورية مصر العربية.</p>
+<div class="faq-content" style="padding: 0 4px 18px 4px; display: none;">
+<p style="font-family: 'Cairo', sans-serif; font-size: 14px; color: rgba(255, 255, 255, 0.72); line-height: 1.8; margin: 0;">الأستاذ كريم هشام مقيد ومخول بالترافع أمام محاكم الاستئناف العالي ومجلس الدولة (محكمة القضاء الإداري والمحكمة الإدارية العليا)، بالإضافة إلى كافة محاكم الجنايات والجنح والدوائر المدنية والتجارية ومحاكم الأسرة على مستوى جمهورية مصر العربية.</p>
 </div>
 </div>
-<!-- Q2 -->
-<div class="faq-item rounded-[16px] overflow-hidden" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.08);">
-<button class="faq-trigger w-full flex justify-between items-center text-right p-space-16" style="padding: 14px 18px; width: 100%; background: transparent; border: none; cursor: pointer;">
-<span style="font-family: 'Cairo', sans-serif; font-size: 15px; font-weight: 700; color: #ffffff;">2. كيف يتم حجز استشارة قانونية وما هي المستندات المطلوبة؟</span>
-<span class="faq-icon" style="color: #ffffff; font-size: 18px; transition: transform 0.2s;">▾</span>
+<div class="faq-item" style="border-bottom: 1px solid rgba(255, 255, 255, 0.07);">
+<button class="faq-trigger" onmouseout="this.style.opacity='1'" onmouseover="this.style.opacity='0.85'" style="width: 100%; display: flex; justify-content: space-between; align-items: center; text-align: right; padding: 18px 4px; background: transparent; border: none; cursor: pointer; transition: opacity 0.2s;">
+<span style="font-family: 'Cairo', sans-serif; font-size: 15.5px; font-weight: 600; color: #ffffff; line-height: 1.5;">كيف يتم حجز استشارة قانونية وما هي المستندات المطلوبة؟</span>
+<span class="faq-icon-badge" style="width: 30px; height: 30px; border-radius: 50%; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-left: 8px;">
+<svg class="faq-icon" fill="none" height="14" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);" viewbox="0 0 24 24" width="14"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</span>
 </button>
-<div class="faq-content px-space-16 pb-space-16" style="padding: 0 18px 14px 18px; display: none;">
-<p style="font-family: 'Cairo', sans-serif; font-size: 13.5px; color: rgba(255, 255, 255, 0.85); line-height: 1.7; margin: 0;">يمكن حجز الاستشارة مباشرة عبر الاتصال هاتفياً على الرقم (01124411711) أو ملء نموذج الحجز الفوري عبر واتساب في هذا الموقع. يُرجى إحضار أو إرسال صور المستندات والعقود ومحاضر الشرطة أو الأحكام السابقة المتعلقة بموضوع القضية للاطلاع عليها بدقة.</p>
+<div class="faq-content" style="padding: 0 4px 18px 4px; display: none;">
+<p style="font-family: 'Cairo', sans-serif; font-size: 14px; color: rgba(255, 255, 255, 0.72); line-height: 1.8; margin: 0;">يمكن حجز الاستشارة مباشرة عبر الاتصال هاتفياً على الرقم (01124411711) أو ملء نموذج الحجز الفوري عبر واتساب في هذا الموقع. يُرجى إحضار أو إرسال صور المستندات والعقود ومحاضر الشرطة أو الأحكام السابقة المتعلقة بموضوع القضية للاطلاع عليها بدقة.</p>
 </div>
 </div>
-<!-- Q3 -->
-<div class="faq-item rounded-[16px] overflow-hidden" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.08);">
-<button class="faq-trigger w-full flex justify-between items-center text-right p-space-16" style="padding: 14px 18px; width: 100%; background: transparent; border: none; cursor: pointer;">
-<span style="font-family: 'Cairo', sans-serif; font-size: 15px; font-weight: 700; color: #ffffff;">3. ما هو دور المكتب في قضايا الجنايات والجنح والتحقيقات العاجلة؟</span>
-<span class="faq-icon" style="color: #ffffff; font-size: 18px; transition: transform 0.2s;">▾</span>
+<div class="faq-item" style="border-bottom: 1px solid rgba(255, 255, 255, 0.07);">
+<button class="faq-trigger" onmouseout="this.style.opacity='1'" onmouseover="this.style.opacity='0.85'" style="width: 100%; display: flex; justify-content: space-between; align-items: center; text-align: right; padding: 18px 4px; background: transparent; border: none; cursor: pointer; transition: opacity 0.2s;">
+<span style="font-family: 'Cairo', sans-serif; font-size: 15.5px; font-weight: 600; color: #ffffff; line-height: 1.5;">ما هو دور المكتب في قضايا الجنايات والجنح والتحقيقات العاجلة؟</span>
+<span class="faq-icon-badge" style="width: 30px; height: 30px; border-radius: 50%; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-left: 8px;">
+<svg class="faq-icon" fill="none" height="14" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);" viewbox="0 0 24 24" width="14"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</span>
 </button>
-<div class="faq-content px-space-16 pb-space-16" style="padding: 0 18px 14px 18px; display: none;">
-<p style="font-family: 'Cairo', sans-serif; font-size: 13.5px; color: rgba(255, 255, 255, 0.85); line-height: 1.7; margin: 0;">يتولى المكتب الحضور الفوري مع المتهمين في سرايا النيابة العامة ونيابة أمن الدولة، وحضور جلسات تجديد الحبس وإجراءات إخلاء السبيل بكفالة، وتقديم الدفوع الجوهرية (بطلان القبض والتفتيش، انتفاء أركان الجريمة)، والترافع أمام محاكم الجنايات والجنح، وإعداد مذكرات الطعن بالنقض.</p>
+<div class="faq-content" style="padding: 0 4px 18px 4px; display: none;">
+<p style="font-family: 'Cairo', sans-serif; font-size: 14px; color: rgba(255, 255, 255, 0.72); line-height: 1.8; margin: 0;">يتولى المكتب الحضور الفوري مع المتهمين في سرايا النيابة العامة ونيابة أمن الدولة، وحضور جلسات تجديد الحبس وإجراءات إخلاء السبيل بكفالة، وتقديم الدفوع الجوهرية (بطلان القبض والتفتيش، انتفاء أركان الجريمة)، والترافع أمام محاكم الجنايات والجنح، وإعداد مذكرات الطعن بالنقض.</p>
 </div>
 </div>
-<!-- Q4 -->
-<div class="faq-item rounded-[16px] overflow-hidden" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.08);">
-<button class="faq-trigger w-full flex justify-between items-center text-right p-space-16" style="padding: 14px 18px; width: 100%; background: transparent; border: none; cursor: pointer;">
-<span style="font-family: 'Cairo', sans-serif; font-size: 15px; font-weight: 700; color: #ffffff;">4. كيف يدعم المكتب رواد الأعمال والشركات في التأسيس والترخيص؟</span>
-<span class="faq-icon" style="color: #ffffff; font-size: 18px; transition: transform 0.2s;">▾</span>
+<div class="faq-item" style="border-bottom: 1px solid rgba(255, 255, 255, 0.07);">
+<button class="faq-trigger" onmouseout="this.style.opacity='1'" onmouseover="this.style.opacity='0.85'" style="width: 100%; display: flex; justify-content: space-between; align-items: center; text-align: right; padding: 18px 4px; background: transparent; border: none; cursor: pointer; transition: opacity 0.2s;">
+<span style="font-family: 'Cairo', sans-serif; font-size: 15.5px; font-weight: 600; color: #ffffff; line-height: 1.5;">كيف يدعم المكتب رواد الأعمال والشركات في التأسيس والترخيص؟</span>
+<span class="faq-icon-badge" style="width: 30px; height: 30px; border-radius: 50%; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-left: 8px;">
+<svg class="faq-icon" fill="none" height="14" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);" viewbox="0 0 24 24" width="14"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</span>
 </button>
-<div class="faq-content px-space-16 pb-space-16" style="padding: 0 18px 14px 18px; display: none;">
-<p style="font-family: 'Cairo', sans-serif; font-size: 13.5px; color: rgba(255, 255, 255, 0.85); line-height: 1.7; margin: 0;">يقوم المكتب بكافة خطوات تأسيس الشركات بمختلف أشكالها (شركات ذات مسؤولية محدودة، مساهمة، شركات الفرد الواحد، شركات التضامن) عبر الهيئة العامة للاستثمار والمناطق الحرة، واستخراج السجل التجاري والصناعي، والبطاقة الضريبية، وفتح الملفات التأمينية، والتراخيص التشغيلية.</p>
+<div class="faq-content" style="padding: 0 4px 18px 4px; display: none;">
+<p style="font-family: 'Cairo', sans-serif; font-size: 14px; color: rgba(255, 255, 255, 0.72); line-height: 1.8; margin: 0;">يقوم المكتب بكافة خطوات تأسيس الشركات بمختلف أشكالها (شركات ذات مسؤولية محدودة، مساهمة، شركات الفرد الواحد، شركات التضامن) عبر الهيئة العامة للاستثمار والمناطق الحرة، واستخراج السجل التجاري والصناعي، والبطاقة الضريبية، وفتح الملفات التأمينية، والتراخيص التشغيلية.</p>
 </div>
 </div>
-<!-- Q5 -->
-<div class="faq-item rounded-[16px] overflow-hidden" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.08);">
-<button class="faq-trigger w-full flex justify-between items-center text-right p-space-16" style="padding: 14px 18px; width: 100%; background: transparent; border: none; cursor: pointer;">
-<span style="font-family: 'Cairo', sans-serif; font-size: 15px; font-weight: 700; color: #ffffff;">5. ما هي شروط وإجراءات توثيق زواج الأجانب داخل جمهورية مصر العربية؟</span>
-<span class="faq-icon" style="color: #ffffff; font-size: 18px; transition: transform 0.2s;">▾</span>
+<div class="faq-item" style="border-bottom: 1px solid rgba(255, 255, 255, 0.07);">
+<button class="faq-trigger" onmouseout="this.style.opacity='1'" onmouseover="this.style.opacity='0.85'" style="width: 100%; display: flex; justify-content: space-between; align-items: center; text-align: right; padding: 18px 4px; background: transparent; border: none; cursor: pointer; transition: opacity 0.2s;">
+<span style="font-family: 'Cairo', sans-serif; font-size: 15.5px; font-weight: 600; color: #ffffff; line-height: 1.5;">ما هي شروط وإجراءات توثيق زواج الأجانب داخل جمهورية مصر العربية؟</span>
+<span class="faq-icon-badge" style="width: 30px; height: 30px; border-radius: 50%; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-left: 8px;">
+<svg class="faq-icon" fill="none" height="14" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);" viewbox="0 0 24 24" width="14"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</span>
 </button>
-<div class="faq-content px-space-16 pb-space-16" style="padding: 0 18px 14px 18px; display: none;">
-<p style="font-family: 'Cairo', sans-serif; font-size: 13.5px; color: rgba(255, 255, 255, 0.85); line-height: 1.7; margin: 0;">يتطلب توثيق زواج الأجانب شهادة عدم ممانعة من سفارة الطرف الأجنبي موثقة من الخارجية المصرية، وشهادة إقامة لغير غرض السياحة، وشهادة فحص طبي. ويتولى المكتب تجهيز الملف بالكامل والتصديقات والتوثيق الرسمي بمكتب توثيق الأحوال الشخصية للأجانب بوزارة العدل بميدان لاظوغلي بالقاهرة.</p>
+<div class="faq-content" style="padding: 0 4px 18px 4px; display: none;">
+<p style="font-family: 'Cairo', sans-serif; font-size: 14px; color: rgba(255, 255, 255, 0.72); line-height: 1.8; margin: 0;">يتطلب توثيق زواج الأجانب شهادة عدم ممانعة من سفارة الطرف الأجنبي موثقة من الخارجية المصرية، وشهادة إقامة لغير غرض السياحة، وشهادة فحص طبي. ويتولى المكتب تجهيز الملف بالكامل والتصديقات والتوثيق الرسمي بمكتب توثيق الأحوال الشخصية للأجانب بوزارة العدل بميدان لاظوغلي بالقاهرة.</p>
 </div>
 </div>
-<!-- Q6 -->
-<div class="faq-item rounded-[16px] overflow-hidden" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.08);">
-<button class="faq-trigger w-full flex justify-between items-center text-right p-space-16" style="padding: 14px 18px; width: 100%; background: transparent; border: none; cursor: pointer;">
-<span style="font-family: 'Cairo', sans-serif; font-size: 15px; font-weight: 700; color: #ffffff;">6. ما هي اختصاصات المكتب أمام محاكم مجلس الدولة والقضاء الإداري؟</span>
-<span class="faq-icon" style="color: #ffffff; font-size: 18px; transition: transform 0.2s;">▾</span>
+<div class="faq-item" style="border-bottom: 1px solid rgba(255, 255, 255, 0.07);">
+<button class="faq-trigger" onmouseout="this.style.opacity='1'" onmouseover="this.style.opacity='0.85'" style="width: 100%; display: flex; justify-content: space-between; align-items: center; text-align: right; padding: 18px 4px; background: transparent; border: none; cursor: pointer; transition: opacity 0.2s;">
+<span style="font-family: 'Cairo', sans-serif; font-size: 15.5px; font-weight: 600; color: #ffffff; line-height: 1.5;">ما هي اختصاصات المكتب أمام محاكم مجلس الدولة والقضاء الإداري؟</span>
+<span class="faq-icon-badge" style="width: 30px; height: 30px; border-radius: 50%; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-left: 8px;">
+<svg class="faq-icon" fill="none" height="14" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);" viewbox="0 0 24 24" width="14"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</span>
 </button>
-<div class="faq-content px-space-16 pb-space-16" style="padding: 0 18px 14px 18px; display: none;">
-<p style="font-family: 'Cairo', sans-serif; font-size: 13.5px; color: rgba(255, 255, 255, 0.85); line-height: 1.7; margin: 0;">نختص برفع ومتابعة دعاوى إلغاء القرارات الإدارية المعيبة (قرارات الفصل، الجزاءات، قرارات التراخيص والجهات الحكومية)، ودعاوى التعويض عن القرارات الإدارية غير المشروعة، ومنازعات عقود المقاولات والتوريدات الحكومية، والطعن أمام المحكمة الإدارية العليا.</p>
+<div class="faq-content" style="padding: 0 4px 18px 4px; display: none;">
+<p style="font-family: 'Cairo', sans-serif; font-size: 14px; color: rgba(255, 255, 255, 0.72); line-height: 1.8; margin: 0;">نختص برفع ومتابعة دعاوى إلغاء القرارات الإدارية المعيبة (قرارات الفصل، الجزاءات، قرارات التراخيص والجهات الحكومية)، ودعاوى التعويض عن القرارات الإدارية غير المشروعة، ومنازعات عقود المقاولات والتوريدات الحكومية، والطعن أمام المحكمة الإدارية العليا.</p>
 </div>
 </div>
-<!-- Q7 -->
-<div class="faq-item rounded-[16px] overflow-hidden" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.08);">
-<button class="faq-trigger w-full flex justify-between items-center text-right p-space-16" style="padding: 14px 18px; width: 100%; background: transparent; border: none; cursor: pointer;">
-<span style="font-family: 'Cairo', sans-serif; font-size: 15px; font-weight: 700; color: #ffffff;">7. كيف يقدم المكتب الدعم في المنازعات الضريبية والتأمينات الاجتماعية؟</span>
-<span class="faq-icon" style="color: #ffffff; font-size: 18px; transition: transform 0.2s;">▾</span>
+<div class="faq-item" style="border-bottom: 1px solid rgba(255, 255, 255, 0.07);">
+<button class="faq-trigger" onmouseout="this.style.opacity='1'" onmouseover="this.style.opacity='0.85'" style="width: 100%; display: flex; justify-content: space-between; align-items: center; text-align: right; padding: 18px 4px; background: transparent; border: none; cursor: pointer; transition: opacity 0.2s;">
+<span style="font-family: 'Cairo', sans-serif; font-size: 15.5px; font-weight: 600; color: #ffffff; line-height: 1.5;">كيف يقدم المكتب الدعم في المنازعات الضريبية والتأمينات الاجتماعية؟</span>
+<span class="faq-icon-badge" style="width: 30px; height: 30px; border-radius: 50%; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-left: 8px;">
+<svg class="faq-icon" fill="none" height="14" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);" viewbox="0 0 24 24" width="14"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</span>
 </button>
-<div class="faq-content px-space-16 pb-space-16" style="padding: 0 18px 14px 18px; display: none;">
-<p style="font-family: 'Cairo', sans-serif; font-size: 13.5px; color: rgba(255, 255, 255, 0.85); line-height: 1.7; margin: 0;">يمثل المكتب عملاءه أمام مأموريات الضرائب ولجان الطعن ولجان إنهاء المنازعات الضريبية (ضريبة الدخل، القيمة المضافة، والضريبة العقارية)، مع معالجة ملفات التهرب الضريبي، وإنهاء النزاعات وتسوية الاشتراكات المتأخرة لدى الهيئة القومية للتأمين الاجتماعي.</p>
+<div class="faq-content" style="padding: 0 4px 18px 4px; display: none;">
+<p style="font-family: 'Cairo', sans-serif; font-size: 14px; color: rgba(255, 255, 255, 0.72); line-height: 1.8; margin: 0;">يمثل المكتب عملاءه أمام مأموريات الضرائب ولجان الطعن ولجان إنهاء المنازعات الضريبية (ضريبة الدخل، القيمة المضافة، والضريبة العقارية)، مع معالجة ملفات التهرب الضريبي، وإنهاء النزاعات وتسوية الاشتراكات المتأخرة لدى الهيئة القومية للتأمين الاجتماعي.</p>
 </div>
 </div>
-<!-- Q8 -->
-<div class="faq-item rounded-[16px] overflow-hidden" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.08);">
-<button class="faq-trigger w-full flex justify-between items-center text-right p-space-16" style="padding: 14px 18px; width: 100%; background: transparent; border: none; cursor: pointer;">
-<span style="font-family: 'Cairo', sans-serif; font-size: 15px; font-weight: 700; color: #ffffff;">8. هل يقدم المكتب خدمات الاستشارات والتمثيل القانوني بعقود سنوية؟</span>
-<span class="faq-icon" style="color: #ffffff; font-size: 18px; transition: transform 0.2s;">▾</span>
+<div class="faq-item" style="border-bottom: 1px solid rgba(255, 255, 255, 0.07);">
+<button class="faq-trigger" onmouseout="this.style.opacity='1'" onmouseover="this.style.opacity='0.85'" style="width: 100%; display: flex; justify-content: space-between; align-items: center; text-align: right; padding: 18px 4px; background: transparent; border: none; cursor: pointer; transition: opacity 0.2s;">
+<span style="font-family: 'Cairo', sans-serif; font-size: 15.5px; font-weight: 600; color: #ffffff; line-height: 1.5;">هل يقدم المكتب خدمات الاستشارات والتمثيل القانوني بعقود سنوية؟</span>
+<span class="faq-icon-badge" style="width: 30px; height: 30px; border-radius: 50%; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-left: 8px;">
+<svg class="faq-icon" fill="none" height="14" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);" viewbox="0 0 24 24" width="14"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</span>
 </button>
-<div class="faq-content px-space-16 pb-space-16" style="padding: 0 18px 14px 18px; display: none;">
-<p style="font-family: 'Cairo', sans-serif; font-size: 13.5px; color: rgba(255, 255, 255, 0.85); line-height: 1.7; margin: 0;">نعم، يوفر المكتب باقات استشارات سنوية متكاملة للشركات والمصانع وأصحاب الأعمال، تتضمن الإشراف القانوني المستمر، مراجعة وصياغة العقود الدورية، حضور الجمعيات العمومية، إدارة ملفات العمل والعمال، والتمثيل القضائي أمام كافة المحاكم والجهات الإدارية.</p>
+<div class="faq-content" style="padding: 0 4px 18px 4px; display: none;">
+<p style="font-family: 'Cairo', sans-serif; font-size: 14px; color: rgba(255, 255, 255, 0.72); line-height: 1.8; margin: 0;">نعم، يوفر المكتب باقات استشارات سنوية متكاملة للشركات والمصانع وأصحاب الأعمال، تتضمن الإشراف القانوني المستمر، مراجعة وصياغة العقود الدورية، حضور الجمعيات العمومية، إدارة ملفات العمل والعمال، والتمثيل القضائي أمام كافة المحاكم والجهات الإدارية.</p>
 </div>
 </div>
-<!-- Q9 -->
-<div class="faq-item rounded-[16px] overflow-hidden" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.08);">
-<button class="faq-trigger w-full flex justify-between items-center text-right p-space-16" style="padding: 14px 18px; width: 100%; background: transparent; border: none; cursor: pointer;">
-<span style="font-family: 'Cairo', sans-serif; font-size: 15px; font-weight: 700; color: #ffffff;">9. ما هي أهمية صياغة وتدقيق العقود التجارية عبر محامٍ متخصص؟</span>
-<span class="faq-icon" style="color: #ffffff; font-size: 18px; transition: transform 0.2s;">▾</span>
+<div class="faq-item" style="border-bottom: 1px solid rgba(255, 255, 255, 0.07);">
+<button class="faq-trigger" onmouseout="this.style.opacity='1'" onmouseover="this.style.opacity='0.85'" style="width: 100%; display: flex; justify-content: space-between; align-items: center; text-align: right; padding: 18px 4px; background: transparent; border: none; cursor: pointer; transition: opacity 0.2s;">
+<span style="font-family: 'Cairo', sans-serif; font-size: 15.5px; font-weight: 600; color: #ffffff; line-height: 1.5;">ما هي أهمية صياغة وتدقيق العقود التجارية عبر محامٍ متخصص؟</span>
+<span class="faq-icon-badge" style="width: 30px; height: 30px; border-radius: 50%; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-left: 8px;">
+<svg class="faq-icon" fill="none" height="14" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);" viewbox="0 0 24 24" width="14"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</span>
 </button>
-<div class="faq-content px-space-16 pb-space-16" style="padding: 0 18px 14px 18px; display: none;">
-<p style="font-family: 'Cairo', sans-serif; font-size: 13.5px; color: rgba(255, 255, 255, 0.85); line-height: 1.7; margin: 0;">صياغة العقود التجارية بدقة تحمي حقوق الأطراف وتغلق الثغرات القانونية المحتملة، وتضبط شروط السداد، والتسليم، والشرط الجزائي، وآليات التحكيم وفض المنازعات، مما يقي الشركات من تكبد خسائر مالية فادحة أو الدخول في نزاعات قضائية طويلة الأمد.</p>
+<div class="faq-content" style="padding: 0 4px 18px 4px; display: none;">
+<p style="font-family: 'Cairo', sans-serif; font-size: 14px; color: rgba(255, 255, 255, 0.72); line-height: 1.8; margin: 0;">صياغة العقود التجارية بدقة تحمي حقوق الأطراف وتغلق الثغرات القانونية المحتملة، وتضبط شروط السداد، والتسليم، والشرط الجزائي، وآليات التحكيم وفض المنازعات، مما يقي الشركات من تكبد خسائر مالية فادحة أو الدخول في نزاعات قضائية طويلة الأمد.</p>
 </div>
 </div>
-<!-- Q10 -->
-<div class="faq-item rounded-[16px] overflow-hidden" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.08);">
-<button class="faq-trigger w-full flex justify-between items-center text-right p-space-16" style="padding: 14px 18px; width: 100%; background: transparent; border: none; cursor: pointer;">
-<span style="font-family: 'Cairo', sans-serif; font-size: 15px; font-weight: 700; color: #ffffff;">10. كيف تضمنون سرية بيانات واستشارات الموكلين؟</span>
-<span class="faq-icon" style="color: #ffffff; font-size: 18px; transition: transform 0.2s;">▾</span>
+<div class="faq-item">
+<button class="faq-trigger" onmouseout="this.style.opacity='1'" onmouseover="this.style.opacity='0.85'" style="width: 100%; display: flex; justify-content: space-between; align-items: center; text-align: right; padding: 18px 4px; background: transparent; border: none; cursor: pointer; transition: opacity 0.2s;">
+<span style="font-family: 'Cairo', sans-serif; font-size: 15.5px; font-weight: 600; color: #ffffff; line-height: 1.5;">كيف تضمنون سرية بيانات واستشارات الموكلين؟</span>
+<span class="faq-icon-badge" style="width: 30px; height: 30px; border-radius: 50%; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-left: 8px;">
+<svg class="faq-icon" fill="none" height="14" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);" viewbox="0 0 24 24" width="14"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</span>
 </button>
-<div class="faq-content px-space-16 pb-space-16" style="padding: 0 18px 14px 18px; display: none;">
-<p style="font-family: 'Cairo', sans-serif; font-size: 13.5px; color: rgba(255, 255, 255, 0.85); line-height: 1.7; margin: 0;">يلتزم المكتب التزاماً صارماً بأعلى معايير السرية المهنية وميثاق الشرف القضائي وقانون المحاماة المصري. جميع البيانات والمستندات والتفاصيل التي يدلي بها الموكل تعامل بسرية تامة ومطلقة ولا يتم إفشاؤها أو تداولها تحت أي ظرف.</p>
+<div class="faq-content" style="padding: 0 4px 18px 4px; display: none;">
+<p style="font-family: 'Cairo', sans-serif; font-size: 14px; color: rgba(255, 255, 255, 0.72); line-height: 1.8; margin: 0;">يلتزم المكتب التزاماً صارماً بأعلى معايير السرية المهنية وميثاق الشرف القضائي وقانون المحاماة المصري. جميع البيانات والمستندات والتفاصيل التي يدلي بها الموكل تعامل بسرية تامة ومطلقة ولا يتم إفشاؤها أو تداولها تحت أي ظرف.</p>
 </div>
 </div>
 </div>
@@ -2084,112 +2128,139 @@ $RC=function(a,b){if(b=document.getElementById(b))(a=document.getElementById(a))
 </div>
 <!-- Custom Tab View Sections -->
 <!-- 1. Contact Section Hub (#contact-view) -->
-<div class="tab-view-section w-full px-space-8 md:px-space-12" id="contact-view" style="display: none; margin-top: 24px; margin-bottom: 30px;">
-<div class="w-full rounded-[24px] overflow-hidden" style="background: rgba(30, 36, 28, 0.75); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.15); box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35); padding: 26px;">
-<div class="flex items-center gap-space-12 mb-space-20 pb-space-16" style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 20px; padding-bottom: 14px;">
-<div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-<svg fill="none" height="24" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24">
-<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-</svg>
+<div class="tab-view-section w-full px-space-8 md:px-space-12" id="contact-view" style="display: none; margin-top: 32px; margin-bottom: 40px;">
+<div class="w-full" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); border: 1px solid rgba(255, 255, 255, 0.09); border-radius: 28px; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25); padding: 32px 28px;">
+<!-- Section Header -->
+<div style="margin-bottom: 28px; padding-bottom: 18px; border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+<div style="display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px; border-radius: 9999px; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.12); margin-bottom: 10px;">
+<svg fill="none" height="14" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+<span style="font-family: 'Cairo', sans-serif; font-size: 12px; font-weight: 600; color: rgba(255, 255, 255, 0.85);">قنوات التواصل المباشر</span>
 </div>
+<h2 style="font-family: 'Cairo', sans-serif; font-size: 24px; font-weight: 700; color: #ffffff; margin: 0; line-height: 1.3;">تواصل مع مكتب الأستاذ كريم هشام جميل</h2>
+<p style="font-family: 'Cairo', sans-serif; font-size: 13.5px; color: rgba(255, 255, 255, 0.6); margin: 4px 0 0 0;">قنوات الاتصال الرسمية، الاستشارات الفورية، ومنصات التواصل الاجتماعي</p>
+</div>
+<!-- Contact Cards 4-Column Grid -->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
+<!-- Card 1: Direct Phone -->
+<a href="tel:01124411711" style="display: flex; flex-direction: column; justify-content: space-between; padding: 22px; border-radius: 20px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); text-decoration: none; transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);">
 <div>
-<h2 style="font-family: 'Cairo', sans-serif; font-size: 22px; font-weight: 700; color: #ffffff; margin: 0; line-height: 1.3;">تواصل مع مكتب الأستاذ كريم هشام جميل</h2>
-<p style="font-family: 'Cairo', sans-serif; font-size: 13.5px; color: rgba(255, 255, 255, 0.7); margin: 3px 0 0 0;">قنوات التواصل المباشرة والمنصات الرسمية للمكتب</p>
+<div style="width: 44px; height: 44px; border-radius: 14px; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+<svg fill="none" height="20" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
 </div>
+<span style="display: block; font-family: 'Cairo', sans-serif; font-size: 15px; font-weight: 700; color: #ffffff; margin-bottom: 4px;">الاتصال المباشر</span>
+<span style="display: block; font-family: 'Cairo', sans-serif; font-size: 12.5px; color: rgba(255, 255, 255, 0.6);">طوارئ واستشارات عاجلة</span>
 </div>
-<!-- Contact Cards Grid -->
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-12 mb-space-24" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-bottom: 24px;">
-<!-- Phone -->
-<a class="flex flex-col items-center justify-center p-space-16 rounded-[16px] text-center transition hover:scale-[1.02]" href="tel:01124411711" style="background: rgba(37, 99, 235, 0.2); border: 1px solid rgba(37, 99, 235, 0.4); padding: 18px; text-decoration: none;">
-<span style="font-size: 26px; margin-bottom: 6px;">📞</span>
-<span style="font-family: 'Cairo', sans-serif; font-size: 15px; font-weight: 700; color: #ffffff;">الاتصال المباشر</span>
-<span dir="ltr" style="font-family: 'Cairo', sans-serif; font-size: 16px; font-weight: 700; color: #93c5fd; margin-top: 4px;">01124411711</span>
-</a>
-<!-- WhatsApp -->
-<a class="flex flex-col items-center justify-center p-space-16 rounded-[16px] text-center transition hover:scale-[1.02]" href="https://wa.me/201124411711" rel="noopener noreferrer" style="background: rgba(22, 163, 74, 0.2); border: 1px solid rgba(22, 163, 74, 0.4); padding: 18px; text-decoration: none;" target="_blank">
-<span style="font-size: 26px; margin-bottom: 6px;">💬</span>
-<span style="font-family: 'Cairo', sans-serif; font-size: 15px; font-weight: 700; color: #ffffff;">واتساب الاستشارات</span>
-<span dir="ltr" style="font-family: 'Cairo', sans-serif; font-size: 16px; font-weight: 700; color: #86efac; margin-top: 4px;">+20 112 441 1711</span>
-</a>
-<!-- Facebook -->
-<a class="flex flex-col items-center justify-center p-space-16 rounded-[16px] text-center transition hover:scale-[1.02]" href="https://www.facebook.com/mr.karim.hisham.law" rel="noopener noreferrer" style="background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.35); padding: 18px; text-decoration: none;" target="_blank">
-<span style="font-size: 26px; margin-bottom: 6px;">🌐</span>
-<span style="font-family: 'Cairo', sans-serif; font-size: 15px; font-weight: 700; color: #ffffff;">صفحة الفيسبوك</span>
-<span style="font-family: 'Cairo', sans-serif; font-size: 12.5px; color: rgba(255, 255, 255, 0.8); margin-top: 4px;">mr.karim.hisham.law</span>
-</a>
-<!-- TikTok -->
-<a class="flex flex-col items-center justify-center p-space-16 rounded-[16px] text-center transition hover:scale-[1.02]" href="https://www.tiktok.com/@lawyer.karim.hisham" rel="noopener noreferrer" style="background: rgba(236, 72, 153, 0.15); border: 1px solid rgba(236, 72, 153, 0.35); padding: 18px; text-decoration: none;" target="_blank">
-<span style="font-size: 26px; margin-bottom: 6px;">🎬</span>
-<span style="font-family: 'Cairo', sans-serif; font-size: 15px; font-weight: 700; color: #ffffff;">حساب تيك توك</span>
-<span style="font-family: 'Cairo', sans-serif; font-size: 12.5px; color: rgba(255, 255, 255, 0.8); margin-top: 4px;">@lawyer.karim.hisham</span>
-</a>
+<div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, 0.06); display: flex; align-items: center; justify-content: space-between;">
+<span dir="ltr" style="font-family: 'Cairo', sans-serif; font-size: 15px; font-weight: 700; color: #ffffff;">01124411711</span>
+<svg fill="none" height="16" stroke="rgba(255,255,255,0.6)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><polyline points="15 18 9 12 15 6"></polyline></svg>
 </div>
-<div class="mt-space-16">
-<p style="font-family: 'Cairo', sans-serif; font-size: 14px; font-weight: 700; color: #ffffff; margin-bottom: 12px;">📍 المقر ومواعيد العمل والاستقبال:</p>
-<!-- Location & Hours will be shown here directly -->
-<div id="contact-location-clone"></div>
+</a>
+<!-- Card 2: WhatsApp -->
+<a href="https://wa.me/201124411711" rel="noopener noreferrer" style="display: flex; flex-direction: column; justify-content: space-between; padding: 22px; border-radius: 20px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); text-decoration: none; transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);" target="_blank">
+<div>
+<div style="width: 44px; height: 44px; border-radius: 14px; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+<svg fill="none" height="20" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+</div>
+<span style="display: block; font-family: 'Cairo', sans-serif; font-size: 15px; font-weight: 700; color: #ffffff; margin-bottom: 4px;">واتساب الاستشارات</span>
+<span style="display: block; font-family: 'Cairo', sans-serif; font-size: 12.5px; color: rgba(255, 255, 255, 0.6);">إرسال المستندات وتأكيد المواعيد</span>
+</div>
+<div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, 0.06); display: flex; align-items: center; justify-content: space-between;">
+<span dir="ltr" style="font-family: 'Cairo', sans-serif; font-size: 15px; font-weight: 700; color: #ffffff;">+20 112 441 1711</span>
+<svg fill="none" height="16" stroke="rgba(255,255,255,0.6)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><polyline points="15 18 9 12 15 6"></polyline></svg>
+</div>
+</a>
+<!-- Card 3: Facebook -->
+<a href="https://www.facebook.com/mr.karim.hisham.law" rel="noopener noreferrer" style="display: flex; flex-direction: column; justify-content: space-between; padding: 22px; border-radius: 20px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); text-decoration: none; transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);" target="_blank">
+<div>
+<div style="width: 44px; height: 44px; border-radius: 14px; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+<svg fill="none" height="20" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+</div>
+<span style="display: block; font-family: 'Cairo', sans-serif; font-size: 15px; font-weight: 700; color: #ffffff; margin-bottom: 4px;">صفحة الفيسبوك</span>
+<span style="display: block; font-family: 'Cairo', sans-serif; font-size: 12.5px; color: rgba(255, 255, 255, 0.6);">الصفحة الرسمية ومقالات التوعية</span>
+</div>
+<div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, 0.06); display: flex; align-items: center; justify-content: space-between;">
+<span dir="ltr" style="font-family: 'Cairo', sans-serif; font-size: 13.5px; font-weight: 600; color: rgba(255,255,255,0.85);">mr.karim.hisham.law</span>
+<svg fill="none" height="16" stroke="rgba(255,255,255,0.6)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><polyline points="15 18 9 12 15 6"></polyline></svg>
+</div>
+</a>
+<!-- Card 4: TikTok -->
+<a href="https://www.tiktok.com/@lawyer.karim.hisham" rel="noopener noreferrer" style="display: flex; flex-direction: column; justify-content: space-between; padding: 22px; border-radius: 20px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); text-decoration: none; transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);" target="_blank">
+<div>
+<div style="width: 44px; height: 44px; border-radius: 14px; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+<svg fill="none" height="20" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
+</div>
+<span style="display: block; font-family: 'Cairo', sans-serif; font-size: 15px; font-weight: 700; color: #ffffff; margin-bottom: 4px;">منصة تيك توك</span>
+<span style="display: block; font-family: 'Cairo', sans-serif; font-size: 12.5px; color: rgba(255, 255, 255, 0.6);">فيديوهات التوعية القانونية</span>
+</div>
+<div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, 0.06); display: flex; align-items: center; justify-content: space-between;">
+<span dir="ltr" style="font-family: 'Cairo', sans-serif; font-size: 13.5px; font-weight: 600; color: rgba(255,255,255,0.85);">@lawyer.karim.hisham</span>
+<svg fill="none" height="16" stroke="rgba(255,255,255,0.6)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><polyline points="15 18 9 12 15 6"></polyline></svg>
+</div>
+</a>
 </div>
 </div>
 </div>
 <!-- 2. Booking Section (#booking-view) -->
-<div class="tab-view-section w-full px-space-8 md:px-space-12" id="booking-view" style="display: none; margin-top: 24px; margin-bottom: 30px;">
-<div class="w-full rounded-[24px] overflow-hidden" style="background: rgba(30, 36, 28, 0.75); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.15); box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35); padding: 26px;">
-<div class="flex items-center gap-space-12 mb-space-20 pb-space-16" style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 20px; padding-bottom: 14px;">
-<div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-<svg fill="none" height="24" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24">
-<rect height="18" rx="2" ry="2" width="18" x="3" y="4"></rect>
-<line x1="16" x2="16" y1="2" y2="6"></line>
-<line x1="8" x2="8" y1="2" y2="6"></line>
-<line x1="3" x2="21" y1="10" y2="10"></line>
-</svg>
+<div class="tab-view-section w-full px-space-8 md:px-space-12" id="booking-view" style="display: none; margin-top: 32px; margin-bottom: 40px;">
+<div class="w-full" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); border: 1px solid rgba(255, 255, 255, 0.09); border-radius: 28px; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25); padding: 32px 28px;">
+<!-- Section Header -->
+<div style="margin-bottom: 28px; padding-bottom: 18px; border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+<div style="display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px; border-radius: 9999px; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.12); margin-bottom: 10px;">
+<svg fill="none" height="14" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14"><rect height="18" rx="2" ry="2" width="18" x="3" y="4"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+<span style="font-family: 'Cairo', sans-serif; font-size: 12px; font-weight: 600; color: rgba(255, 255, 255, 0.85);">حجز استشارة قانونية</span>
 </div>
+<h2 style="font-family: 'Cairo', sans-serif; font-size: 24px; font-weight: 700; color: #ffffff; margin: 0; line-height: 1.3;">حجز موعد استشارة مع الأستاذ كريم هشام جميل</h2>
+<p style="font-family: 'Cairo', sans-serif; font-size: 13.5px; color: rgba(255, 255, 255, 0.6); margin: 4px 0 0 0;">اختر الطريقة الأنسب لحجز موعد استشارتك بمقر المكتب أو عبر المنصات الرقمية</p>
+</div>
+<!-- Booking Options Grid -->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;">
+<!-- Option 1: Direct Phone Call -->
+<div style="display: flex; flex-direction: column; justify-content: space-between; padding: 26px; border-radius: 22px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08);">
 <div>
-<h2 style="font-family: 'Cairo', sans-serif; font-size: 22px; font-weight: 700; color: #ffffff; margin: 0; line-height: 1.3;">حجز موعد استشارة قانونية</h2>
-<p style="font-family: 'Cairo', sans-serif; font-size: 13.5px; color: rgba(255, 255, 255, 0.7); margin: 3px 0 0 0;">اختر الطريقة الأنسب لك لحجز موعد مع الأستاذ كريم هشام جميل</p>
+<div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
+<span style="font-family: 'Cairo', sans-serif; font-size: 12px; font-weight: 700; color: rgba(255, 255, 255, 0.6); text-transform: uppercase; letter-spacing: 0.5px;">الخيار الأول</span>
+<div style="width: 32px; height: 32px; border-radius: 50%; background: rgba(255, 255, 255, 0.08); display: flex; align-items: center; justify-content: center;">
+<svg fill="none" height="15" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
 </div>
 </div>
-<!-- Booking Options -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-space-20" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
-<!-- Option 1: Book via Phone -->
-<div class="p-space-20 rounded-[20px] flex flex-col justify-between" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12); padding: 22px;">
-<div>
-<div class="flex items-center gap-space-8 mb-space-12">
-<span style="background: #2563eb; color: #fff; width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px;">1</span>
-<h3 style="font-family: 'Cairo', sans-serif; font-size: 18px; font-weight: 700; color: #ffffff; margin: 0;">الخيار الأول: الحجز الفوري عبر الهاتف</h3>
-</div>
-<p style="font-family: 'Cairo', sans-serif; font-size: 13.5px; color: rgba(255, 255, 255, 0.8); line-height: 1.7; margin-bottom: 16px;">
-            للحالات الطارئة والقضايا الجنائية العاجلة وتحديد موعد مباشر وفوري، يرجى الاتصال المباشر على الهاتف المحمول للمكتب:
+<h3 style="font-family: 'Cairo', sans-serif; font-size: 18px; font-weight: 700; color: #ffffff; margin: 0 0 8px 0;">الحجز الفوري عبر الاتصال المباشر</h3>
+<p style="font-family: 'Cairo', sans-serif; font-size: 13.5px; color: rgba(255, 255, 255, 0.65); line-height: 1.7; margin: 0 0 20px 0;">
+            للقضايا الجنائية العاجلة، محاضر الشرطة، أو لتحديد موعد فوري مع الأستاذ كريم دون انتظار.
           </p>
-<div class="p-space-16 rounded-[14px] mb-space-16 text-center" style="background: rgba(0, 0, 0, 0.25); border: 1px solid rgba(255, 255, 255, 0.1); padding: 14px;">
-<p style="font-family: 'Cairo', sans-serif; font-size: 13px; color: rgba(255, 255, 255, 0.65); margin: 0;">رقم الحجز والاستشارات:</p>
-<p dir="ltr" style="font-family: 'Cairo', sans-serif; font-size: 22px; font-weight: 800; color: #60a5fa; margin: 4px 0 0 0;">01124411711</p>
+<div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 18px; text-align: center; margin-bottom: 22px;">
+<span style="font-family: 'Cairo', sans-serif; font-size: 12px; color: rgba(255, 255, 255, 0.55); display: block; margin-bottom: 4px;">رقم الحجز والاستشارات المباشرة</span>
+<span dir="ltr" style="font-family: 'Cairo', sans-serif; font-size: 22px; font-weight: 800; color: #ffffff; letter-spacing: 0.5px;">01124411711</span>
 </div>
 </div>
-<a class="w-full flex items-center justify-center gap-space-8 py-space-12 rounded-[14px] text-white font-bold text-[15px] transition hover:opacity-95" href="tel:01124411711" style="background: #2563eb; text-decoration: none; padding: 12px; font-family:'Cairo',sans-serif; border-radius: 14px;">
-          📞 اتصال فوري الآن لحجز موعد
-        </a>
+<a href="tel:01124411711" style="display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 13px 20px; border-radius: 9999px; background: #ffffff; color: #111111; font-family: 'Cairo', sans-serif; font-size: 14.5px; font-weight: 700; text-decoration: none; transition: opacity 0.2s;">
+<svg fill="none" height="16" stroke="#111111" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="16"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+<span>اتصال هاتفي مباشر للحجز</span>
+</a>
 </div>
-<!-- Option 2: Book via WhatsApp Form -->
-<div class="p-space-20 rounded-[20px]" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12); padding: 22px;">
-<div class="flex items-center gap-space-8 mb-space-12">
-<span style="background: #16a34a; color: #fff; width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px;">2</span>
-<h3 style="font-family: 'Cairo', sans-serif; font-size: 18px; font-weight: 700; color: #ffffff; margin: 0;">الخيار الثاني: نموذج الحجز وتأكيده عبر واتساب</h3>
+<!-- Option 2: WhatsApp Form -->
+<div style="padding: 26px; border-radius: 22px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08);">
+<div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
+<span style="font-family: 'Cairo', sans-serif; font-size: 12px; font-weight: 700; color: rgba(255, 255, 255, 0.6); text-transform: uppercase; letter-spacing: 0.5px;">الخيار الثاني</span>
+<div style="width: 32px; height: 32px; border-radius: 50%; background: rgba(255, 255, 255, 0.08); display: flex; align-items: center; justify-content: center;">
+<svg fill="none" height="15" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
 </div>
-<p style="font-family: 'Cairo', sans-serif; font-size: 13px; color: rgba(255, 255, 255, 0.75); margin-bottom: 14px;">
-          املأ بياناتك أدناه وسيتم نقلك مباشرة إلى واتساب برسالة مجهزة مسبقاً لتأكيد الحجز فوراً:
+</div>
+<h3 style="font-family: 'Cairo', sans-serif; font-size: 18px; font-weight: 700; color: #ffffff; margin: 0 0 8px 0;">طلب حجز عبر نموذج واتساب</h3>
+<p style="font-family: 'Cairo', sans-serif; font-size: 13.5px; color: rgba(255, 255, 255, 0.65); line-height: 1.7; margin: 0 0 18px 0;">
+          املأ بيانات استشارتك وسيتم تحويلك مباشرة برسالة موثقة لتأكيد موعد الحضور.
         </p>
-<form class="flex flex-col gap-space-10" id="whatsapp-booking-form" style="display: flex; flex-direction: column; gap: 10px;">
+<form id="whatsapp-booking-form" style="display: flex; flex-direction: column; gap: 12px;">
 <div>
-<label style="font-family: 'Cairo', sans-serif; font-size: 12.5px; font-weight: 600; color: rgba(255,255,255,0.9); display: block; margin-bottom: 4px;">الاسم الكامل *</label>
-<input id="bk-name" placeholder="اكتب اسمك الثلاثي..." required="" style="width: 100%; padding: 10px 12px; border-radius: 10px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.2); color: #fff; font-family: 'Cairo', sans-serif; font-size: 13.5px;" type="text"/>
+<label style="font-family: 'Cairo', sans-serif; font-size: 12.5px; font-weight: 600; color: rgba(255, 255, 255, 0.8); display: block; margin-bottom: 5px;">الاسم الكريم *</label>
+<input id="bk-name" placeholder="اكتب اسمك كاملاً" required="" style="width: 100%; padding: 11px 14px; border-radius: 12px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); color: #ffffff; font-family: 'Cairo', sans-serif; font-size: 13.5px; outline: none;" type="text"/>
 </div>
 <div>
-<label style="font-family: 'Cairo', sans-serif; font-size: 12.5px; font-weight: 600; color: rgba(255,255,255,0.9); display: block; margin-bottom: 4px;">رقم الهاتف / واتساب *</label>
-<input id="bk-phone" placeholder="01xxxxxxxxx" required="" style="width: 100%; padding: 10px 12px; border-radius: 10px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.2); color: #fff; font-family: 'Cairo', sans-serif; font-size: 13.5px;" type="tel"/>
+<label style="font-family: 'Cairo', sans-serif; font-size: 12.5px; font-weight: 600; color: rgba(255, 255, 255, 0.8); display: block; margin-bottom: 5px;">رقم الهاتف / واتساب *</label>
+<input id="bk-phone" placeholder="01xxxxxxxxx" required="" style="width: 100%; padding: 11px 14px; border-radius: 12px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); color: #ffffff; font-family: 'Cairo', sans-serif; font-size: 13.5px; outline: none;" type="tel"/>
 </div>
 <div>
-<label style="font-family: 'Cairo', sans-serif; font-size: 12.5px; font-weight: 600; color: rgba(255,255,255,0.9); display: block; margin-bottom: 4px;">نوع القضية أو الاستشارة *</label>
-<select id="bk-type" style="width: 100%; padding: 10px 12px; border-radius: 10px; background: #1e241c; border: 1px solid rgba(255,255,255,0.2); color: #fff; font-family: 'Cairo', sans-serif; font-size: 13.5px;">
+<label style="font-family: 'Cairo', sans-serif; font-size: 12.5px; font-weight: 600; color: rgba(255, 255, 255, 0.8); display: block; margin-bottom: 5px;">موضوع الاستشارة *</label>
+<select id="bk-type" style="width: 100%; padding: 11px 14px; border-radius: 12px; background: #161b14; border: 1px solid rgba(255, 255, 255, 0.12); color: #ffffff; font-family: 'Cairo', sans-serif; font-size: 13.5px; outline: none; cursor: pointer;">
 <option value="قضايا جنايات وجنح">قضايا جنايات وجنح</option>
 <option value="قضايا أسرة وأحوال شخصية">قضايا أسرة وأحوال شخصية</option>
 <option value="قضايا مدنية وعقارات">قضايا مدنية وعقارات</option>
@@ -2201,163 +2272,175 @@ $RC=function(a,b){if(b=document.getElementById(b))(a=document.getElementById(a))
 </select>
 </div>
 <div>
-<label style="font-family: 'Cairo', sans-serif; font-size: 12.5px; font-weight: 600; color: rgba(255,255,255,0.9); display: block; margin-bottom: 4px;">اليوم والموعد المفضل للحضور</label>
-<input id="bk-time" placeholder="مثال: غداً الساعة 5 مساءً" style="width: 100%; padding: 10px 12px; border-radius: 10px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.2); color: #fff; font-family: 'Cairo', sans-serif; font-size: 13.5px;" type="text"/>
+<label style="font-family: 'Cairo', sans-serif; font-size: 12.5px; font-weight: 600; color: rgba(255, 255, 255, 0.8); display: block; margin-bottom: 5px;">الموعد المفضل للحضور (اختياري)</label>
+<input id="bk-time" placeholder="مثال: غداً الساعة 5 مساءً" style="width: 100%; padding: 11px 14px; border-radius: 12px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); color: #ffffff; font-family: 'Cairo', sans-serif; font-size: 13.5px; outline: none;" type="text"/>
 </div>
 <div>
-<label style="font-family: 'Cairo', sans-serif; font-size: 12.5px; font-weight: 600; color: rgba(255,255,255,0.9); display: block; margin-bottom: 4px;">نبذة مختصرة عن الموضوع (اختياري)</label>
-<textarea id="bk-notes" placeholder="ملخص سريع لموضوع الاستشارة..." rows="2" style="width: 100%; padding: 8px 12px; border-radius: 10px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.2); color: #fff; font-family: 'Cairo', sans-serif; font-size: 13px;"></textarea>
+<label style="font-family: 'Cairo', sans-serif; font-size: 12.5px; font-weight: 600; color: rgba(255, 255, 255, 0.8); display: block; margin-bottom: 5px;">نبذة موجزة عن الموضوع (اختياري)</label>
+<textarea id="bk-notes" placeholder="أدخل أية تفاصيل تفيد بدراسة الطلب..." rows="2" style="width: 100%; padding: 10px 14px; border-radius: 12px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); color: #ffffff; font-family: 'Cairo', sans-serif; font-size: 13px; outline: none; resize: vertical;"></textarea>
 </div>
-<button class="w-full flex items-center justify-center gap-space-8 py-space-12 rounded-[14px] text-white font-bold text-[15px] transition hover:opacity-95 mt-space-6" style="background: #16a34a; border: none; cursor: pointer; padding: 12px; font-family:'Cairo',sans-serif; border-radius: 14px;" type="submit">
-            💬 تأكيد الحجز وإرسال التفاصيل عبر واتساب
-          </button>
+<button style="display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 13px 20px; border-radius: 9999px; background: rgba(255, 255, 255, 0.95); color: #111111; font-family: 'Cairo', sans-serif; font-size: 14.5px; font-weight: 700; border: none; cursor: pointer; margin-top: 6px; transition: opacity 0.2s;" type="submit">
+<svg fill="none" height="16" stroke="#111111" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="16"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+<span>تأكيد الموعد عبر واتساب</span>
+</button>
 </form>
 </div>
 </div>
 </div>
 </div>
 <!-- 3. About Section (#about-view) -->
-<div class="tab-view-section w-full px-space-8 md:px-space-12" id="about-view" style="display: none; margin-top: 24px; margin-bottom: 30px;">
-<div class="w-full rounded-[24px] overflow-hidden" style="background: rgba(30, 36, 28, 0.75); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.15); box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35); padding: 26px;">
-<div class="flex flex-col md:flex-row items-center md:items-start gap-space-24 mb-space-24" style="display: flex; flex-direction: column; gap: 24px; margin-bottom: 24px;">
-<!-- Lawyer Photo -->
-<div class="w-full md:w-1/3 flex justify-center" style="max-width: 320px;">
-<div class="relative rounded-[20px] overflow-hidden shadow-2xl" style="border: 2px solid rgba(255, 255, 255, 0.2); box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);">
+<div class="tab-view-section w-full px-space-8 md:px-space-12" id="about-view" style="display: none; margin-top: 32px; margin-bottom: 40px;">
+<div class="w-full" style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); border: 1px solid rgba(255, 255, 255, 0.09); border-radius: 28px; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25); padding: 32px 28px;">
+<!-- Profile & Bio Split -->
+<div class="flex flex-col md:flex-row items-center md:items-start gap-space-24" style="display: flex; gap: 28px;">
+<!-- Portrait Card -->
+<div class="w-full md:w-auto flex justify-center" style="flex-shrink: 0; max-width: 280px; width: 100%;">
+<div style="border-radius: 22px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.12); box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35); position: relative; width: 100%;">
 <img alt="الأستاذ كريم هشام جميل - المحامي بالاستئناف العالي ومجلس الدولة" src="/assets/karim_hisham_portrait.jpg" style="width: 100%; height: auto; display: block; object-fit: cover;"/>
-<div class="absolute bottom-0 inset-x-0 p-space-12 text-center" style="background: linear-gradient(to top, rgba(0,0,0,0.85), transparent); padding: 12px;">
+<div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 16px; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%); text-align: center;">
 <p style="font-family: 'Cairo', sans-serif; font-size: 15px; font-weight: 700; color: #ffffff; margin: 0;">الأستاذ كريم هشام جميل</p>
-<p style="font-family: 'Cairo', sans-serif; font-size: 12px; color: rgba(255, 255, 255, 0.8); margin: 2px 0 0 0;">المحامي بالاستئناف العالي ومجلس الدولة</p>
+<p style="font-family: 'Cairo', sans-serif; font-size: 12px; color: rgba(255, 255, 255, 0.7); margin: 3px 0 0 0;">المحامي بالاستئناف العالي ومجلس الدولة</p>
 </div>
 </div>
 </div>
-<!-- Qualifications and Bio -->
-<div class="w-full md:w-2/3" style="flex: 1;">
-<div class="mb-space-16 pb-space-12" style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 16px; padding-bottom: 12px;">
-<h2 style="font-family: 'Cairo', sans-serif; font-size: 24px; font-weight: 800; color: #ffffff; margin: 0; line-height: 1.3;">نبذة عن الأستاذ كريم هشام جميل</h2>
-<p style="font-family: 'Cairo', sans-serif; font-size: 14.5px; color: #93c5fd; font-weight: 700; margin: 4px 0 0 0;">المحامي المقيد بالاستئناف العالي ومجلس الدولة - جمهورية مصر العربية</p>
+<!-- Bio and Areas of Practice -->
+<div style="flex: 1;">
+<div style="margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+<div style="display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px; border-radius: 9999px; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.12); margin-bottom: 10px;">
+<svg fill="none" height="14" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+<span style="font-family: 'Cairo', sans-serif; font-size: 12px; font-weight: 600; color: rgba(255, 255, 255, 0.85);">السيرة المهنية والاعتماد</span>
 </div>
-<p style="font-family: 'Cairo', sans-serif; font-size: 14px; color: rgba(255, 255, 255, 0.88); line-height: 1.8; margin-bottom: 16px;">
-          محامٍ متخصص يتمتع بخبرة واسعة وسجل حافل بالنجاحات في الترافع والتمثيل القانوني أمام أعلى الدوائر القضائية المصرية. يجمع المكتب بين عمق المعرفة القانونية والرؤية الاستراتيجية الحديثة لحماية مصالح الأفراد والشركات والمستثمرين، مع الالتزام التام بأعلى معايير النزاهة والسرية والاحترافية.
+<h2 style="font-family: 'Cairo', sans-serif; font-size: 24px; font-weight: 700; color: #ffffff; margin: 0; line-height: 1.3;">نبذة عن الأستاذ كريم هشام جميل</h2>
+<p style="font-family: 'Cairo', sans-serif; font-size: 13.5px; color: rgba(255, 255, 255, 0.7); margin: 4px 0 0 0;">المحامي المقيد بجدول الاستئناف العالي ومجلس الدولة - نقابة المحامين المصرية</p>
+</div>
+<p style="font-family: 'Cairo', sans-serif; font-size: 14px; color: rgba(255, 255, 255, 0.8); line-height: 1.85; margin: 0 0 22px 0;">
+          محامٍ متخصص يتمتع بخبرة واسعة وسجل متميز في الترافع والتمثيل القانوني أمام مختلف الدوائر القضائية المصرية. يرتكز عمل المكتب على حماية مصالح الموكلين من الأفراد والشركات والمستثمرين، من خلال تقديم استشارات استباقية وحلول قانونية حاسمة تلتزم بأعلى معايير السرية والأمانة المهنية.
         </p>
-<h3 style="font-family: 'Cairo', sans-serif; font-size: 16px; font-weight: 700; color: #ffffff; margin: 0 0 10px 0;">مجالات الاختصاص والخبرات الرئيسية:</h3>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-8 mb-space-20" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-bottom: 20px;">
-<div class="p-space-8 rounded-[12px]" style="background: rgba(255, 255, 255, 0.05); padding: 8px 12px; border: 1px solid rgba(255, 255, 255, 0.08);">
-<p style="font-family: 'Cairo', sans-serif; font-size: 13px; font-weight: 700; color: #ffffff; margin: 0;">⚖️ قضايا الجنايات والجنح الكبرى</p>
+<h3 style="font-family: 'Cairo', sans-serif; font-size: 15.5px; font-weight: 700; color: #ffffff; margin: 0 0 12px 0;">مجالات الاختصاص والخبرات القضائية:</h3>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; margin-bottom: 24px;">
+<div style="display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 12px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08);">
+<svg fill="none" height="16" stroke="rgba(255,255,255,0.7)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+<span style="font-family: 'Cairo', sans-serif; font-size: 13px; font-weight: 600; color: #ffffff;">قضايا الجنايات والجنح الكبرى</span>
 </div>
-<div class="p-space-8 rounded-[12px]" style="background: rgba(255, 255, 255, 0.05); padding: 8px 12px; border: 1px solid rgba(255, 255, 255, 0.08);">
-<p style="font-family: 'Cairo', sans-serif; font-size: 13px; font-weight: 700; color: #ffffff; margin: 0;">🏛️ محاكم مجلس الدولة والقضاء الإداري</p>
+<div style="display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 12px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08);">
+<svg fill="none" height="16" stroke="rgba(255,255,255,0.7)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M3 21h18M3 10h18M5 10v11M19 10v11M9 10v11M15 10v11M12 3l9 7H3z"></path></svg>
+<span style="font-family: 'Cairo', sans-serif; font-size: 13px; font-weight: 600; color: #ffffff;">محاكم مجلس الدولة والقضاء الإداري</span>
 </div>
-<div class="p-space-8 rounded-[12px]" style="background: rgba(255, 255, 255, 0.05); padding: 8px 12px; border: 1px solid rgba(255, 255, 255, 0.08);">
-<p style="font-family: 'Cairo', sans-serif; font-size: 13px; font-weight: 700; color: #ffffff; margin: 0;">🏢 تأسيس الشركات وهيئة الاستثمار</p>
+<div style="display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 12px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08);">
+<svg fill="none" height="16" stroke="rgba(255,255,255,0.7)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><line x1="9" x2="9" y1="9" y2="9"></line><line x1="15" x2="15" y1="9" y2="9"></line><line x1="9" x2="15" y1="15" y2="15"></line></svg>
+<span style="font-family: 'Cairo', sans-serif; font-size: 13px; font-weight: 600; color: #ffffff;">تأسيس الشركات وهيئة الاستثمار</span>
 </div>
-<div class="p-space-8 rounded-[12px]" style="background: rgba(255, 255, 255, 0.05); padding: 8px 12px; border: 1px solid rgba(255, 255, 255, 0.08);">
-<p style="font-family: 'Cairo', sans-serif; font-size: 13px; font-weight: 700; color: #ffffff; margin: 0;">📜 صياغة ومراجعة العقود التجارية</p>
+<div style="display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 12px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08);">
+<svg fill="none" height="16" stroke="rgba(255,255,255,0.7)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" x2="8" y1="13" y2="13"></line><line x1="16" x2="8" y1="17" y2="17"></line></svg>
+<span style="font-family: 'Cairo', sans-serif; font-size: 13px; font-weight: 600; color: #ffffff;">صياغة ومراجعة العقود التجارية</span>
 </div>
-<div class="p-space-8 rounded-[12px]" style="background: rgba(255, 255, 255, 0.05); padding: 8px 12px; border: 1px solid rgba(255, 255, 255, 0.08);">
-<p style="font-family: 'Cairo', sans-serif; font-size: 13px; font-weight: 700; color: #ffffff; margin: 0;">💍 زواج وخدمات وإقامات الأجانب</p>
+<div style="display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 12px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08);">
+<svg fill="none" height="16" stroke="rgba(255,255,255,0.7)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><circle cx="12" cy="12" r="10"></circle><path d="m4.93 4.93 4.24 4.24M14.83 9.17l4.24-4.24M14.83 14.83l4.24 4.24M4.93 19.07l4.24-4.24"></path></svg>
+<span style="font-family: 'Cairo', sans-serif; font-size: 13px; font-weight: 600; color: #ffffff;">زواج وخدمات وإقامات الأجانب</span>
 </div>
-<div class="p-space-8 rounded-[12px]" style="background: rgba(255, 255, 255, 0.05); padding: 8px 12px; border: 1px solid rgba(255, 255, 255, 0.08);">
-<p style="font-family: 'Cairo', sans-serif; font-size: 13px; font-weight: 700; color: #ffffff; margin: 0;">📊 الضرائب المصرية والتأمينات والنزاعات</p>
-</div>
-</div>
-<!-- Social Media Links -->
-<div class="flex items-center gap-space-12 pt-space-12" style="display: flex; gap: 12px; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 14px;">
-<span style="font-family: 'Cairo', sans-serif; font-size: 13px; color: rgba(255, 255, 255, 0.8);">تابع الأستاذ كريم على:</span>
-<a class="px-space-12 py-space-6 rounded-[8px] font-bold text-[12px] text-white transition hover:opacity-90" href="https://www.facebook.com/mr.karim.hisham.law" rel="noopener noreferrer" style="background: #1877f2; text-decoration: none; padding: 6px 12px; border-radius: 8px; font-family:'Cairo',sans-serif;" target="_blank">
-            فيسبوك
-          </a>
-<a class="px-space-12 py-space-6 rounded-[8px] font-bold text-[12px] text-white transition hover:opacity-90" href="https://www.tiktok.com/@lawyer.karim.hisham" rel="noopener noreferrer" style="background: #000000; border: 1px solid rgba(255,255,255,0.3); text-decoration: none; padding: 6px 12px; border-radius: 8px; font-family:'Cairo',sans-serif;" target="_blank">
-            تيك توك
-          </a>
+<div style="display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 12px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08);">
+<svg fill="none" height="16" stroke="rgba(255,255,255,0.7)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><line x1="18" x2="18" y1="20" y2="10"></line><line x1="12" x2="12" y1="20" y2="4"></line><line x1="6" x2="6" y1="20" y2="14"></line></svg>
+<span style="font-family: 'Cairo', sans-serif; font-size: 13px; font-weight: 600; color: #ffffff;">المنازعات الضريبية والتأمينات</span>
 </div>
 </div>
+<!-- Social Media Buttons Apple Glass -->
+<div style="display: flex; align-items: center; gap: 12px; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.08); flex-wrap: wrap;">
+<span style="font-family: 'Cairo', sans-serif; font-size: 13px; color: rgba(255, 255, 255, 0.65);">تابع الأستاذ كريم:</span>
+<a href="https://www.facebook.com/mr.karim.hisham.law" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 9999px; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.12); color: #ffffff; font-family: 'Cairo', sans-serif; font-size: 13px; font-weight: 600; text-decoration: none; transition: background 0.2s;" target="_blank">
+<svg fill="none" height="14" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+<span>فيسبوك</span>
+</a>
+<a href="https://www.tiktok.com/@lawyer.karim.hisham" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 9999px; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.12); color: #ffffff; font-family: 'Cairo', sans-serif; font-size: 13px; font-weight: 600; text-decoration: none; transition: background 0.2s;" target="_blank">
+<svg fill="none" height="14" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
+<span>تيك توك</span>
+</a>
 </div>
-<!-- Map alone in about section -->
-<div class="mt-space-20 pt-space-16" style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 18px;">
-<h3 style="font-family: 'Cairo', sans-serif; font-size: 17px; font-weight: 700; color: #ffffff; margin: 0 0 12px 0;">مقر المكتب على الخريطة:</h3>
-<div class="w-full overflow-hidden rounded-[16px]" style="border: 1px solid rgba(255, 255, 255, 0.15); height: 320px;">
-<iframe allowfullscreen="" height="100%" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13820.295260127876!2d31.1781785!3d30.0060368!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458470014c4abb9%3A0x953487e5a70ad6c6!2z2YXZg9iq2Kgg2KfZhNin2LPYqtin2LAg2YPYsdmK2YUg2YfYtNin2YUg2KfZhNmF2K3Yp9mF2Yo!5e0!3m2!1sen!2seg!4v1791735142838!5m2!1sen!2seg" style="border:0;" width="100%"></iframe>
 </div>
 </div>
 </div>
 </div>
-<div class="w-full mt-space-32 px-space-8 md:px-space-12" id="lawyer-office-location" style="margin-top: 40px; margin-bottom: 30px;">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-space-16 w-full" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;">
+<div class="w-full mt-space-32 px-space-8 md:px-space-12" id="lawyer-office-location" style="margin-top: 48px; margin-bottom: 40px;">
+<div class="w-full" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;">
 <!-- Box 1: Google Map Location -->
-<div class="w-full rounded-[24px] overflow-hidden flex flex-col justify-between" style="background: rgba(30, 36, 28, 0.75); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.15); box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35); padding: 22px;">
+<div style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); border: 1px solid rgba(255, 255, 255, 0.09); border-radius: 28px; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25); padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
 <div>
-<div class="flex items-center gap-space-12 mb-space-16 pb-space-16" style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 16px; padding-bottom: 12px;">
-<div style="width: 42px; height: 42px; border-radius: 12px; background: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-<svg fill="none" height="22" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22">
-<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
-<circle cx="12" cy="10" r="3"></circle>
-</svg>
+<!-- Card Header -->
+<div style="margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+<div style="display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px; border-radius: 9999px; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.12); margin-bottom: 10px;">
+<svg fill="none" height="14" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+<span style="font-family: 'Cairo', sans-serif; font-size: 12px; font-weight: 600; color: rgba(255, 255, 255, 0.85);">المقر الجغرافي</span>
 </div>
-<div>
-<h2 style="font-family: 'Cairo', sans-serif; font-size: 19px; font-weight: 700; color: #ffffff; margin: 0; line-height: 1.3;">مقر وموقع المكتب</h2>
-<p style="font-family: 'Cairo', sans-serif; font-size: 13px; color: rgba(255, 255, 255, 0.7); margin: 2px 0 0 0;">مكتب الأستاذ كريم هشام جميل للمحاماة والاستشارات القانونية</p>
+<h2 style="font-family: 'Cairo', sans-serif; font-size: 20px; font-weight: 700; color: #ffffff; margin: 0; line-height: 1.3;">مقر وموقع المكتب</h2>
+<p style="font-family: 'Cairo', sans-serif; font-size: 13px; color: rgba(255, 255, 255, 0.6); margin: 3px 0 0 0;">مكتب الأستاذ كريم هشام جميل للمحاماة والاستشارات القانونية</p>
 </div>
-</div>
-<div class="w-full overflow-hidden rounded-[16px]" style="border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25); height: 290px;">
+<!-- Google Maps Iframe -->
+<div style="border-radius: 18px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.09); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25); height: 280px; width: 100%;">
 <iframe allowfullscreen="" height="100%" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13820.295260127876!2d31.1781785!3d30.0060368!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458470014c4abb9%3A0x953487e5a70ad6c6!2z2YXZg9iq2Kgg2KfZhNin2LPYqtin2LAg2YPYsdmK2YUg2YfYtNin2YUg2KfZhNmF2K3Yp9mF2Yo!5e0!3m2!1sen!2seg!4v1791735142838!5m2!1sen!2seg" style="border:0;" width="100%"></iframe>
 </div>
 </div>
-<div class="mt-space-12 pt-space-12 flex justify-between items-center" style="border-top: 1px solid rgba(255, 255, 255, 0.08); margin-top: 14px; padding-top: 12px;">
-<span style="font-family: 'Cairo', sans-serif; font-size: 12px; color: rgba(255, 255, 255, 0.65);">الجيزة / القاهرة - جمهورية مصر العربية</span>
-<a href="https://maps.app.goo.gl/953487e5a70ad6c6" rel="noopener noreferrer" style="font-family: 'Cairo', sans-serif; font-size: 12px; font-weight: 700; color: #ffffff; text-decoration: underline;" target="_blank">فتح في خرائط Google ↗</a>
+<!-- Card Footer -->
+<div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.08); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+<span style="font-family: 'Cairo', sans-serif; font-size: 12.5px; color: rgba(255, 255, 255, 0.65);">الجيزة / القاهرة — جمهورية مصر العربية</span>
+<a href="https://maps.app.goo.gl/953487e5a70ad6c6" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; font-family: 'Cairo', sans-serif; font-size: 12.5px; font-weight: 700; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 9999px; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.14); transition: background 0.2s;" target="_blank">
+<span>فتح في خرائط Google</span>
+<svg fill="none" height="12" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
+</a>
 </div>
 </div>
 <!-- Box 2: Working Hours / مواعيد العمل والاستقبال -->
-<div class="w-full rounded-[24px] overflow-hidden flex flex-col justify-between" style="background: rgba(30, 36, 28, 0.75); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.15); box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35); padding: 22px;">
+<div style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); border: 1px solid rgba(255, 255, 255, 0.09); border-radius: 28px; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25); padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
 <div>
-<div class="flex items-center gap-space-12 mb-space-16 pb-space-16" style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 16px; padding-bottom: 12px;">
-<div style="width: 42px; height: 42px; border-radius: 12px; background: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-<svg fill="none" height="22" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22">
-<circle cx="12" cy="12" r="10"></circle>
-<polyline points="12 6 12 12 16 14"></polyline>
-</svg>
+<!-- Card Header -->
+<div style="margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+<div style="display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px; border-radius: 9999px; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.12); margin-bottom: 10px;">
+<svg fill="none" height="14" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+<span style="font-family: 'Cairo', sans-serif; font-size: 12px; font-weight: 600; color: rgba(255, 255, 255, 0.85);">ساعات الاستقبال</span>
 </div>
-<div>
-<h2 style="font-family: 'Cairo', sans-serif; font-size: 19px; font-weight: 700; color: #ffffff; margin: 0; line-height: 1.3;">مواعيد العمل والاستقبال</h2>
-<p style="font-family: 'Cairo', sans-serif; font-size: 13px; color: rgba(255, 255, 255, 0.7); margin: 2px 0 0 0;">المواعيد الرسمية المعتمدة لاستقبال الموكلين والاستشارات</p>
+<h2 style="font-family: 'Cairo', sans-serif; font-size: 20px; font-weight: 700; color: #ffffff; margin: 0; line-height: 1.3;">مواعيد العمل والاستقبال</h2>
+<p style="font-family: 'Cairo', sans-serif; font-size: 13px; color: rgba(255, 255, 255, 0.6); margin: 3px 0 0 0;">المواعيد الرسمية المعتمدة لاستقبال الموكلين وإجراء الاستشارات</p>
+</div>
+<!-- Schedule Rows -->
+<div style="display: flex; flex-direction: column; gap: 10px;">
+<div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; border-radius: 14px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.07);">
+<div style="display: flex; align-items: center; gap: 10px;">
+<span style="display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #34d399; box-shadow: 0 0 8px rgba(52, 211, 153, 0.5);"></span>
+<span style="font-family: 'Cairo', sans-serif; font-size: 14px; font-weight: 700; color: #ffffff;">السبت – الأربعاء</span>
+</div>
+<span style="font-family: 'Cairo', sans-serif; font-size: 13.5px; color: rgba(255, 255, 255, 0.9);">10:00 ص – 10:00 م</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; border-radius: 14px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.07);">
+<div style="display: flex; align-items: center; gap: 10px;">
+<span style="display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #34d399; box-shadow: 0 0 8px rgba(52, 211, 153, 0.5);"></span>
+<span style="font-family: 'Cairo', sans-serif; font-size: 14px; font-weight: 700; color: #ffffff;">الخميس</span>
+</div>
+<span style="font-family: 'Cairo', sans-serif; font-size: 13.5px; color: rgba(255, 255, 255, 0.9);">10:00 ص – 08:00 م</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; border-radius: 14px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05);">
+<div style="display: flex; align-items: center; gap: 10px;">
+<span style="display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #fbbf24;"></span>
+<span style="font-family: 'Cairo', sans-serif; font-size: 14px; font-weight: 700; color: #ffffff;">الجمعة</span>
+</div>
+<span style="font-family: 'Cairo', sans-serif; font-size: 13px; color: rgba(255, 255, 255, 0.65);">عطلة أسبوعية (طوارئ هاتفية فقط)</span>
+</div>
+<!-- Note -->
+<div style="padding: 12px 14px; border-radius: 14px; background: rgba(255, 255, 255, 0.03); border: 1px dashed rgba(255, 255, 255, 0.12); margin-top: 4px; display: flex; align-items: flex-start; gap: 10px;">
+<svg fill="none" height="16" stroke="rgba(255,255,255,0.7)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;" viewbox="0 0 24 24" width="16"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="16" y2="16"></line><line x1="12" x2="12.01" y1="8" y2="8"></line></svg>
+<p style="font-family: 'Cairo', sans-serif; font-size: 12px; color: rgba(255, 255, 255, 0.75); margin: 0; line-height: 1.6;">
+<strong>تنويه:</strong> يرجى التفضل بحجز الموعد مسبقاً قبل الحضور لضمان تفرغ الأستاذ كريم ودراسة ملف القضية بدقة.
+</p>
 </div>
 </div>
-<div class="flex flex-col gap-space-8" style="display: flex; flex-direction: column; gap: 10px;">
-<div class="flex justify-between items-center p-space-12 rounded-[14px]" style="background: rgba(255, 255, 255, 0.06); padding: 10px 14px; border: 1px solid rgba(255, 255, 255, 0.08);">
-<div class="flex items-center gap-space-8">
-<span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #4ade80;"></span>
-<span style="font-family: 'Cairo', sans-serif; font-size: 14px; font-weight: 700; color: #ffffff;">السبت – الأربعاء:</span>
 </div>
-<span style="font-family: 'Cairo', sans-serif; font-size: 13px; color: rgba(255, 255, 255, 0.9);">10:00 ص – 10:00 م</span>
-</div>
-<div class="flex justify-between items-center p-space-12 rounded-[14px]" style="background: rgba(255, 255, 255, 0.06); padding: 10px 14px; border: 1px solid rgba(255, 255, 255, 0.08);">
-<div class="flex items-center gap-space-8">
-<span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #4ade80;"></span>
-<span style="font-family: 'Cairo', sans-serif; font-size: 14px; font-weight: 700; color: #ffffff;">الخميس:</span>
-</div>
-<span style="font-family: 'Cairo', sans-serif; font-size: 13px; color: rgba(255, 255, 255, 0.9);">10:00 ص – 08:00 م</span>
-</div>
-<div class="flex justify-between items-center p-space-12 rounded-[14px]" style="background: rgba(255, 255, 255, 0.04); padding: 10px 14px; border: 1px solid rgba(255, 255, 255, 0.06);">
-<div class="flex items-center gap-space-8">
-<span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #facc15;"></span>
-<span style="font-family: 'Cairo', sans-serif; font-size: 14px; font-weight: 700; color: #ffffff;">الجمعة:</span>
-</div>
-<span style="font-family: 'Cairo', sans-serif; font-size: 13px; color: rgba(255, 255, 255, 0.75);">عطلة أسبوعية (طوارئ هاتفية فقط)</span>
-</div>
-<div class="p-space-12 rounded-[14px] mt-space-4" style="background: rgba(255, 255, 255, 0.04); padding: 12px; border: 1px dashed rgba(255, 255, 255, 0.18);">
-<p style="font-family: 'Cairo', sans-serif; font-size: 12px; color: rgba(255, 255, 255, 0.85); margin: 0; line-height: 1.6;">
-              💡 <strong>تنويه هام:</strong> يرجى حجز الموعد مسبقاً قبل الحضور إلى مقر المكتب لضمان تفرغ الأستاذ كريم وتخصيص الوقت الكافي لدراسة أوراق قضيتكم بدقة.
-            </p>
-</div>
-</div>
-</div>
-<div class="mt-space-16 pt-space-12 flex gap-space-8" style="display: flex; gap: 10px; margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(255, 255, 255, 0.08);">
-<a class="flex-1 flex items-center justify-center gap-space-4 py-space-8 rounded-[12px] font-bold text-[13px] text-white transition hover:opacity-90" href="tel:01124411711" style="background: #2563eb; font-family:'Cairo',sans-serif; text-decoration: none; padding: 8px 12px; border-radius: 12px;">
-          📞 اتصال مباشر
-        </a>
-<a class="flex-1 flex items-center justify-center gap-space-4 py-space-8 rounded-[12px] font-bold text-[13px] text-white transition hover:opacity-90" href="https://wa.me/201124411711" rel="noopener noreferrer" style="background: #16a34a; font-family:'Cairo',sans-serif; text-decoration: none; padding: 8px 12px; border-radius: 12px;" target="_blank">
-          💬 محادثة واتساب
-        </a>
+<!-- Action Buttons -->
+<div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.08); display: flex; gap: 10px;">
+<a href="tel:01124411711" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px; padding: 11px 16px; border-radius: 9999px; background: #ffffff; color: #111111; font-family: 'Cairo', sans-serif; font-size: 13.5px; font-weight: 700; text-decoration: none; transition: opacity 0.2s;">
+<svg fill="none" height="15" stroke="#111111" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="15"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+<span>اتصال مباشر</span>
+</a>
+<a href="https://wa.me/201124411711" rel="noopener noreferrer" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px; padding: 11px 16px; border-radius: 9999px; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.16); color: #ffffff; font-family: 'Cairo', sans-serif; font-size: 13.5px; font-weight: 600; text-decoration: none; transition: background 0.2s;" target="_blank">
+<svg fill="none" height="15" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+<span>واتساب</span>
+</a>
 </div>
 </div>
 </div>
