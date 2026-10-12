@@ -22,6 +22,8 @@
 
       if (target === filterCategory) {
         btn.classList.add('active');
+        btn.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+        btn.style.borderColor = '#ffffff';
         if (innerDiv) {
           innerDiv.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
           innerDiv.style.borderColor = '#ffffff';
@@ -29,6 +31,8 @@
         if (pText) pText.style.color = '#111111';
       } else {
         btn.classList.remove('active');
+        btn.style.backgroundColor = 'hsla(76, 5.9%, 58%, 0.85)';
+        btn.style.borderColor = 'hsl(76, 5.9%, 58%)';
         if (innerDiv) {
           innerDiv.style.backgroundColor = 'hsla(76, 5.9%, 58%, 0.85)';
           innerDiv.style.borderColor = 'hsl(76, 5.9%, 58%)';
