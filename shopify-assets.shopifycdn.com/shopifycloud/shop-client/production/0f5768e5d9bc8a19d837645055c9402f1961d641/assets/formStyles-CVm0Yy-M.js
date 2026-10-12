@@ -1,0 +1,2 @@
+var e={container:`relative flex flex-col gap-space-4`,field:[`rounded-radius-12 border border-border-input bg-bg-fill`,`peer transition-all duration-100`,`focus:border-text`,`placeholder:text-text-tertiary focus:placeholder:opacity-0`],fieldHeight:`h-[54px]`,fieldPadding:`p-space-16`,error:`border-text-critical`};export{e as t};
+//# sourceMappingURL=formStyles-CVm0Yy-M.js.map

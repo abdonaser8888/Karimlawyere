@@ -1,0 +1,2 @@
+var e=(e=43)=>{let t=window.crypto.getRandomValues(new Uint8Array(e*2));return n(window.btoa(String.fromCharCode(...t)).substring(0,e))},t=async e=>{let t=new TextEncoder().encode(e),r=await window.crypto.subtle.digest(`SHA-256`,t);return n(window.btoa(String.fromCharCode(...new Uint8Array(r))))},n=e=>e.replace(/\+/g,`-`).replace(/\//g,`_`).replace(/[=]+$/,``),r=async()=>{let n=e();return{verifier:n,challenge:await t(n)}};export{r as n,e as t};
+//# sourceMappingURL=pkce-DGVGOwk6.js.map

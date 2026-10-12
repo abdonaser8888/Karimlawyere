@@ -1,0 +1,2 @@
+import{a as e}from"./PayAddressUtils-85WPhWmc.js";import{t}from"./isJapaneseLocale-CWARRewR.js";import{t as n}from"./formatLocalizedName-C4tffOm2.js";function r(r,i,a={}){let o=n(r,i,a.locale);return o&&t(a.locale)&&a.country===e.JP?`${o} 様`:o}export{r as t};
+//# sourceMappingURL=formatLocalizedRecipientName-DbieXJmH.js.map

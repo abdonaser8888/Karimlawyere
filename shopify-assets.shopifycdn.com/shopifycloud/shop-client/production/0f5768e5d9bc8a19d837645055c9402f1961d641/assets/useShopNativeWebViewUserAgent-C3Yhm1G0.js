@@ -1,0 +1,2 @@
+import{t as e}from"./use-hydrated-CHsfTLOs.js";import{i as t}from"./userAgent-lVhu0CSm.js";function n(n=!1){let r=e();return n?!0:!r||typeof navigator>`u`?!1:t(navigator.userAgent)}export{n as t};
+//# sourceMappingURL=useShopNativeWebViewUserAgent-C3Yhm1G0.js.map

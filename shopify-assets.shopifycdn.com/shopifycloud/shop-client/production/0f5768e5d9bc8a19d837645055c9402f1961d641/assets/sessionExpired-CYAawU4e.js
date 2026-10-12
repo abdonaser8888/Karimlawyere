@@ -1,0 +1,2 @@
+var e=function(e){return e.INVALID_ARGUMENTS=`INVALID_ARGUMENTS`,e.NOT_FOUND=`NOT_FOUND`,e.SESSION_EXPIRED=`SESSION_EXPIRED`,e}({});function t(t){return t==null?void 0:t.some(t=>t.code===e.SESSION_EXPIRED)}export{t};
+//# sourceMappingURL=sessionExpired-CYAawU4e.js.map

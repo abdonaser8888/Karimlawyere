@@ -1,0 +1,2 @@
+function e(e){var t,n;return(e==null||(t=e.colors)==null?void 0:t.logoAverage)??(e==null||(n=e.colors)==null?void 0:n.logoDominant)??void 0}export{e as t};
+//# sourceMappingURL=getLogoColor-CoLPQuPm.js.map

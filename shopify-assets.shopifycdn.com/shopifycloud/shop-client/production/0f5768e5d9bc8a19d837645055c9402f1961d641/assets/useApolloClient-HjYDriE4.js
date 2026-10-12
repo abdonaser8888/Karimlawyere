@@ -1,0 +1,2 @@
+import{o as e}from"./rolldown-runtime-C0FnF6B9.js";import{l as t,n,t as r}from"./ApolloContext-CscDe_cl.js";var i=e(n(),1);function a(e){var n=i.useContext(r()),a=e||n.client;return t(!!a,79),a}export{a as t};
+//# sourceMappingURL=useApolloClient-HjYDriE4.js.map

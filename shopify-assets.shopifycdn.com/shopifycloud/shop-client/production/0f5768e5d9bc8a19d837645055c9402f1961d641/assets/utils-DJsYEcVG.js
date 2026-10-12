@@ -1,0 +1,2 @@
+import{t as e}from"./breakpoints-CvLotN6b.js";function t(e){try{return new URL(e,`https://placeholder.invalid`).pathname}catch{return e}}var n=e=>t(e).endsWith(`.webm`),r=e=>{let n=t(e);return n.endsWith(`.mp4`)||n.endsWith(`.mp4v`)},i=e=>t(e).endsWith(`.m3u8`),a=e=>n(e)||r(e)||i(e),o=t=>{if(t!=="default")return`(min-width: ${e[t]}px)`};export{n as a,a as i,i as n,r,o as t};
+//# sourceMappingURL=utils-DJsYEcVG.js.map

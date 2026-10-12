@@ -1,0 +1,2 @@
+import{i as e}from"./hiddenValueIncentive-Dhy7zR6c.js";function t({cashType:t,formattedBoostedCash:n,t:r}){switch(t){case e.ImmediateDiscount:return{offerText:r(`ShopCash.ExclusiveOffers.XOff`,{amount:n}),accessibilityLabel:r(`ShopCash.Worth`,{formattedBoostedCash:n})};case e.EarnShopCash:return{offerText:r(`ShopCash.ExclusiveOffers.EarnFlat`,{formattedBoostedCash:n}),accessibilityLabel:r(`ShopCash.ExclusiveOffers.EarnFlatA11y`,{formattedBoostedCash:n})};default:return{offerText:n,accessibilityLabel:n}}}export{t};
+//# sourceMappingURL=getOfferText-CsdinCe_.js.map

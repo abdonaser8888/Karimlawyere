@@ -1,0 +1,2 @@
+import{n as e,t}from"./jsx-runtime-CSuk6psM.js";import{t as n}from"./ReviewStars-Bn50Vnyx.js";var r=e(),i=t(),a=e=>{var t,a;let o=(0,r.c)(4),{product:s,color:c}=e,l=(t=s.reviewAnalytics)==null?void 0:t.averageRating,u=(a=s.reviewAnalytics)==null?void 0:a.count;if(!l)return null;let d;return o[0]!==c||o[1]!==l||o[2]!==u?(d=(0,i.jsx)(n,{rating:l,count:u,size:`s`,color:c}),o[0]=c,o[1]=l,o[2]=u,o[3]=d):d=o[3],d};export{a as t};
+//# sourceMappingURL=ProductCardReviewStars-CB0ylrTZ.js.map

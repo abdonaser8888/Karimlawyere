@@ -1,0 +1,2 @@
+import{O as e}from"./components-D-pkByQq.js";import{m as t}from"./urls-CIc3U_RE.js";function n(e,n,r={}){let i=new URL(`/qr${e}`,t(n));return Object.entries(r).forEach(([e,t])=>{t!==void 0&&i.searchParams.set(e,t)}),i.toString()}function r(t,r){let{hostname:i}=e(`root`)||{};return n(t,i,r)}export{r as t};
+//# sourceMappingURL=useQrCodeUrl-B8YnCImz.js.map

@@ -1,0 +1,2 @@
+var e=[],t=0;function n(n){if(n<=0){t+=e.length,e.length=0;return}let r=e.length-n;r>0&&(e.splice(0,r),t+=r)}function r(t,r=25){e.push(t),n(r)}function i(){return{items:[...e],droppedCount:t}}function a(){e.length=0,t=0}export{r as n,i as r,a as t};
+//# sourceMappingURL=monorailEventQueue-BHg4X4jH.js.map

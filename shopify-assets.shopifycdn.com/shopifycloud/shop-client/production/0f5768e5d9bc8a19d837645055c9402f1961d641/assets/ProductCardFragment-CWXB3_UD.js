@@ -1,0 +1,13 @@
+import{i as e,o as t,r as n,t as r}from"./ShopCashIncentiveFragment-DnUntjyt.js";var i={kind:`Document`,definitions:[{kind:`FragmentDefinition`,name:{kind:`Name`,value:`ProductCard`},typeCondition:{kind:`NamedType`,name:{kind:`Name`,value:`DiscoveryProduct`}},directives:[],selectionSet:{kind:`SelectionSet`,selections:[{kind:`FragmentSpread`,name:{kind:`Name`,value:`ProductCardWithoutShopCash`},directives:[]},{kind:`Field`,name:{kind:`Name`,value:`shopCashIncentive`},arguments:[],directives:[],selectionSet:{kind:`SelectionSet`,selections:[{kind:`FragmentSpread`,name:{kind:`Name`,value:`ShopCashIncentiveFragment`},directives:[]}]}}]}}],loc:{start:0,end:325}};i.loc.source={body:`#import "./AutomaticDiscountFragment.graphql"
+#import "./ReducedImageFragment.graphql"
+#import "./ProductCardWithoutShopCashFragment.graphql"
+#import "./ShopCashIncentiveFragment.graphql"
+
+fragment ProductCard on DiscoveryProduct {
+  ...ProductCardWithoutShopCash
+  shopCashIncentive {
+    ...ShopCashIncentiveFragment
+  }
+}
+`,name:`GraphQL request`,locationOffset:{line:1,column:1}};var a={};function o(e){return e.filter(function(e){if(e.kind!==`FragmentDefinition`)return!0;var t=e.name.value;return!a[t]&&(a[t]=!0,!0)})}i.definitions=i.definitions.concat(o(e.definitions)),i.definitions=i.definitions.concat(o(t.definitions)),i.definitions=i.definitions.concat(o(n.definitions)),i.definitions=i.definitions.concat(o(r.definitions));function s(e,t){if(e.kind===`FragmentSpread`)t.add(e.name.value);else if(e.kind===`VariableDefinition`){var n=e.type;n.kind===`NamedType`&&t.add(n.name.value)}e.selectionSet&&e.selectionSet.selections.forEach(function(e){s(e,t)}),e.variableDefinitions&&e.variableDefinitions.forEach(function(e){s(e,t)}),e.definitions&&e.definitions.forEach(function(e){s(e,t)})}var c={};(function(){i.definitions.forEach(function(e){if(e.name){var t=new Set;s(e,t),c[e.name.value]=t}})})();function l(e,t){for(var n=0;n<e.definitions.length;n++){var r=e.definitions[n];if(r.name&&r.name.value==t)return r}}function u(e,t){var n={kind:e.kind,definitions:[l(e,t)]};e.hasOwnProperty(`loc`)&&(n.loc=e.loc);var r=c[t]||new Set,i=new Set,a=new Set;for(r.forEach(function(e){a.add(e)});a.size>0;){var o=a;a=new Set,o.forEach(function(e){i.has(e)||(i.add(e),(c[e]||new Set).forEach(function(e){a.add(e)}))})}return i.forEach(function(t){var r=l(e,t);r&&n.definitions.push(r)}),n}u(i,`ProductCard`);export{i as t};
+//# sourceMappingURL=ProductCardFragment-CWXB3_UD.js.map

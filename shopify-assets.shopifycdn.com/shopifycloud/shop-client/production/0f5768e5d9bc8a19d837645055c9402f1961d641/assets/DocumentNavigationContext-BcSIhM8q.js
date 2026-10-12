@@ -1,0 +1,2 @@
+import{o as e}from"./rolldown-runtime-C0FnF6B9.js";import{t}from"./react-C21x__mS.js";var n=(0,e(t(),1).createContext)({retryMigrationOnNextNavigation:!1});export{n as t};
+//# sourceMappingURL=DocumentNavigationContext-BcSIhM8q.js.map

@@ -1,0 +1,2 @@
+import{o as e}from"./rolldown-runtime-C0FnF6B9.js";import{i as t,n}from"./ApolloContext-CscDe_cl.js";var r=e(n(),1),i=t?r.useLayoutEffect:r.useEffect;export{i as t};
+//# sourceMappingURL=useIsomorphicLayoutEffect-BplyDhZE.js.map

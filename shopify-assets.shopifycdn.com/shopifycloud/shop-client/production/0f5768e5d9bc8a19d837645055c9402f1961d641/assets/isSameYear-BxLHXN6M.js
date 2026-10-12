@@ -1,0 +1,2 @@
+import{r as e}from"./differenceInCalendarDays-QU-SUTRE.js";function t(t,n,r){let[i,a]=e(r==null?void 0:r.in,t,n);return i.getFullYear()===a.getFullYear()}export{t};
+//# sourceMappingURL=isSameYear-BxLHXN6M.js.map

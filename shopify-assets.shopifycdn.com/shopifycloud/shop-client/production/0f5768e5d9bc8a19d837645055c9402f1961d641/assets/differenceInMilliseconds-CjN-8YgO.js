@@ -1,0 +1,2 @@
+import{t as e}from"./toDate-PwU_UItz.js";function t(e){return t=>{let n=(e?Math[e]:Math.trunc)(t);return n===0?0:n}}function n(t,n){return e(t)-+e(n)}export{t as n,n as t};
+//# sourceMappingURL=differenceInMilliseconds-CjN-8YgO.js.map

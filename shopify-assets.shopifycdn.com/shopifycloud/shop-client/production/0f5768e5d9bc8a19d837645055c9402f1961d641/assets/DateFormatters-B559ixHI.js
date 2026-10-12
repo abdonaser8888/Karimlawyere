@@ -1,0 +1,2 @@
+var e={en:`MMM d`,es:`do MMM`,fr:`do MMM`,de:`do MMM`,cs:`d. MMM`,da:`d. MMM`,fi:`d. MMM`,it:`d MMM`,ja:`M月d日`,lt:`MMM d`,nb:`d. MMM`,nl:`d MMM`,pl:`d MMM`,pt:`d MMM`,ro:`d MMM`,sv:`d MMM`},t={en:`MMM d, yyyy`,es:`do MMM yyyy`,fr:`do MMM yyyy`,de:`do MMM yyyy`,cs:`d. MMM yyyy`,da:`d. MMM yyyy`,fi:`d. MMM yyyy`,it:`d MMM yyyy`,ja:`yyyy年M月d日`,lt:`MMM d, yyyy`,nb:`d. MMM yyyy`,nl:`d MMM yyyy`,pl:`d MMM yyyy`,pt:`d MMM yyyy`,ro:`d MMM yyyy`,sv:`d MMM yyyy`};export{t as n,e as t};
+//# sourceMappingURL=DateFormatters-B559ixHI.js.map

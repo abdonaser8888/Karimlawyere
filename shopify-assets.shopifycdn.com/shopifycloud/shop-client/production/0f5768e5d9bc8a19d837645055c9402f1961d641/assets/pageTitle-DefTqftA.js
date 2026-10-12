@@ -1,0 +1,2 @@
+import{b as e}from"./constants-C5JXivoa.js";function t(t,{siteNamePlacement:n=`suffix`}={}){let r=t==null?void 0:t.trim();return r?n===`prefix`?`${e} - ${r}`:`${r} - ${e}`:e}export{t};
+//# sourceMappingURL=pageTitle-DefTqftA.js.map

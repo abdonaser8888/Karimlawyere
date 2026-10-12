@@ -1,0 +1,2 @@
+var e=({clientToken:e,sessionToken:t,fallbackClientToken:n,fallbackSessionToken:r})=>({trackingUnique:e||n||`00000000-0000-0000-5000-000000000000`,trackingVisit:t||r||`00000000-0000-0000-5000-000000000000`});export{e as t};
+//# sourceMappingURL=checkoutTrackingTokens-DmGbro-o.js.map

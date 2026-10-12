@@ -1,0 +1,3 @@
+var e=(e,t)=>{let{address1:n,address2:r,city:i,zoneCode:a,postalCode:o}=e,s=[t,n,r,i,a,o].filter(Boolean);return encodeURIComponent(s.join(`, `))},t=(t,n)=>`https://www.google.com/maps/search/?api=1&query=${e(t,n)}`,n=9.5,r={lat:0,lng:0};function i(e){if(!e)return``;let t=[];e.address1&&t.push(e.address1);let n=[e.zoneCode||e.zone,e.postalCode].filter(Boolean).join(` `),r=[e.city,n].filter(Boolean).join(`, `);return r&&t.push(r),t.join(`,
+`)}export{t as i,n,i as r,r as t};
+//# sourceMappingURL=locationDisplayUtils-_H25EBiG.js.map

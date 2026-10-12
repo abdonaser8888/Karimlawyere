@@ -1,0 +1,2 @@
+import{t as e}from"./languages-CbqBQnWm.js";var t={supportedLngs:[...e],nonExplicitSupportedLngs:!0,fallbackLng:`en`,defaultNS:[`common`,`accounts`,`shopAI`,`shop-minis-marketing`],react:{useSuspense:!1},interpolation:{escapeValue:!1}};export{t};
+//# sourceMappingURL=i18nConfig-C3hTkDLn.js.map

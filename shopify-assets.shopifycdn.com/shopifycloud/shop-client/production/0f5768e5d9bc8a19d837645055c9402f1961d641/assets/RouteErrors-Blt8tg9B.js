@@ -1,0 +1,2 @@
+import{t as e}from"./defineProperty-BbfpZ9Tg.js";var t=class extends Error{constructor(t){super(t),e(this,`to`,void 0),this.name=`RedirectError`,this.to=t}},n=class extends Error{constructor(t){super(t),e(this,`to`,void 0),this.name=`RedirectErrorPermanentlyMoved`,this.to=t}},r=class extends Error{constructor(){super(`Not found`),this.name=`NotFoundError`}};export{t as n,n as r,r as t};
+//# sourceMappingURL=RouteErrors-Blt8tg9B.js.map

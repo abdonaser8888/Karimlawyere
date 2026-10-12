@@ -1,0 +1,2 @@
+var e=function(e){return e.LOCAL=`LOCAL`,e.NONE=`NONE`,e.PICK_UP=`PICK_UP`,e.PICKUP_POINT=`PICKUP_POINT`,e.RETAIL=`RETAIL`,e.SHIPPING=`SHIPPING`,e}({});export{e as t};
+//# sourceMappingURL=DeliveryMethodType-8DRY8SgZ.js.map

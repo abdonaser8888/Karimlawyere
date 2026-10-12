@@ -1,0 +1,2 @@
+import{o as e}from"./rolldown-runtime-C0FnF6B9.js";import{t}from"./react-C21x__mS.js";import{l as n}from"./_virtual_permissions-45_EbSPd.js";var r=e(t(),1),i=()=>{let[e,t]=n(),i=e.get(`na`)===`1`;return(0,r.useEffect)(()=>{i&&(e.delete(`na`),t(e))},[e,t,i]),{hasNotAvailableUrlParam:i}};export{i as t};
+//# sourceMappingURL=useNotAvailableUrlParam-BbOEA6XD.js.map

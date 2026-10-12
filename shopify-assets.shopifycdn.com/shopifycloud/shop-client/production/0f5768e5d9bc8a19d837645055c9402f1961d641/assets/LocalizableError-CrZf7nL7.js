@@ -1,0 +1,2 @@
+import{t as e}from"./defineProperty-BbfpZ9Tg.js";var t=class extends Error{constructor(t,n){super(t),e(this,`t`,void 0),this.t=n,this.name=`LocalizableError`}};export{t};
+//# sourceMappingURL=LocalizableError-CrZf7nL7.js.map

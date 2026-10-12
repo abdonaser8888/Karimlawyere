@@ -1,0 +1,2 @@
+import{n as e,t}from"./toDate-PwU_UItz.js";function n(n,r,i){let a=t(n,i==null?void 0:i.in);return isNaN(r)?e((i==null?void 0:i.in)||n,NaN):(r&&a.setDate(a.getDate()+r),a)}export{n as t};
+//# sourceMappingURL=addDays-DnExfPub.js.map

@@ -1,0 +1,2 @@
+import{o as e}from"./rolldown-runtime-C0FnF6B9.js";import{t}from"./react-C21x__mS.js";import{O as n}from"./components-D-pkByQq.js";import{o as r,r as i,s as a,t as o}from"./deviceUtils-CcXaFA3y.js";var s=e(t(),1),c=()=>{let{userAgent:e=``,mobilePlatform:t}=n(`root`)||{};return(0,s.useMemo)(()=>({mobilePlatform:t,isMobile:r(e||``),isIOS:i(e),isAndroid:o(e),isSafari:a(e)}),[e,t])};export{c as t};
+//# sourceMappingURL=useDeviceInfo-LklfZK7N.js.map

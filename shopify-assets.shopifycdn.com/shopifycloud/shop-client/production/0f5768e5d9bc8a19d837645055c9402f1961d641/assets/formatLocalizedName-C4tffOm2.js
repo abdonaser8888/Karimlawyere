@@ -1,0 +1,2 @@
+import{t as e}from"./isJapaneseLocale-CWARRewR.js";function t(t,n,r){let i=t==null?void 0:t.trim(),a=n==null?void 0:n.trim();return e(r)?[a,i].filter(Boolean).join(` `):[i,a].filter(Boolean).join(` `)}export{t};
+//# sourceMappingURL=formatLocalizedName-C4tffOm2.js.map

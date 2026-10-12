@@ -1,0 +1,2 @@
+import{c as e}from"./reviewMedia-DyNcb9OU.js";var t=4/5;function n(t){let n=new Set;return e(t).map(e=>{let t=e.mediaId??`${e.group.id}-${e.mediaIndex}`,r=t,i=1;for(;n.has(r);)r=`${t}-${i}`,i+=1;n.add(r);let a={id:r,url:e.url,imageWidth:e.imageWidth,imageHeight:e.imageHeight,thumbhash:e.thumbhash,group:e.group};return e.mediaType===`video`?{...a,mediaType:`video`,videoUrl:e.videoUrl}:{...a,mediaType:`image`}})}function r(e,n){return!e||!n?t:e/n}export{n,r as t};
+//# sourceMappingURL=types-D01Bb9ip.js.map

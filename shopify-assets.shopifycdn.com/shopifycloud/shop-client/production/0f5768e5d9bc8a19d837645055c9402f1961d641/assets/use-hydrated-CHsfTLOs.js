@@ -1,0 +1,2 @@
+import{o as e}from"./rolldown-runtime-C0FnF6B9.js";import{t}from"./react-C21x__mS.js";var n=e(t(),1);function r(){return()=>{}}function i(){return(0,n.useSyncExternalStore)(r,()=>!0,()=>!1)}export{i as t};
+//# sourceMappingURL=use-hydrated-CHsfTLOs.js.map

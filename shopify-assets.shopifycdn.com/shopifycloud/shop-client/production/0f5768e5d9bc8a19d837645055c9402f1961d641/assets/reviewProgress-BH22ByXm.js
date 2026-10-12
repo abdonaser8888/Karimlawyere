@@ -1,0 +1,2 @@
+import{o as e}from"./reviewValidation-C1fkpoLd.js";function t(t,n=[]){if(t.mode!==`create`)return;let r=t.lineItems.filter(t=>t.reviewableStatus===e.REVIEWABLE||t.reviewableStatus===e.REVIEWED);if(r.length<=1)return;let i=r.findIndex(e=>e.id===t.lineItem.id),a=[...r.slice(i+1),...r.slice(0,i)],o=a.find(t=>t.reviewableStatus===e.REVIEWABLE&&!n.includes(t.id));return{current:a.filter(t=>t.reviewableStatus===e.REVIEWED||n.includes(t.id)).length+1,total:r.length,nextLineItemId:o==null?void 0:o.id}}export{t};
+//# sourceMappingURL=reviewProgress-BH22ByXm.js.map

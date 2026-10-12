@@ -1,0 +1,2 @@
+function e(e,t,n={}){return new Intl.NumberFormat(t,{notation:`compact`,compactDisplay:`short`,maximumFractionDigits:1,...n}).format(e)}export{e as t};
+//# sourceMappingURL=formatCompactNumber-WjGUnRBo.js.map

@@ -1,0 +1,2 @@
+import{t as e}from"./breakpoints-CvLotN6b.js";import{n as t}from"./useMediaQuery-BtYYjzPc.js";var n={FeedCardText:`_FeedCardText_q8s4i_1`},r=()=>{let n=t(`(min-width: ${e.xxl}px)`),r=t(`(min-width: ${e.xl}px)`),i=t(`(min-width: ${e.lg}px)`),a=t(`(min-width: ${e.md}px)`),o=t(`(min-width: ${e.sm}px)`),s=t(`(min-width: ${e.xsm}px)`),c=t(`(min-width: ${e.xxsm}px)`);return n?`xxl`:r?`xl`:i?`lg`:a?`md`:o?`sm`:s?`xsm`:c?`xxsm`:`default`};export{n,r as t};
+//# sourceMappingURL=useCurrentBreakpoint-CxGFAqGx.js.map

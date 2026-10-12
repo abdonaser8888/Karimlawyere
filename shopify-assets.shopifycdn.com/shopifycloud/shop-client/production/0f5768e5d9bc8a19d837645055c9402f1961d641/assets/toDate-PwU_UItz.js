@@ -1,0 +1,2 @@
+var e=365.2425,t=6048e5,n=864e5,r=6e4,i=36e5,a=1e3,o=43200,s=1440,c=86400;c*7,c*e/12*3;var l=Symbol.for(`constructDateFrom`);function u(e,t){return typeof e==`function`?e(t):e&&typeof e==`object`&&l in e?e[l](t):e instanceof Date?new e.constructor(t):new Date(t)}function d(e,t){return u(t||e,e)}export{r as a,s as c,i,o as l,u as n,a as o,n as r,t as s,d as t};
+//# sourceMappingURL=toDate-PwU_UItz.js.map

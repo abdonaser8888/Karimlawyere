@@ -1,0 +1,2 @@
+function e(e,t){let n=new URLSearchParams;for(let[e,r]of Object.entries(t))r!=null&&(typeof r==`object`?n.set(e,JSON.stringify(r)):n.set(e,String(r)));let r=n.toString();return r?`${e}?${r}`:e}export{e as t};
+//# sourceMappingURL=buildResourceUrl-C4n3ilbW.js.map

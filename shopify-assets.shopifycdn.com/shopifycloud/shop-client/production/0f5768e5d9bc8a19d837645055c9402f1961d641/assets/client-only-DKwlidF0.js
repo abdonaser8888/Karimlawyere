@@ -1,0 +1,2 @@
+import"./rolldown-runtime-C0FnF6B9.js";import{t as e}from"./react-C21x__mS.js";import{t}from"./use-hydrated-CHsfTLOs.js";e();function n({children:e,fallback:n=null}){return t()?e():n}export{n as t};
+//# sourceMappingURL=client-only-DKwlidF0.js.map

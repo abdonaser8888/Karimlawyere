@@ -1,0 +1,2 @@
+import{o as e}from"./rolldown-runtime-C0FnF6B9.js";import{t}from"./react-C21x__mS.js";var n=e(t(),1),r=(0,n.createContext)(void 0),i=()=>{let e=(0,n.useContext)(r);if(!e)throw Error(`useAgentNavigation must be used within an AgentNavigationProvider`);return e},a=()=>(0,n.useContext)(r);export{i as n,a as r,r as t};
+//# sourceMappingURL=AgentNavigationContext-BiSkz0q6.js.map

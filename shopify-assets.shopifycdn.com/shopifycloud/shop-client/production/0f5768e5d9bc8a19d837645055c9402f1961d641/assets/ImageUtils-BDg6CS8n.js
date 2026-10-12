@@ -1,0 +1,2 @@
+var e={xsUrl:64,sUrl:128,xxsmUrl:256,xsmUrl:384,smUrl:512,mUrl:640,lUrl:1080,xlUrl:2048},t={...e,lUrl:800,xlUrl:1e3,xxlUrl:1500,xxxlUrl:2048},n=[`https://cdn.shopify.com`,`https://shopify-assets.shopifycdn.com`],r=`https://proxy.shopifycdn.com`;Object.entries(e).sort(([,e],[,t])=>e-t);var i=e=>!!(e&&n.some(t=>e.startsWith(t))),a=e=>!!(e!=null&&e.startsWith(r));export{a as i,t as n,i as r,e as t};
+//# sourceMappingURL=ImageUtils-BDg6CS8n.js.map

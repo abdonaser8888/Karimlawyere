@@ -1,0 +1,2 @@
+import{t as e}from"./httpStatus-DQuWILYU.js";function t(e){return e.hasOwnProperty(`graphQLErrors`)}var n=`UNAUTHORIZED`,r=n=>{if(!n)return!1;if(n instanceof Response)return n.status===e.UNAUTHORIZED;if(!t(n))return!1;let{graphQLErrors:r}=n;for(let e of r){var i;if(((i=e.extensions)==null?void 0:i.code)===`UNAUTHORIZED`)return!0}return!1};export{r as n,t as r,n as t};
+//# sourceMappingURL=hasUnauthorizedError-5P9j6hBX.js.map

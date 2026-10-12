@@ -1,0 +1,2 @@
+import{n as e,t}from"./jsx-runtime-CSuk6psM.js";import{t as n}from"./cn-DW2TDMXS.js";var r=e(),i=t(),a={l:`h-space-16`,m:`h-space-4`,s:`h-[1px]`};function o(e){let t=(0,r.c)(5),{className:o,size:s}=e,c=a[s===void 0?`s`:s],l;t[0]!==o||t[1]!==c?(l=n(`border-none bg-border-tertiary`,c,o),t[0]=o,t[1]=c,t[2]=l):l=t[2];let u;return t[3]===l?u=t[4]:(u=(0,i.jsx)(`hr`,{className:l}),t[3]=l,t[4]=u),u}export{o as t};
+//# sourceMappingURL=Divider-HKFXus4U.js.map

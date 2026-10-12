@@ -1,0 +1,2 @@
+var e={BLOCK_MT:`mt-space-20 md:mt-space-40`,BLOCK_MB:`mb-space-20 md:mb-space-36`,GAP:`gap-space-8`,TITLE_CLASSES:`text-header md:text-center md:font-posterXS md:text-posterXS`};export{e as t};
+//# sourceMappingURL=PageTitle.constants-CwzKUv_z.js.map

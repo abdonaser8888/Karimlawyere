@@ -1,0 +1,2 @@
+var e=({src:e,id:t,attributes:n,onload:r=null,onerror:i=null})=>{if(t){let e=document.getElementById(t);if(e)return e.dispatchEvent(new Event(`load`)),e}let a=document.createElement(`script`);t&&(a.id=t),a.type=`text/javascript`,a.async=!0,a.onload=r,a.onerror=i,a.src=e,n&&Object.entries(n).forEach(([e,t])=>{a.setAttribute(e,t)});let o=document.head.getElementsByTagName(`script`)[0];return o&&o.parentNode?o.parentNode.insertBefore(a,o):document.head.appendChild(a),a};export{e as t};
+//# sourceMappingURL=insertScriptTag-CD5WPcue.js.map

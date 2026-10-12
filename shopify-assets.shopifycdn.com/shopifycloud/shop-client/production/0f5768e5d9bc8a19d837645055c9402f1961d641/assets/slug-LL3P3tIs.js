@@ -1,0 +1,2 @@
+function e(e){let t=e.toLowerCase().trim().replace(/['′'`´]/g,``).replace(/[^a-z0-9\s-]/g,` `).replace(/\s+/g,` `).trim().split(` `).filter(e=>e.length>0).slice(0,13),n=t.join(`-`);if(n.length>80){n=``;for(let e of t){let t=n?`${n}-${e}`:e;if(t.length<=80)n=t;else{!n&&e.length>80&&(n=e.slice(0,80));break}}}return n=n.replace(/-+/g,`-`).replace(/^-+/,``).replace(/-+$/,``),n}export{e as t};
+//# sourceMappingURL=slug-LL3P3tIs.js.map

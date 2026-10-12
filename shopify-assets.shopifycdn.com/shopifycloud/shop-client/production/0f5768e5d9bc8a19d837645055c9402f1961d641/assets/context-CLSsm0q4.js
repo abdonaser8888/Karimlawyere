@@ -1,0 +1,2 @@
+import{o as e}from"./rolldown-runtime-C0FnF6B9.js";import{t}from"./react-C21x__mS.js";var n=(0,e(t(),1).createContext)({activeSearch:null,searchHistory:[],recordSearch(e){},removeSearch(e){},recordSimilarTo(e,t,n){},removeSimilarTo(e){},loading:!1});export{n as t};
+//# sourceMappingURL=context-CLSsm0q4.js.map
