@@ -297,6 +297,7 @@
       if (overlay) overlay.classList.add('open');
       if (dialog) dialog.classList.add('open');
       document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
     }
 
     function closeDrawer() {
@@ -304,6 +305,7 @@
       if (overlay) overlay.classList.remove('open');
       if (dialog) dialog.classList.remove('open');
       document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
     }
 
     if (menuBtn) {
