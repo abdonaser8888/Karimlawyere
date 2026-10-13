@@ -253,33 +253,30 @@ menu::-webkit-scrollbar, [data-testid="store-navigation-bar"]::-webkit-scrollbar
   text-align: right !important;
 }
 
-/* Store Menu Side Sheet Drawer (Shop.com Exact Style) */
+/* Store Menu Side Sheet Drawer (Shop.com Exact Replica) */
 #store-menu-scrim {
-  position: fixed;
-  top: 8px;
-  left: 4.75rem;
-  right: 8px;
-  bottom: 8px;
-  border-radius: 28px;
-  z-index: 55;
-  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  opacity: 0;
-  pointer-events: none;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.45) 69.75%);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 55 !important;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  background: rgba(0, 0, 0, 0.55) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+@media (min-width: 1024px) {
+  #store-menu-scrim {
+    left: 4.75rem !important;
+  }
 }
 #store-menu-overlay {
-  position: fixed;
-  top: 8px;
-  left: 4.75rem;
-  right: 8px;
-  bottom: 8px;
-  border-radius: 28px;
-  z-index: 55;
-  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  opacity: 0;
-  pointer-events: none;
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 55 !important;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 #store-menu-scrim.open, #store-menu-overlay.open {
   opacity: 1 !important;
@@ -287,33 +284,45 @@ menu::-webkit-scrollbar, [data-testid="store-navigation-bar"]::-webkit-scrollbar
 }
 
 #store-menu-container {
-  position: fixed;
-  top: 8px;
-  left: 4.75rem;
-  right: 8px;
-  bottom: 8px;
-  border-radius: 28px;
-  z-index: 60;
-  pointer-events: none;
-  overflow: hidden;
+  position: fixed !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 4.75rem !important;
+  right: 0 !important;
+  z-index: 60 !important;
+  pointer-events: none !important;
+}
+@media (max-width: 1023px) {
+  #store-menu-container {
+    left: 0 !important;
+    z-index: 100 !important;
+  }
 }
 
 #store-menu-dialog {
   position: absolute !important;
-  top: 0 !important;
-  bottom: auto !important;
-  left: 0 !important;
+  top: 12px !important;
+  bottom: 12px !important;
+  left: 12px !important;
   right: auto !important;
-  width: 100% !important;
-  max-width: 480px !important;
-  height: auto !important;
-  max-height: calc(100vh - 16px) !important;
-  padding: 8px !important;
+  width: 390px !important;
+  max-width: calc(100vw - 4.75rem - 24px) !important;
+  height: calc(100% - 24px) !important;
   z-index: 70 !important;
-  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease-out !important;
-  transform: translateX(-105%) !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease !important;
+  transform: translateX(-110%) !important;
   opacity: 0 !important;
   pointer-events: none !important;
+  border-radius: 28px !important;
+  background-color: rgba(62, 70, 58, 0.94) !important;
+  backdrop-filter: blur(28px) !important;
+  -webkit-backdrop-filter: blur(28px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
 }
 #store-menu-dialog.open {
   transform: translateX(0) !important;
@@ -322,40 +331,357 @@ menu::-webkit-scrollbar, [data-testid="store-navigation-bar"]::-webkit-scrollbar
 }
 
 @media (max-width: 1023px) {
-  #store-menu-scrim, #store-menu-overlay, #store-menu-container {
+  #store-menu-dialog {
     top: 0 !important;
+    bottom: 0 !important;
     left: 0 !important;
     right: 0 !important;
-    bottom: 0 !important;
-    border-radius: 0 !important;
-    z-index: 100 !important;
-  }
-  #store-menu-dialog {
-    max-width: 100% !important;
     width: 100% !important;
+    max-width: 100% !important;
     height: 100dvh !important;
-    max-height: 100dvh !important;
-    padding: 0 !important;
+    border-radius: 0 !important;
+    border: none !important;
     transform: translateY(100%) !important;
     z-index: 101 !important;
-    box-sizing: border-box !important;
   }
   #store-menu-dialog.open {
     transform: translateY(0) !important;
   }
-  #store-menu-dialog .shop-dialog-inner {
-    border-radius: 0 !important;
-    height: 100dvh !important;
-    max-height: 100dvh !important;
-    max-width: 100% !important;
-    width: 100% !important;
-    padding: 16px !important;
-    box-sizing: border-box !important;
-    overflow-y: auto !important;
-  }
 }
 
-/* Force crisp white text and clean styles inside drawer */
+.shop-menu-scroll-area {
+  width: 100% !important;
+  height: 100% !important;
+  overflow-y: auto !important;
+  overscroll-behavior: contain !important;
+  padding: 20px !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 14px !important;
+  scrollbar-width: none !important;
+}
+.shop-menu-scroll-area::-webkit-scrollbar {
+  display: none !important;
+}
+
+.shop-menu-topbar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  flex-shrink: 0 !important;
+}
+.shop-menu-circle-btn {
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+  max-width: 40px !important;
+  min-height: 40px !important;
+  max-height: 40px !important;
+  border-radius: 50% !important;
+  background: rgba(0, 0, 0, 0.28) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #ffffff !important;
+  cursor: pointer !important;
+  padding: 0 !important;
+  transition: background 0.2s, transform 0.15s !important;
+  box-sizing: border-box !important;
+}
+.shop-menu-circle-btn:hover {
+  background: rgba(0, 0, 0, 0.45) !important;
+}
+.shop-menu-circle-btn:active {
+  transform: scale(0.95) !important;
+}
+
+.shop-menu-identity {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  direction: rtl !important;
+  text-align: right !important;
+  width: 100% !important;
+  flex-shrink: 0 !important;
+  margin-top: 2px !important;
+}
+.shop-menu-logo-box {
+  width: 46px !important;
+  height: 46px !important;
+  min-width: 46px !important;
+  max-width: 46px !important;
+  min-height: 46px !important;
+  max-height: 46px !important;
+  border-radius: 50% !important;
+  background: #171d15 !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  padding: 2px !important;
+  box-sizing: border-box !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25) !important;
+}
+.shop-menu-logo-img {
+  width: 38px !important;
+  height: 38px !important;
+  max-width: 38px !important;
+  max-height: 38px !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+.shop-menu-identity-info {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  min-width: 0 !important;
+  flex: 1 !important;
+  text-align: right !important;
+}
+.shop-menu-identity-title {
+  font-family: 'Cairo', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  margin: 0 !important;
+  line-height: 1.3 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+.shop-menu-identity-sub {
+  font-family: 'Cairo', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  margin-top: 2px !important;
+  line-height: 1 !important;
+}
+
+.shop-menu-card-nav {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 24px !important;
+  padding: 8px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2px !important;
+  direction: rtl !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  flex-shrink: 0 !important;
+}
+.shop-menu-nav-btn {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  width: 100% !important;
+  padding: 7px 10px !important;
+  border-radius: 9999px !important;
+  border: none !important;
+  background: transparent !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  box-sizing: border-box !important;
+  transition: background 0.15s ease, transform 0.1s ease !important;
+  text-align: right !important;
+}
+.shop-menu-nav-btn:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+}
+.shop-menu-nav-btn:active {
+  transform: scale(0.99) !important;
+}
+.shop-menu-nav-icon-badge {
+  width: 32px !important;
+  height: 32px !important;
+  min-width: 32px !important;
+  max-width: 32px !important;
+  min-height: 32px !important;
+  max-height: 32px !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  box-sizing: border-box !important;
+}
+.shop-menu-nav-text {
+  font-family: 'Cairo', sans-serif !important;
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.shop-menu-card-reviews {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 24px !important;
+  padding: 16px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  direction: rtl !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  flex-shrink: 0 !important;
+}
+.shop-menu-reviews-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+}
+.shop-menu-reviews-title {
+  font-family: 'Cairo', sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  margin: 0 !important;
+}
+.shop-menu-arrow-btn {
+  width: 32px !important;
+  height: 32px !important;
+  min-width: 32px !important;
+  max-width: 32px !important;
+  min-height: 32px !important;
+  max-height: 32px !important;
+  border-radius: 50% !important;
+  background: rgba(0, 0, 0, 0.25) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #ffffff !important;
+  cursor: pointer !important;
+  padding: 0 !important;
+  flex-shrink: 0 !important;
+  box-sizing: border-box !important;
+}
+.shop-menu-rating-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+.shop-menu-rating-number {
+  font-family: 'Cairo', sans-serif !important;
+  font-size: 32px !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+  line-height: 1 !important;
+}
+.shop-menu-rating-stars-col {
+  display: flex !important;
+  flex-direction: column !important;
+  text-align: right !important;
+}
+.shop-menu-stars {
+  color: #fbbf24 !important;
+  font-size: 14px !important;
+  line-height: 1 !important;
+  letter-spacing: 1px !important;
+}
+.shop-menu-rating-count {
+  font-family: 'Cairo', sans-serif !important;
+  font-size: 11.5px !important;
+  color: rgba(255, 255, 255, 0.65) !important;
+  margin-top: 2px !important;
+  line-height: 1 !important;
+}
+
+.shop-menu-thumbs-strip {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 6px !important;
+  width: 100% !important;
+  padding-top: 2px !important;
+}
+.shop-menu-thumb-img {
+  width: 52px !important;
+  height: 52px !important;
+  min-width: 52px !important;
+  max-width: 52px !important;
+  min-height: 52px !important;
+  max-height: 52px !important;
+  border-radius: 12px !important;
+  object-fit: cover !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  display: block !important;
+  box-sizing: border-box !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important;
+}
+
+.shop-menu-actions-row {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 8px !important;
+  width: 100% !important;
+  padding-top: 10px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-sizing: border-box !important;
+}
+.shop-menu-action-pill {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  padding: 8px 12px !important;
+  border-radius: 9999px !important;
+  font-family: 'Cairo', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: background 0.15s, transform 0.1s !important;
+  box-sizing: border-box !important;
+  border: none !important;
+}
+.shop-menu-action-pill:active {
+  transform: scale(0.96) !important;
+}
+.shop-menu-pill-call {
+  background: rgba(255, 255, 255, 0.16) !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  color: #ffffff !important;
+}
+.shop-menu-pill-call:hover {
+  background: rgba(255, 255, 255, 0.24) !important;
+}
+.shop-menu-pill-wa {
+  background: rgba(37, 211, 102, 0.2) !important;
+  border: 1px solid rgba(37, 211, 102, 0.4) !important;
+  color: #4ade80 !important;
+}
+.shop-menu-pill-wa:hover {
+  background: rgba(37, 211, 102, 0.3) !important;
+}
+
+.shop-menu-footer {
+  text-align: center !important;
+  font-family: 'Cairo', sans-serif !important;
+  font-size: 11px !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+  margin-top: auto !important;
+  padding-top: 8px !important;
+  direction: rtl !important;
+  flex-shrink: 0 !important;
+}
+
 #store-menu-dialog,
 #store-menu-dialog h1,
 #store-menu-dialog h2,
@@ -365,222 +691,171 @@ menu::-webkit-scrollbar, [data-testid="store-navigation-bar"]::-webkit-scrollbar
 #store-menu-dialog a {
   color: #ffffff;
 }
-
-#store-menu-dialog .drawer-call-btn,
-#store-menu-dialog .drawer-call-btn span,
-#store-menu-dialog .drawer-call-btn svg {
-  color: #111111 !important;
-  stroke: #111111 !important;
-}
 </style>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
 </head><body class="">
-<!-- Store Menu Side Sheet Drawer (Shop.com Exact Style) -->
+<!-- Store Menu Side Sheet Drawer (Shop.com Exact Replica) -->
 <div id="store-menu-scrim" class="pointer-events-none opacity-0" data-drawer-scrim="true"></div>
 <div id="store-menu-overlay" class="pointer-events-none opacity-0" aria-hidden="true" data-testid="side-sheet-overlay"></div>
 <div id="store-menu-container" class="pointer-events-none" data-testid="side-sheet-container">
-  <div id="store-menu-dialog" class="pointer-events-none" role="dialog" aria-modal="true" aria-hidden="true" data-testid="side-sheet-dialog" style="overscroll-behavior: contain;">
-    <div class="shop-dialog-inner w-full p-4 lg:p-5 backdrop-blur-[16px] shadow-2xl flex flex-col gap-2.5" style="background-color: rgb(105, 110, 98); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 28px; box-sizing: border-box; height: auto; max-height: calc(100vh - 32px);">
+  <div id="store-menu-dialog" class="pointer-events-none" role="dialog" aria-modal="true" aria-hidden="true" data-testid="side-sheet-dialog">
+    <div class="shop-menu-scroll-area">
       
       <!-- Top Action Bar (Close & Share) -->
-      <div class="flex w-full items-center justify-between pb-2 z-10 shrink-0">
+      <div class="shop-menu-topbar">
         <!-- Close Button X -->
-        <button type="button" id="store-menu-close-btn" class="rounded-full transition flex items-center justify-center active:scale-[0.96] active:opacity-60 hover:bg-black/30 cursor-pointer" aria-label="إغلاق القائمة" data-testid="side-sheet-close-button" style="width: 40px; height: 40px; background: rgba(0, 0, 0, 0.2); border: 1px solid rgba(255, 255, 255, 0.16);">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.67" stroke-linecap="round">
+        <button type="button" id="store-menu-close-btn" class="shop-menu-circle-btn" aria-label="إغلاق القائمة">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round">
             <path d="M6 6L18 18M18 6L6 18"></path>
           </svg>
         </button>
 
         <!-- Share Button -->
-        <button type="button" id="store-menu-share-btn" class="rounded-full transition flex items-center justify-center active:scale-[0.96] active:opacity-60 hover:bg-black/30 cursor-pointer" aria-label="مشاركة صفحة المكتب" style="width: 40px; height: 40px; background: rgba(0, 0, 0, 0.2); border: 1px solid rgba(255, 255, 255, 0.16);">
+        <button type="button" id="store-menu-share-btn" class="shop-menu-circle-btn" aria-label="مشاركة صفحة المكتب" onclick="if(navigator.share){navigator.share({title:'مكتب الأستاذ كريم هشام جميل',url:window.location.href});}else{navigator.clipboard.writeText(window.location.href);alert('تم نسخ رابط الصفحة بنجاح!');}">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M20 12.75V16C20 18.2091 18.2091 20 16 20H8C5.79086 20 4 18.2091 4 16V12.75M12 4V15.25M12 4L16.5 8.5M12 4L7.5 8.5"></path>
           </svg>
         </button>
       </div>
 
-      <!-- Scrollable Main Content -->
-      <div class="flex flex-col flex-1 min-h-0 overflow-y-auto overscroll-contain pr-0.5 gap-2.5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" data-testid="side-sheet-content">
+      <!-- Store Info Header (Exact FIGS Style: Logo + Name + 4.9 Rating) -->
+      <div class="shop-menu-identity">
+        <div class="shop-menu-logo-box">
+          <img src="/assets/lawyer_logo.png" alt="شعار المكتب" width="38" height="38" class="shop-menu-logo-img">
+        </div>
+        <div class="shop-menu-identity-info">
+          <h2 class="shop-menu-identity-title">مكتب الأستاذ كريم هشام جميل</h2>
+          <div class="shop-menu-identity-sub">
+            <span style="font-weight:700;">4.9</span>
+            <span style="color:#fbbf24; font-size:12px;">★</span>
+            <span style="opacity:0.75;">(280+ استشارة موثقة)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 1: Navigation Island (Exact Shop.com List Style) -->
+      <div class="shop-menu-card-nav">
         
-        <!-- Lawyer Branding Info Header -->
-        <div class="pt-0.5 pb-2 flex min-w-0 items-center gap-3 shrink-0" data-testid="shop-info-header" style="direction: rtl; text-align: right;">
-          <div class="relative shrink-0">
-            <div class="relative flex items-center justify-center overflow-hidden w-[52px] h-[52px] rounded-full" style="background-color: #1a2018; border: 1.5px solid rgba(255, 255, 255, 0.28); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);">
-              <img class="size-full object-contain p-[2px]" alt="شعار المكتب" src="/assets/lawyer_logo.png">
-            </div>
+        <a href="#overview" data-drawer-nav="overview" class="shop-menu-nav-btn">
+          <div class="shop-menu-nav-icon-badge">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="7" rx="1.5"></rect>
+              <rect x="14" y="3" width="7" height="7" rx="1.5"></rect>
+              <rect x="14" y="14" width="7" height="7" rx="1.5"></rect>
+              <rect x="3" y="14" width="7" height="7" rx="1.5"></rect>
+            </svg>
           </div>
-          <div class="min-w-0 flex-1">
-            <h1 class="text-white text-[16px] font-bold leading-tight" style="font-family: 'Cairo', sans-serif; margin: 0;">مكتب الأستاذ كريم هشام جميل</h1>
-            <p class="text-white/80 text-[12px] font-medium mt-0.5 leading-snug" style="font-family: 'Cairo', sans-serif; margin: 1px 0 0 0;">المحامي بالاستئناف العالي ومجلس الدولة</p>
-            <div class="inline-flex items-center gap-1.5 mt-1 px-2 py-0.5 rounded-full" style="background: rgba(74, 222, 128, 0.15); border: 1px solid rgba(74, 222, 128, 0.3);">
-              <span class="w-1.5 h-1.5 rounded-full bg-[#4ade80]" style="box-shadow: 0 0 6px #4ade80;"></span>
-              <span class="text-[10.5px] font-bold text-[#4ade80]" style="font-family: 'Cairo', sans-serif;">نشاط موثق ومُعتمد من VoroCom</span>
-            </div>
+          <span class="shop-menu-nav-text">نظرة عامة والخدمات الرئيسية</span>
+        </a>
+
+        <a href="#contact" data-drawer-nav="contact" class="shop-menu-nav-btn">
+          <div class="shop-menu-nav-icon-badge">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+          </div>
+          <span class="shop-menu-nav-text">تواصل مباشر واستشارات فورية</span>
+        </a>
+
+        <a href="#booking" data-drawer-nav="booking" class="shop-menu-nav-btn">
+          <div class="shop-menu-nav-icon-badge">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+          </div>
+          <span class="shop-menu-nav-text">حجز موعد استشارة بمقر المكتب</span>
+        </a>
+
+        <a href="#faq" data-drawer-nav="faq" class="shop-menu-nav-btn">
+          <div class="shop-menu-nav-icon-badge">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+              <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>
+          </div>
+          <span class="shop-menu-nav-text">الأسئلة الأكثر تداولاً وإجاباتها</span>
+        </a>
+
+        <a href="#about" data-drawer-nav="about" class="shop-menu-nav-btn">
+          <div class="shop-menu-nav-icon-badge">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <span class="shop-menu-nav-text">السيرة المهنية والاعتماد القضائي</span>
+        </a>
+
+        <a href="#lawyer-office-location" data-drawer-nav="location" class="shop-menu-nav-btn">
+          <div class="shop-menu-nav-icon-badge">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+          </div>
+          <span class="shop-menu-nav-text">موقع المكتب ومواعيد العمل</span>
+        </a>
+
+      </div>
+
+      <!-- Card 2: Reviews Island (Exact Shop.com Reviews Block) -->
+      <div class="shop-menu-card-reviews">
+        
+        <!-- Reviews Header + Arrow Circle -->
+        <div class="shop-menu-reviews-header">
+          <h3 class="shop-menu-reviews-title">التقييمات والاعتماد</h3>
+          <div class="shop-menu-arrow-btn" onclick="var el=document.getElementById('about');if(el){el.scrollIntoView({behavior:'smooth'});document.getElementById('store-menu-close-btn').click();}">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5M12 19l-7-7 7-7"></path>
+            </svg>
           </div>
         </div>
 
-        <!-- Card 1: Vertical Navigation Card Block (Exact Shop.com Style) -->
-        <div class="flex flex-col gap-1 shadow-sm p-1.5 shrink-0" style="background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 24px; direction: rtl;">
-          
-          <!-- Item 1: Overview -->
-          <a href="#overview" data-drawer-nav="overview" class="block w-full text-decoration-none" style="text-decoration: none;">
-            <button class="hover:bg-[rgba(0,0,0,0.14)] focus-visible:outline-hidden rounded-full min-h-[38px] transition active:scale-[0.99] w-full py-1.5 px-2.5 text-right relative flex items-center gap-3 cursor-pointer border-none bg-transparent">
-              <div class="size-8 rounded-full flex items-center justify-center shrink-0" style="width: 30px; height: 30px; border-radius: 50%; background: rgba(255, 255, 255, 0.14); border: 1px solid rgba(255, 255, 255, 0.2);">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="3" y="3" width="7" height="7" rx="1.5"></rect>
-                  <rect x="14" y="3" width="7" height="7" rx="1.5"></rect>
-                  <rect x="14" y="14" width="7" height="7" rx="1.5"></rect>
-                  <rect x="3" y="14" width="7" height="7" rx="1.5"></rect>
-                </svg>
-              </div>
-              <span class="text-[14px] font-bold text-white text-right" style="font-family: 'Cairo', sans-serif;">نظرة عامة والخدمات الرئيسية</span>
-            </button>
-          </a>
-
-          <!-- Item 2: Contact -->
-          <a href="#contact" data-drawer-nav="contact" class="block w-full text-decoration-none" style="text-decoration: none;">
-            <button class="hover:bg-[rgba(0,0,0,0.14)] focus-visible:outline-hidden rounded-full min-h-[38px] transition active:scale-[0.99] w-full py-1.5 px-2.5 text-right relative flex items-center gap-3 cursor-pointer border-none bg-transparent">
-              <div class="size-8 rounded-full flex items-center justify-center shrink-0" style="width: 30px; height: 30px; border-radius: 50%; background: rgba(255, 255, 255, 0.14); border: 1px solid rgba(255, 255, 255, 0.2);">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                </svg>
-              </div>
-              <span class="text-[14px] font-bold text-white text-right" style="font-family: 'Cairo', sans-serif;">تواصل مباشر واستشارات فورية</span>
-            </button>
-          </a>
-
-          <!-- Item 3: Booking -->
-          <a href="#booking" data-drawer-nav="booking" class="block w-full text-decoration-none" style="text-decoration: none;">
-            <button class="hover:bg-[rgba(0,0,0,0.14)] focus-visible:outline-hidden rounded-full min-h-[38px] transition active:scale-[0.99] w-full py-1.5 px-2.5 text-right relative flex items-center gap-3 cursor-pointer border-none bg-transparent">
-              <div class="size-8 rounded-full flex items-center justify-center shrink-0" style="width: 30px; height: 30px; border-radius: 50%; background: rgba(255, 255, 255, 0.14); border: 1px solid rgba(255, 255, 255, 0.2);">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                  <line x1="16" y1="2" x2="16" y2="6"></line>
-                  <line x1="8" y1="2" x2="8" y2="6"></line>
-                  <line x1="3" y1="10" x2="21" y2="10"></line>
-                </svg>
-              </div>
-              <span class="text-[14px] font-bold text-white text-right" style="font-family: 'Cairo', sans-serif;">حجز موعد استشارة بمقر المكتب</span>
-            </button>
-          </a>
-
-          <!-- Item 4: FAQ -->
-          <a href="#faq" data-drawer-nav="faq" class="block w-full text-decoration-none" style="text-decoration: none;">
-            <button class="hover:bg-[rgba(0,0,0,0.14)] focus-visible:outline-hidden rounded-full min-h-[38px] transition active:scale-[0.99] w-full py-1.5 px-2.5 text-right relative flex items-center gap-3 cursor-pointer border-none bg-transparent">
-              <div class="size-8 rounded-full flex items-center justify-center shrink-0" style="width: 30px; height: 30px; border-radius: 50%; background: rgba(255, 255, 255, 0.14); border: 1px solid rgba(255, 255, 255, 0.2);">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-                  <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                </svg>
-              </div>
-              <span class="text-[14px] font-bold text-white text-right" style="font-family: 'Cairo', sans-serif;">الأسئلة الأكثر تداولاً وإجاباتها</span>
-            </button>
-          </a>
-
-          <!-- Item 5: About Lawyer -->
-          <a href="#about" data-drawer-nav="about" class="block w-full text-decoration-none" style="text-decoration: none;">
-            <button class="hover:bg-[rgba(0,0,0,0.14)] focus-visible:outline-hidden rounded-full min-h-[38px] transition active:scale-[0.99] w-full py-1.5 px-2.5 text-right relative flex items-center gap-3 cursor-pointer border-none bg-transparent">
-              <div class="size-8 rounded-full flex items-center justify-center shrink-0" style="width: 30px; height: 30px; border-radius: 50%; background: rgba(255, 255, 255, 0.14); border: 1px solid rgba(255, 255, 255, 0.2);">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="12" cy="7" r="4"></circle>
-                </svg>
-              </div>
-              <span class="text-[14px] font-bold text-white text-right" style="font-family: 'Cairo', sans-serif;">السيرة المهنية والاعتماد القضائي</span>
-            </button>
-          </a>
-
-          <!-- Item 6: Office Location & Hours -->
-          <a href="#lawyer-office-location" data-drawer-nav="location" class="block w-full text-decoration-none" style="text-decoration: none;">
-            <button class="hover:bg-[rgba(0,0,0,0.14)] focus-visible:outline-hidden rounded-full min-h-[38px] transition active:scale-[0.99] w-full py-1.5 px-2.5 text-right relative flex items-center gap-3 cursor-pointer border-none bg-transparent">
-              <div class="size-8 rounded-full flex items-center justify-center shrink-0" style="width: 30px; height: 30px; border-radius: 50%; background: rgba(255, 255, 255, 0.14); border: 1px solid rgba(255, 255, 255, 0.2);">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-              </div>
-              <span class="text-[14px] font-bold text-white text-right" style="font-family: 'Cairo', sans-serif;">موقع المكتب ومواعيد العمل الرسمية</span>
-            </button>
-          </a>
-
+        <!-- Rating Score Row -->
+        <div class="shop-menu-rating-row">
+          <span class="shop-menu-rating-number">4.9</span>
+          <div class="shop-menu-rating-stars-col">
+            <div class="shop-menu-stars">★★★★★</div>
+            <span class="shop-menu-rating-count">أكثر من 280+ استشارة موثقة</span>
+          </div>
         </div>
 
-        <!-- Card 2: Reviews & Direct Actions Card (Exact Shop.com Reviews Block Style) -->
-        <div class="flex flex-col p-3 shrink-0" data-testid="reviews-section" style="background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 24px; box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 12px 0px; direction: rtl;">
-          <div class="flex justify-between items-center">
-            <h2 class="text-white text-[15px] font-bold" style="font-family: 'Cairo', sans-serif; margin: 0;">
-              <span>الاعتماد والتقييمات القانونية</span>
-            </h2>
-            <div class="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full" style="background: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.18);">
-              <span class="text-[11px] font-bold text-white" style="font-family: 'Cairo', sans-serif;">موثق 100%</span>
-            </div>
-          </div>
-          
-          <div class="flex w-full items-center justify-between pt-2 pb-1.5">
-            <div class="flex items-baseline gap-2.5 text-white">
-              <p class="text-[26px] font-extrabold text-white" style="font-family: 'Cairo', sans-serif; line-height: 1; margin: 0;">4.9</p>
-              <div class="flex flex-col">
-                <div class="flex items-center gap-1 text-[#fbbf24] text-[13px] leading-tight">
-                  ★★★★★
-                </div>
-                <p class="text-[11px] text-white/70" style="font-family: 'Cairo', sans-serif; margin: 2px 0 0 0;">أكثر من 280+ استشارة موثقة</p>
-              </div>
-            </div>
-          </div>
+        <!-- 5 Verified Case Thumbnails (Exact shop.com 5-photo strip!) -->
+        <div class="shop-menu-thumbs-strip">
+          <img src="/assets/lawyer/service_1_felonies.jpg" alt="قضايا الجنايات" width="52" height="52" class="shop-menu-thumb-img">
+          <img src="/assets/lawyer/service_5_state_council.jpg" alt="مجلس الدولة" width="52" height="52" class="shop-menu-thumb-img">
+          <img src="/assets/lawyer/service_6_corporate.jpg" alt="الشركات" width="52" height="52" class="shop-menu-thumb-img">
+          <img src="/assets/lawyer/service_7_contracts.jpg" alt="العقود" width="52" height="52" class="shop-menu-thumb-img">
+          <img src="/assets/karim_hisham_portrait.jpg" alt="الأستاذ كريم" width="52" height="52" class="shop-menu-thumb-img">
+        </div>
 
-          <!-- Direct Consultation Action Buttons -->
-          <div class="grid grid-cols-2 gap-2 mt-2 pt-2" style="border-top: 1px solid rgba(255, 255, 255, 0.1);">
-            <a href="tel:01124411711" class="text-decoration-none" style="text-decoration: none;">
-              <button type="button" class="drawer-call-btn w-full py-2 px-3 rounded-full flex items-center justify-center gap-1.5 cursor-pointer transition active:scale-[0.98] border-none" style="background: #ffffff; color: #111111 !important; font-family: 'Cairo', sans-serif; font-size: 12.5px; font-weight: 700; border-radius: 9999px;">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                </svg>
-                <span style="color: #111111 !important;">اتصال مباشر</span>
-              </button>
-            </a>
-            <a href="https://wa.me/201124411711" target="_blank" rel="noopener noreferrer" class="text-decoration-none" style="text-decoration: none;">
-              <button type="button" class="w-full py-2 px-3 rounded-full flex items-center justify-center gap-1.5 cursor-pointer transition active:scale-[0.98] border-none" style="background: #25D366; color: #ffffff; font-family: 'Cairo', sans-serif; font-size: 12.5px; font-weight: 700; border-radius: 9999px;">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-                </svg>
-                <span style="color: #ffffff !important;">واتساب</span>
-              </button>
-            </a>
-          </div>
-
-          <!-- Verified Client Reviews Testimonials (Exact Shop.com Customer Review Block) -->
-          <div class="flex flex-col gap-2 mt-2 pt-2" style="border-top: 1px solid rgba(255, 255, 255, 0.08);">
-            <div class="p-2.5 rounded-[16px] text-right" style="background: rgba(255, 255, 255, 0.07); border: 1px solid rgba(255, 255, 255, 0.08);">
-              <div class="flex items-center justify-between mb-1">
-                <span class="text-[12px] font-bold text-white">م. أحمد سمير</span>
-                <span class="text-[#fbbf24] text-[11px]">★★★★★</span>
-              </div>
-              <p class="text-[11.5px] text-white/80 leading-relaxed m-0" style="font-family: 'Cairo', sans-serif;">
-                "أستاذ كريم متميز جداً ودقيق في صياغة العقود وقضايا الاستئناف، استشارة أنقذت موقفي القانوني."
-              </p>
-            </div>
-
-            <div class="p-2.5 rounded-[16px] text-right" style="background: rgba(255, 255, 255, 0.07); border: 1px solid rgba(255, 255, 255, 0.08);">
-              <div class="flex items-center justify-between mb-1">
-                <span class="text-[12px] font-bold text-white">د. محمود فوزي</span>
-                <span class="text-[#fbbf24] text-[11px]">★★★★★</span>
-              </div>
-              <p class="text-[11.5px] text-white/80 leading-relaxed m-0" style="font-family: 'Cairo', sans-serif;">
-                "سرعة في الاستجابة واحترافية عالية وأمانة مهنية مشهودة في منازعات مجلس الدولة."
-              </p>
-            </div>
-          </div>
+        <!-- Quick Frosted Action Pills (Sleek, matching luxury glass) -->
+        <div class="shop-menu-actions-row">
+          <a href="tel:01124411711" class="shop-menu-action-pill shop-menu-pill-call">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>اتصال مباشر</span>
+          </a>
+          <a href="https://wa.me/201124411711" target="_blank" rel="noopener noreferrer" class="shop-menu-action-pill shop-menu-pill-wa">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+            <span>واتساب</span>
+          </a>
         </div>
 
       </div>
 
       <!-- Drawer Footer Info -->
-      <div class="pt-2 pb-0.5 flex items-center justify-between text-[11px] text-white/60 shrink-0" style="border-top: 1px solid rgba(255, 255, 255, 0.08); font-family: 'Cairo', sans-serif; direction: rtl;">
-        <span>مواعيد العمل: السبت - الخميس (10 ص - 10 م)</span>
-        <span dir="ltr">VoroCom &copy; 2026</span>
+      <div class="shop-menu-footer">
+        مواعيد العمل: السبت - الخميس (10 ص - 10 م) • VoroCom © 2026
       </div>
 
     </div>
