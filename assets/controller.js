@@ -292,10 +292,13 @@
     var closeBtn = document.getElementById('store-menu-close-btn');
     var shareBtn = document.getElementById('store-menu-share-btn');
 
+    var container = document.getElementById('store-menu-container');
+
     function openDrawer() {
       if (scrim) scrim.classList.add('open');
       if (overlay) overlay.classList.add('open');
       if (dialog) dialog.classList.add('open');
+      if (container) container.classList.add('open');
       document.body.style.overflow = 'hidden';
       document.documentElement.style.overflow = 'hidden';
     }
@@ -304,6 +307,7 @@
       if (scrim) scrim.classList.remove('open');
       if (overlay) overlay.classList.remove('open');
       if (dialog) dialog.classList.remove('open');
+      if (container) container.classList.remove('open');
       document.body.style.overflow = '';
       document.documentElement.style.overflow = '';
     }

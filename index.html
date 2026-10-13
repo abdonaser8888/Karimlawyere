@@ -258,8 +258,9 @@ menu::-webkit-scrollbar, [data-testid="store-navigation-bar"]::-webkit-scrollbar
   position: fixed !important;
   inset: 0 !important;
   z-index: 55 !important;
-  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s !important;
   opacity: 0 !important;
+  visibility: hidden !important;
   pointer-events: none !important;
   background: rgba(0, 0, 0, 0.55) !important;
   backdrop-filter: blur(8px) !important;
@@ -274,12 +275,14 @@ menu::-webkit-scrollbar, [data-testid="store-navigation-bar"]::-webkit-scrollbar
   position: fixed !important;
   inset: 0 !important;
   z-index: 55 !important;
-  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s !important;
   opacity: 0 !important;
+  visibility: hidden !important;
   pointer-events: none !important;
 }
 #store-menu-scrim.open, #store-menu-overlay.open {
   opacity: 1 !important;
+  visibility: visible !important;
   pointer-events: auto !important;
 }
 
@@ -291,6 +294,10 @@ menu::-webkit-scrollbar, [data-testid="store-navigation-bar"]::-webkit-scrollbar
   right: 0 !important;
   z-index: 60 !important;
   pointer-events: none !important;
+  visibility: hidden !important;
+}
+#store-menu-container.open {
+  visibility: visible !important;
 }
 @media (max-width: 1023px) {
   #store-menu-container {
@@ -309,9 +316,10 @@ menu::-webkit-scrollbar, [data-testid="store-navigation-bar"]::-webkit-scrollbar
   max-width: calc(100vw - 4.75rem - 24px) !important;
   height: calc(100% - 24px) !important;
   z-index: 70 !important;
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease, visibility 0.35s !important;
   transform: translateX(-110%) !important;
   opacity: 0 !important;
+  visibility: hidden !important;
   pointer-events: none !important;
   border-radius: 28px !important;
   background-color: rgba(62, 70, 58, 0.94) !important;
@@ -327,6 +335,7 @@ menu::-webkit-scrollbar, [data-testid="store-navigation-bar"]::-webkit-scrollbar
 #store-menu-dialog.open {
   transform: translateX(0) !important;
   opacity: 1 !important;
+  visibility: visible !important;
   pointer-events: auto !important;
 }
 
