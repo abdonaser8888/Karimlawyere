@@ -26,7 +26,7 @@ body, button, input, select, textarea, p, span, a, h1, h2, h3, h4, h5, h6 {
 /* Store screen & Footer styling */
 [data-testid="store-screen-v2"] {
   border-radius: 28px !important;
-  overflow: hidden !important;
+  overflow: visible !important;
 }
 
 footer[data-testid="footer"],
@@ -203,6 +203,12 @@ menu::-webkit-scrollbar, [data-testid="store-navigation-bar"]::-webkit-scrollbar
   height: 0 !important;
 }
 
+/* Sticky Navigation bar spacing for mobile: prevent collision with sticky menu button */
+@media (max-width: 1023px) {
+  [data-testid="store-navigation-container"] {
+    padding-left: 56px !important;
+  }
+}
 
 /* Mobile Hero Center Logo: Slightly smaller on phone so pills do not overlap */
 @media (max-width: 639px) {
