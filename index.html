@@ -253,537 +253,263 @@ menu::-webkit-scrollbar, [data-testid="store-navigation-bar"]::-webkit-scrollbar
   text-align: right !important;
 }
 
-/* Store Menu Side Sheet Drawer (Shop.com Exact Replica) */
+/* Store Menu Side Sheet Drawer (Shop.com Exact Replica 1:1) */
 #store-menu-scrim {
   position: fixed !important;
   inset: 0 !important;
-  z-index: 55 !important;
-  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s !important;
+  z-index: 90 !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+  backdrop-filter: blur(2px) !important;
+  -webkit-backdrop-filter: blur(2px) !important;
   opacity: 0 !important;
   visibility: hidden !important;
   pointer-events: none !important;
-  background: rgba(0, 0, 0, 0.55) !important;
-  backdrop-filter: blur(8px) !important;
-  -webkit-backdrop-filter: blur(8px) !important;
+  transition: opacity 0.3s ease-out, visibility 0.3s ease-out !important;
 }
-@media (min-width: 1024px) {
-  #store-menu-scrim {
-    left: 4.75rem !important;
-  }
-}
-#store-menu-overlay {
-  position: fixed !important;
-  inset: 0 !important;
-  z-index: 55 !important;
-  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-}
-#store-menu-scrim.open, #store-menu-overlay.open {
+#store-menu-scrim.open {
   opacity: 1 !important;
   visibility: visible !important;
   pointer-events: auto !important;
 }
 
 #store-menu-container {
-  position: fixed !important;
-  top: 0 !important;
-  bottom: 0 !important;
-  left: 4.75rem !important;
-  right: 0 !important;
-  z-index: 60 !important;
   pointer-events: none !important;
-  visibility: hidden !important;
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 100 !important;
+  overflow: hidden !important;
 }
-#store-menu-container.open {
-  visibility: visible !important;
-}
-@media (max-width: 1023px) {
+@media (min-width: 1024px) {
   #store-menu-container {
-    left: 0 !important;
-    z-index: 100 !important;
+    top: 8px !important;
+    right: 8px !important;
+    bottom: 8px !important;
+    left: 4.75rem !important;
+    border-radius: 28px !important;
   }
 }
 
 #store-menu-dialog {
   position: absolute !important;
-  top: 12px !important;
-  bottom: 12px !important;
-  left: 12px !important;
-  right: auto !important;
-  width: 390px !important;
-  max-width: calc(100vw - 4.75rem - 24px) !important;
-  height: calc(100% - 24px) !important;
-  z-index: 70 !important;
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease, visibility 0.35s !important;
-  transform: translateX(-110%) !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-  border-radius: 28px !important;
-  background-color: rgba(62, 70, 58, 0.94) !important;
-  backdrop-filter: blur(28px) !important;
-  -webkit-backdrop-filter: blur(28px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.14) !important;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  z-index: 100 !important;
   display: flex !important;
-  flex-direction: column !important;
+  width: 100vw !important;
+  max-width: 508px !important;
+  height: 100% !important;
+  pointer-events: none !important;
+  transform: translateX(-100%) !important;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  overscroll-behavior: contain !important;
   box-sizing: border-box !important;
-  overflow: hidden !important;
+}
+@media (min-width: 1024px) {
+  #store-menu-dialog {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    padding-left: 8px !important;
+  }
 }
 #store-menu-dialog.open {
   transform: translateX(0) !important;
-  opacity: 1 !important;
-  visibility: visible !important;
   pointer-events: auto !important;
 }
 
-@media (max-width: 1023px) {
-  #store-menu-dialog {
-    top: 0 !important;
-    bottom: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    height: 100dvh !important;
-    border-radius: 0 !important;
-    border: none !important;
-    transform: translateY(100%) !important;
-    z-index: 101 !important;
-  }
-  #store-menu-dialog.open {
-    transform: translateY(0) !important;
-  }
-}
-
-.shop-menu-scroll-area {
-  width: 100% !important;
+.shop-menu-inner-card {
+  position: relative !important;
+  width: 100vw !important;
+  max-width: 500px !important;
   height: 100% !important;
-  overflow-y: auto !important;
-  overscroll-behavior: contain !important;
-  padding: 20px !important;
+  overflow: hidden !important;
+  padding: 24px !important;
+  background-color: #838778FF !important;
+  backdrop-filter: blur(9px) !important;
+  -webkit-backdrop-filter: blur(9px) !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12) !important;
   box-sizing: border-box !important;
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 14px !important;
-  scrollbar-width: none !important;
 }
-.shop-menu-scroll-area::-webkit-scrollbar {
-  display: none !important;
+@media (min-width: 1024px) {
+  .shop-menu-inner-card {
+    border-radius: 24px !important;
+  }
 }
 
 .shop-menu-topbar {
+  position: absolute !important;
+  top: 24px !important;
+  left: 24px !important;
+  right: 24px !important;
+  width: calc(100% - 48px) !important;
+  z-index: 10 !important;
   display: flex !important;
-  align-items: center !important;
   justify-content: space-between !important;
-  width: 100% !important;
-  flex-shrink: 0 !important;
+  align-items: center !important;
+  pointer-events: auto !important;
+  box-sizing: border-box !important;
 }
 .shop-menu-circle-btn {
-  width: 40px !important;
-  height: 40px !important;
-  min-width: 40px !important;
-  max-width: 40px !important;
-  min-height: 40px !important;
-  max-height: 40px !important;
-  border-radius: 50% !important;
-  background: rgba(0, 0, 0, 0.28) !important;
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  max-width: 44px !important;
+  min-height: 44px !important;
+  max-height: 44px !important;
+  border-radius: 9999px !important;
+  background: rgba(0, 0, 0, 0.22) !important;
   border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+  cursor: pointer !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  color: #ffffff !important;
-  cursor: pointer !important;
-  padding: 0 !important;
-  transition: background 0.2s, transform 0.15s !important;
+  transition: background 0.15s ease, transform 0.1s ease !important;
   box-sizing: border-box !important;
+  padding: 0 !important;
 }
 .shop-menu-circle-btn:hover {
-  background: rgba(0, 0, 0, 0.45) !important;
+  background: rgba(0, 0, 0, 0.38) !important;
 }
 .shop-menu-circle-btn:active {
-  transform: scale(0.95) !important;
+  transform: scale(0.96) !important;
 }
 
-.shop-menu-identity {
-  display: flex !important;
-  align-items: center !important;
-  gap: 12px !important;
-  direction: rtl !important;
-  text-align: right !important;
-  width: 100% !important;
-  flex-shrink: 0 !important;
-  margin-top: 2px !important;
-}
-.shop-menu-logo-box {
-  width: 46px !important;
-  height: 46px !important;
-  min-width: 46px !important;
-  max-width: 46px !important;
-  min-height: 46px !important;
-  max-height: 46px !important;
-  border-radius: 50% !important;
-  background: #171d15 !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
-  overflow: hidden !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  flex-shrink: 0 !important;
-  padding: 2px !important;
-  box-sizing: border-box !important;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25) !important;
-}
-.shop-menu-logo-img {
-  width: 38px !important;
-  height: 38px !important;
-  max-width: 38px !important;
-  max-height: 38px !important;
-  object-fit: contain !important;
-  display: block !important;
-}
-.shop-menu-identity-info {
+.shop-menu-scroll-content {
   display: flex !important;
   flex-direction: column !important;
-  justify-content: center !important;
-  min-width: 0 !important;
-  flex: 1 !important;
-  text-align: right !important;
+  height: 100% !important;
+  overflow-y: auto !important;
+  overscroll-behavior: contain !important;
+  -webkit-overflow-scrolling: touch !important;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+  mask-image: linear-gradient(transparent 0%, black 80px, black calc(100% - 80px), transparent 100%) !important;
+  -webkit-mask-image: linear-gradient(transparent 0%, black 80px, black calc(100% - 80px), transparent 100%) !important;
+  padding: 56px 24px 40px 24px !important;
+  margin-left: -24px !important;
+  margin-right: -24px !important;
+  box-sizing: border-box !important;
+  pointer-events: auto !important;
 }
-.shop-menu-identity-title {
-  font-family: 'Cairo', sans-serif !important;
-  font-size: 16px !important;
-  font-weight: 700 !important;
-  color: #ffffff !important;
-  margin: 0 !important;
-  line-height: 1.3 !important;
-  white-space: nowrap !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-}
-.shop-menu-identity-sub {
-  font-family: 'Cairo', sans-serif !important;
-  font-size: 12px !important;
-  font-weight: 500 !important;
-  color: rgba(255, 255, 255, 0.8) !important;
-  display: flex !important;
-  align-items: center !important;
-  gap: 4px !important;
-  margin-top: 2px !important;
-  line-height: 1 !important;
+.shop-menu-scroll-content::-webkit-scrollbar {
+  display: none !important;
 }
 
-.shop-menu-card-nav {
-  background: rgba(255, 255, 255, 0.08) !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
-  border-radius: 24px !important;
-  padding: 8px !important;
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 2px !important;
-  direction: rtl !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-  flex-shrink: 0 !important;
-}
 .shop-menu-nav-btn {
+  width: 100% !important;
+  min-height: 48px !important;
+  padding: 8px 12px !important;
+  border-radius: 9999px !important;
+  background: transparent !important;
+  border: none !important;
+  cursor: pointer !important;
   display: flex !important;
   align-items: center !important;
   gap: 12px !important;
-  width: 100% !important;
-  padding: 7px 10px !important;
-  border-radius: 9999px !important;
-  border: none !important;
-  background: transparent !important;
   color: #ffffff !important;
-  text-decoration: none !important;
-  cursor: pointer !important;
-  box-sizing: border-box !important;
-  transition: background 0.15s ease, transform 0.1s ease !important;
   text-align: right !important;
+  transition: background 0.15s ease !important;
+  box-sizing: border-box !important;
 }
 .shop-menu-nav-btn:hover {
-  background: rgba(255, 255, 255, 0.12) !important;
+  background: rgba(0, 0, 0, 0.1) !important;
 }
 .shop-menu-nav-btn:active {
   transform: scale(0.99) !important;
 }
-.shop-menu-nav-icon-badge {
-  width: 32px !important;
-  height: 32px !important;
-  min-width: 32px !important;
-  max-width: 32px !important;
-  min-height: 32px !important;
-  max-height: 32px !important;
+.shop-menu-nav-badge {
+  width: 34px !important;
+  height: 34px !important;
+  min-width: 34px !important;
   border-radius: 50% !important;
-  background: rgba(255, 255, 255, 0.1) !important;
-  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  background: rgba(255, 255, 255, 0.14) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   flex-shrink: 0 !important;
-  box-sizing: border-box !important;
 }
-.shop-menu-nav-text {
+.shop-menu-nav-label {
   font-family: 'Cairo', sans-serif !important;
-  font-size: 13.5px !important;
-  font-weight: 700 !important;
+  font-size: 14.5px !important;
+  font-weight: 600 !important;
   color: #ffffff !important;
+  margin: 0 !important;
+  flex: 1 !important;
+  text-align: right !important;
   white-space: nowrap !important;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
 }
 
-.shop-menu-card-reviews {
-  background: rgba(255, 255, 255, 0.08) !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
-  border-radius: 24px !important;
-  padding: 16px !important;
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 12px !important;
-  direction: rtl !important;
+.shop-menu-policy-btn {
   width: 100% !important;
-  box-sizing: border-box !important;
-  flex-shrink: 0 !important;
-}
-.shop-menu-reviews-header {
+  min-height: 46px !important;
+  padding: 10px 12px !important;
+  border-radius: 9999px !important;
+  background: transparent !important;
+  border: none !important;
+  cursor: pointer !important;
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
-  width: 100% !important;
-}
-.shop-menu-reviews-title {
-  font-family: 'Cairo', sans-serif !important;
-  font-size: 18px !important;
-  font-weight: 700 !important;
   color: #ffffff !important;
-  margin: 0 !important;
-}
-.shop-menu-arrow-btn {
-  width: 32px !important;
-  height: 32px !important;
-  min-width: 32px !important;
-  max-width: 32px !important;
-  min-height: 32px !important;
-  max-height: 32px !important;
-  border-radius: 50% !important;
-  background: rgba(0, 0, 0, 0.25) !important;
-  border: 1px solid rgba(255, 255, 255, 0.15) !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  color: #ffffff !important;
-  cursor: pointer !important;
-  padding: 0 !important;
-  flex-shrink: 0 !important;
+  transition: background 0.15s ease !important;
   box-sizing: border-box !important;
 }
-.shop-menu-rating-row {
-  display: flex !important;
-  align-items: center !important;
-  gap: 12px !important;
-}
-.shop-menu-rating-number {
-  font-family: 'Cairo', sans-serif !important;
-  font-size: 32px !important;
-  font-weight: 800 !important;
-  color: #ffffff !important;
-  line-height: 1 !important;
-}
-.shop-menu-rating-stars-col {
-  display: flex !important;
-  flex-direction: column !important;
-  text-align: right !important;
-}
-.shop-menu-stars {
-  color: #fbbf24 !important;
-  font-size: 14px !important;
-  line-height: 1 !important;
-  letter-spacing: 1px !important;
-}
-.shop-menu-rating-count {
-  font-family: 'Cairo', sans-serif !important;
-  font-size: 11.5px !important;
-  color: rgba(255, 255, 255, 0.65) !important;
-  margin-top: 2px !important;
-  line-height: 1 !important;
+.shop-menu-policy-btn:hover {
+  background: rgba(0, 0, 0, 0.1) !important;
 }
 
 .shop-menu-thumbs-strip {
   display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  gap: 6px !important;
-  width: 100% !important;
-  padding-top: 2px !important;
+  gap: 8px !important;
+  overflow-x: auto !important;
+  scrollbar-width: none !important;
+  -webkit-overflow-scrolling: touch !important;
+  padding-bottom: 4px !important;
+}
+.shop-menu-thumbs-strip::-webkit-scrollbar {
+  display: none !important;
 }
 .shop-menu-thumb-img {
-  width: 52px !important;
-  height: 52px !important;
-  min-width: 52px !important;
-  max-width: 52px !important;
-  min-height: 52px !important;
-  max-height: 52px !important;
+  width: 60px !important;
+  height: 60px !important;
+  min-width: 60px !important;
   border-radius: 12px !important;
   object-fit: cover !important;
-  border: 1px solid rgba(255, 255, 255, 0.16) !important;
-  display: block !important;
-  box-sizing: border-box !important;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important;
-}
-
-.shop-menu-actions-row {
-  display: grid !important;
-  grid-template-columns: 1fr 1fr !important;
-  gap: 8px !important;
-  width: 100% !important;
-  padding-top: 10px !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
-  box-sizing: border-box !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12) !important;
 }
 .shop-menu-action-pill {
-  display: flex !important;
+  display: inline-flex !important;
   align-items: center !important;
-  justify-content: center !important;
-  gap: 6px !important;
-  padding: 8px 12px !important;
+  gap: 8px !important;
+  padding: 8px 16px !important;
   border-radius: 9999px !important;
   font-family: 'Cairo', sans-serif !important;
-  font-size: 12px !important;
+  font-size: 13px !important;
   font-weight: 700 !important;
   text-decoration: none !important;
-  cursor: pointer !important;
-  transition: background 0.15s, transform 0.1s !important;
-  box-sizing: border-box !important;
-  border: none !important;
+  transition: transform 0.15s ease, background 0.15s ease !important;
 }
 .shop-menu-action-pill:active {
   transform: scale(0.96) !important;
 }
 .shop-menu-pill-call {
-  background: rgba(255, 255, 255, 0.16) !important;
-  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  background: rgba(0, 0, 0, 0.25) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
   color: #ffffff !important;
 }
 .shop-menu-pill-call:hover {
-  background: rgba(255, 255, 255, 0.24) !important;
+  background: rgba(0, 0, 0, 0.38) !important;
 }
 .shop-menu-pill-wa {
-  background: rgba(37, 211, 102, 0.2) !important;
-  border: 1px solid rgba(37, 211, 102, 0.4) !important;
-  color: #4ade80 !important;
+  background: rgba(34, 197, 94, 0.2) !important;
+  border: 1px solid rgba(34, 197, 94, 0.4) !important;
+  color: #ffffff !important;
 }
 .shop-menu-pill-wa:hover {
-  background: rgba(37, 211, 102, 0.3) !important;
-}
-
-.shop-menu-card-contact {
-  background: rgba(255, 255, 255, 0.1) !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
-  border-radius: 28px !important;
-  padding: 20px 24px !important;
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 16px !important;
-  direction: rtl !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-  flex-shrink: 0 !important;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12) !important;
-}
-.shop-menu-contact-title {
-  font-family: 'Cairo', sans-serif !important;
-  font-size: 18px !important;
-  font-weight: 700 !important;
-  color: #ffffff !important;
-  margin: 0 !important;
-  line-height: 1.2 !important;
-}
-.shop-menu-contact-list {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 16px !important;
-  width: 100% !important;
-}
-.shop-menu-contact-row {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  width: 100% !important;
-  gap: 12px !important;
-}
-.shop-menu-contact-link {
-  display: flex !important;
-  align-items: center !important;
-  gap: 12px !important;
-  color: #ffffff !important;
-  text-decoration: none !important;
-  flex: 1 !important;
-  min-width: 0 !important;
-  transition: opacity 0.15s ease !important;
-}
-.shop-menu-contact-link:hover {
-  opacity: 0.85 !important;
-}
-.shop-menu-contact-icon {
-  width: 20px !important;
-  height: 20px !important;
-  min-width: 20px !important;
-  color: #ffffff !important;
-  flex-shrink: 0 !important;
-}
-.shop-menu-contact-text {
-  font-family: 'Cairo', sans-serif !important;
-  font-size: 14px !important;
-  font-weight: 600 !important;
-  color: #ffffff !important;
-  white-space: nowrap !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-}
-.shop-menu-copy-btn {
-  background: transparent !important;
-  border: none !important;
-  padding: 6px !important;
-  cursor: pointer !important;
-  color: rgba(255, 255, 255, 0.75) !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  border-radius: 50% !important;
-  transition: color 0.15s ease, background 0.15s ease, transform 0.1s ease !important;
-  flex-shrink: 0 !important;
-}
-.shop-menu-copy-btn:hover {
-  color: #ffffff !important;
-  background: rgba(255, 255, 255, 0.12) !important;
-}
-.shop-menu-copy-btn:active {
-  transform: scale(0.92) !important;
-}
-.shop-menu-contact-address {
-  font-family: 'Cairo', sans-serif !important;
-  font-size: 13px !important;
-  line-height: 1.6 !important;
-  color: rgba(255, 255, 255, 0.75) !important;
-  margin: 0 !important;
-  padding-top: 14px !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
-  text-align: right !important;
-}
-
-.shop-menu-footer {
-  text-align: center !important;
-  font-family: 'Cairo', sans-serif !important;
-  font-size: 11px !important;
-  color: rgba(255, 255, 255, 0.5) !important;
-  margin-top: auto !important;
-  padding-top: 8px !important;
-  direction: rtl !important;
-  flex-shrink: 0 !important;
+  background: rgba(34, 197, 94, 0.32) !important;
 }
 
 #store-menu-dialog,
@@ -800,227 +526,284 @@ menu::-webkit-scrollbar, [data-testid="store-navigation-bar"]::-webkit-scrollbar
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
 </head><body class="">
-<!-- Store Menu Side Sheet Drawer (Shop.com Exact Replica) -->
+<!-- Store Menu Side Sheet Drawer (Shop.com Exact Replica 1:1) -->
 <div id="store-menu-scrim" class="pointer-events-none opacity-0" data-drawer-scrim="true"></div>
 <div id="store-menu-overlay" class="pointer-events-none opacity-0" aria-hidden="true" data-testid="side-sheet-overlay"></div>
 <div id="store-menu-container" class="pointer-events-none" data-testid="side-sheet-container">
   <div id="store-menu-dialog" class="pointer-events-none" role="dialog" aria-modal="true" aria-hidden="true" data-testid="side-sheet-dialog">
-    <div class="shop-menu-scroll-area">
+    <div class="shop-menu-inner-card">
       
-      <!-- Top Action Bar (Close & Share) -->
+      <!-- Pinned Top Action Bar (Close & Share) - NEVER SCROLLS AWAY -->
       <div class="shop-menu-topbar">
         <!-- Close Button X -->
-        <button type="button" id="store-menu-close-btn" class="shop-menu-circle-btn" aria-label="إغلاق القائمة">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round">
+        <button type="button" id="store-menu-close-btn" class="shop-menu-circle-btn" aria-label="إغلاق القائمة" data-testid="side-sheet-close-button">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.67" stroke-linecap="round">
             <path d="M6 6L18 18M18 6L6 18"></path>
           </svg>
         </button>
 
-        <!-- Share Button -->
-        <button type="button" id="store-menu-share-btn" class="shop-menu-circle-btn" aria-label="مشاركة صفحة المكتب" onclick="if(navigator.share){navigator.share({title:'مكتب الأستاذ كريم هشام جميل',url:window.location.href});}else{navigator.clipboard.writeText(window.location.href);alert('تم نسخ رابط الصفحة بنجاح!');}">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Share Button (Matching shop.com action icon button) -->
+        <button type="button" id="store-menu-share-btn" class="shop-menu-circle-btn" aria-label="مشاركة صفحة المكتب" data-testid="store-menu-share-button">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M20 12.75V16C20 18.2091 18.2091 20 16 20H8C5.79086 20 4 18.2091 4 16V12.75M12 4V15.25M12 4L16.5 8.5M12 4L7.5 8.5"></path>
           </svg>
         </button>
       </div>
 
-      <!-- Store Info Header (Exact FIGS Style: Logo + Name + 4.9 Rating) -->
-      <div class="shop-menu-identity">
-        <div class="shop-menu-logo-box">
-          <img src="/assets/lawyer_logo.png" alt="شعار المكتب" width="38" height="38" class="shop-menu-logo-img">
-        </div>
-        <div class="shop-menu-identity-info">
-          <h2 class="shop-menu-identity-title">مكتب الأستاذ كريم هشام جميل</h2>
-          <div class="shop-menu-identity-sub">
-            <span style="font-weight:700;">4.9</span>
-            <span style="color:#fbbf24; font-size:12px;">★</span>
-            <span style="opacity:0.75;">(280+ استشارة موثقة)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 1: Navigation Island (Exact Shop.com List Style) -->
-      <div class="shop-menu-card-nav">
+      <!-- Scrollable Content with Top & Bottom Mask Gradient -->
+      <div class="shop-menu-scroll-content" data-testid="side-sheet-content">
         
-        <a href="#overview" data-drawer-nav="overview" class="shop-menu-nav-btn">
-          <div class="shop-menu-nav-icon-badge">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="3" width="7" height="7" rx="1.5"></rect>
-              <rect x="14" y="3" width="7" height="7" rx="1.5"></rect>
-              <rect x="14" y="14" width="7" height="7" rx="1.5"></rect>
-              <rect x="3" y="14" width="7" height="7" rx="1.5"></rect>
-            </svg>
-          </div>
-          <span class="shop-menu-nav-text">نظرة عامة والخدمات الرئيسية</span>
-        </a>
-
-        <a href="#contact" data-drawer-nav="contact" class="shop-menu-nav-btn">
-          <div class="shop-menu-nav-icon-badge">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-            </svg>
-          </div>
-          <span class="shop-menu-nav-text">تواصل مباشر واستشارات فورية</span>
-        </a>
-
-        <a href="#booking" data-drawer-nav="booking" class="shop-menu-nav-btn">
-          <div class="shop-menu-nav-icon-badge">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-              <line x1="16" y1="2" x2="16" y2="6"></line>
-              <line x1="8" y1="2" x2="8" y2="6"></line>
-              <line x1="3" y1="10" x2="21" y2="10"></line>
-            </svg>
-          </div>
-          <span class="shop-menu-nav-text">حجز موعد استشارة بمقر المكتب</span>
-        </a>
-
-        <a href="#faq" data-drawer-nav="faq" class="shop-menu-nav-btn">
-          <div class="shop-menu-nav-icon-badge">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-              <line x1="12" y1="17" x2="12.01" y2="17"></line>
-            </svg>
-          </div>
-          <span class="shop-menu-nav-text">الأسئلة الأكثر تداولاً وإجاباتها</span>
-        </a>
-
-        <a href="#about" data-drawer-nav="about" class="shop-menu-nav-btn">
-          <div class="shop-menu-nav-icon-badge">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-              <circle cx="12" cy="7" r="4"></circle>
-            </svg>
-          </div>
-          <span class="shop-menu-nav-text">السيرة المهنية والاعتماد القضائي</span>
-        </a>
-
-        <a href="#lawyer-office-location" data-drawer-nav="location" class="shop-menu-nav-btn">
-          <div class="shop-menu-nav-icon-badge">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-              <circle cx="12" cy="10" r="3"></circle>
-            </svg>
-          </div>
-          <span class="shop-menu-nav-text">موقع المكتب ومواعيد العمل</span>
-        </a>
-
-      </div>
-
-      <!-- Card 2: Reviews Island (Exact Shop.com Reviews Block) -->
-      <div class="shop-menu-card-reviews">
-        
-        <!-- Reviews Header + Arrow Circle -->
-        <div class="shop-menu-reviews-header">
-          <h3 class="shop-menu-reviews-title">التقييمات والاعتماد</h3>
-          <div class="shop-menu-arrow-btn" onclick="var el=document.getElementById('about');if(el){el.scrollIntoView({behavior:'smooth'});document.getElementById('store-menu-close-btn').click();}">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M19 12H5M12 19l-7-7 7-7"></path>
-            </svg>
+        <!-- Store Info Header (Exact Shop.com Brand Header: 56px Logo Circle + Name + Rating) -->
+        <div style="padding-top: 16px; padding-bottom: 12px;">
+          <div style="display: flex; align-items: center; gap: 12px;" data-testid="shop-info-header">
+            <div style="flex-shrink: 0;">
+              <div style="width: 56px; height: 56px; border-radius: 50%; background-color: #1e241c; border: 1px solid rgba(255, 255, 255, 0.2); overflow: hidden; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.18);">
+                <img src="/assets/lawyer_logo.png" alt="شعار المكتب" style="width: 100%; height: 100%; object-fit: contain; padding: 2px;">
+              </div>
+            </div>
+            <div style="min-width: 0; flex: 1;">
+              <h1 style="font-family: 'Cairo', sans-serif; font-size: 16.5px; font-weight: 800; color: #ffffff; margin: 0; line-height: 1.35; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">مكتب الأستاذ كريم هشام جميل</h1>
+              <p style="font-family: 'Cairo', sans-serif; font-size: 12px; font-weight: 600; color: rgba(255, 255, 255, 0.85); margin: 2px 0 4px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">المحامي بالاستئناف العالي ومجلس الدولة</p>
+              <div style="display: flex; align-items: center; gap: 4px;">
+                <span style="font-family: 'Cairo', sans-serif; font-weight: 700; font-size: 13px; color: #ffffff;">4.9</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="#fbbf24" stroke="none"><path d="M12.9019 1.56798C12.7356 1.22088 12.3849 1 12 1C11.6152 1 11.2644 1.22088 11.0982 1.56798L8.45542 7.08482L2.36984 7.8839C1.98727 7.93413 1.66773 8.2 1.54875 8.56705C1.42978 8.93411 1.5326 9.33687 1.81297 9.60198L6.26237 13.8093L5.14555 19.8172C5.07514 20.196 5.22857 20.5815 5.53998 20.8083C5.85139 21.0351 6.2654 21.0629 6.60429 20.8797L12 17.9625L17.3958 20.8797C17.7347 21.0629 18.1487 21.0351 18.4601 20.8083C18.7715 20.5815 18.9249 20.196 18.8545 19.8172L17.7377 13.8093L22.1871 9.60198C22.4675 9.33687 22.5703 8.93411 22.4513 8.56705C22.3323 8.2 22.0128 7.93413 21.6302 7.8839L15.5446 7.08482L12.9019 1.56798Z"></path></svg>
+                <span style="font-family: 'Cairo', sans-serif; font-size: 12px; color: rgba(255, 255, 255, 0.75);">(280+ استشارة موثقة)</span>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Rating Score Row -->
-        <div class="shop-menu-rating-row">
-          <span class="shop-menu-rating-number">4.9</span>
-          <div class="shop-menu-rating-stars-col">
-            <div class="shop-menu-stars">★★★★★</div>
-            <span class="shop-menu-rating-count">أكثر من 280+ استشارة موثقة</span>
-          </div>
-        </div>
-
-        <!-- 5 Verified Case Thumbnails (Exact shop.com 5-photo strip!) -->
-        <div class="shop-menu-thumbs-strip">
-          <img src="/assets/lawyer/service_1_felonies.jpg" alt="قضايا الجنايات" width="52" height="52" class="shop-menu-thumb-img">
-          <img src="/assets/lawyer/service_5_state_council.jpg" alt="مجلس الدولة" width="52" height="52" class="shop-menu-thumb-img">
-          <img src="/assets/lawyer/service_6_corporate.jpg" alt="الشركات" width="52" height="52" class="shop-menu-thumb-img">
-          <img src="/assets/lawyer/service_7_contracts.jpg" alt="العقود" width="52" height="52" class="shop-menu-thumb-img">
-          <img src="/assets/karim_hisham_portrait.jpg" alt="الأستاذ كريم" width="52" height="52" class="shop-menu-thumb-img">
-        </div>
-
-        <!-- Quick Frosted Action Pills (Sleek, matching luxury glass) -->
-        <div class="shop-menu-actions-row">
-          <a href="tel:01124411711" class="shop-menu-action-pill shop-menu-pill-call">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-            </svg>
-            <span>اتصال مباشر</span>
-          </a>
-          <a href="https://wa.me/201124411711" target="_blank" rel="noopener noreferrer" class="shop-menu-action-pill shop-menu-pill-wa">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-            </svg>
-            <span>واتساب</span>
-          </a>
-        </div>
-
-      </div>
-
-      <!-- Card 3: Contact Island (Exact Shop.com Contact Replica) -->
-      <div class="shop-menu-card-contact" data-testid="store-menu-contact-card">
-        <h2 class="shop-menu-contact-title">معلومات التواصل والمقر</h2>
-        <div class="shop-menu-contact-list">
+        <!-- Island 1: Navigation Island (Exact Shop.com Categories Island) -->
+        <div style="background: rgba(255, 255, 255, 0.1); border-radius: 28px; padding: 8px; margin-top: 18px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12); display: flex; flex-direction: column; gap: 4px;">
           
-          <!-- Social Link (Facebook / Instagram) -->
-          <div class="shop-menu-contact-row">
-            <a href="https://www.facebook.com/mr.karim.hisham.law" target="_blank" rel="noopener noreferrer" class="shop-menu-contact-link">
-              <svg class="shop-menu-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+          <button type="button" class="shop-menu-nav-btn" data-drawer-nav="overview">
+            <div class="shop-menu-nav-badge">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="7" rx="1.5"></rect>
+                <rect x="14" y="3" width="7" height="7" rx="1.5"></rect>
+                <rect x="14" y="14" width="7" height="7" rx="1.5"></rect>
+                <rect x="3" y="14" width="7" height="7" rx="1.5"></rect>
               </svg>
-              <span class="shop-menu-contact-text">الصفحة الرسمية (فيسبوك)</span>
-            </a>
-          </div>
+            </div>
+            <span class="shop-menu-nav-label">نظرة عامة والخدمات الرئيسية</span>
+          </button>
 
-          <!-- Email Row with Copy Button -->
-          <div class="shop-menu-contact-row">
-            <a href="mailto:info@karim-lawyer.com" class="shop-menu-contact-link">
-              <svg class="shop-menu-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 8C3 6.34315 4.34315 5 6 5H18C19.6569 5 21 6.34315 21 8V16C21 17.6569 19.6569 19 18 19H6C4.34315 19 3 17.6569 3 16V8Z"></path>
-                <path d="M4 6L10.5436 12.9526C11.3333 13.7916 12.6667 13.7916 13.4564 12.9526L20 6"></path>
+          <button type="button" class="shop-menu-nav-btn" data-drawer-nav="contact">
+            <div class="shop-menu-nav-badge">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
               </svg>
-              <span class="shop-menu-contact-text">info@karim-lawyer.com</span>
-            </a>
-            <button type="button" class="shop-menu-copy-btn" aria-label="نسخ البريد الإلكتروني" onclick="navigator.clipboard.writeText('info@karim-lawyer.com');alert('تم نسخ البريد الإلكتروني بنجاح!');">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M15 15V18C15 19.6569 13.6569 21 12 21H6C4.34315 21 3 19.6569 3 18V12C3 10.3431 4.34315 9 6 9H9M12 3H18C19.6569 3 21 4.34315 21 6V12C21 13.6569 19.6569 15 18 15H12C10.3431 15 9 13.6569 9 12V6C9 4.34315 10.3431 3 12 3Z"></path>
+            </div>
+            <span class="shop-menu-nav-label">تواصل مباشر واستشارات فورية</span>
+          </button>
+
+          <button type="button" class="shop-menu-nav-btn" data-drawer-nav="booking">
+            <div class="shop-menu-nav-badge">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <span class="shop-menu-nav-label">حجز موعد استشارة بمقر المكتب</span>
+          </button>
+
+          <button type="button" class="shop-menu-nav-btn" data-drawer-nav="faq">
+            <div class="shop-menu-nav-badge">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+            </div>
+            <span class="shop-menu-nav-label">الأسئلة الأكثر تداولاً وإجاباتها</span>
+          </button>
+
+          <button type="button" class="shop-menu-nav-btn" data-drawer-nav="about">
+            <div class="shop-menu-nav-badge">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <span class="shop-menu-nav-label">السيرة المهنية والاعتماد القضائي</span>
+          </button>
+
+          <button type="button" class="shop-menu-nav-btn" data-drawer-nav="location">
+            <div class="shop-menu-nav-badge">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="shop-menu-nav-label">موقع المكتب ومواعيد العمل</span>
+          </button>
+
+        </div>
+
+        <!-- Island 2: Reviews Section (Exact Shop.com Reviews Section Replica) -->
+        <div style="background: rgba(255, 255, 255, 0.1); border-radius: 28px; padding: 20px; margin-top: 20px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);" data-testid="store-menu-reviews-section">
+          
+          <!-- Header with Arrow Button -->
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h2 style="font-family: 'Cairo', sans-serif; font-size: 18px; font-weight: 700; color: #ffffff; margin: 0;">التقييمات والاعتماد المهني</h2>
+            <button type="button" class="shop-menu-circle-btn" style="width: 36px; height: 36px; min-width: 36px; min-height: 36px;" aria-label="عرض التقييمات" onclick="var el=document.getElementById('about');if(el){el.scrollIntoView({behavior:'smooth'});var c=document.getElementById('store-menu-close-btn');if(c)c.click();}">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5M12 19l-7-7 7-7"></path>
               </svg>
             </button>
           </div>
 
-          <!-- Phone Row -->
-          <div class="shop-menu-contact-row">
-            <a href="tel:01124411711" class="shop-menu-contact-link">
-              <svg class="shop-menu-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M7.86971 9.29327C8.59181 10.7225 9.54984 12.063 10.7438 13.257C11.9377 14.4509 13.2783 15.4089 14.7075 16.131L15.8917 14.9469C16.3774 14.4612 17.1309 14.3674 17.7208 14.7193L19.3463 15.689C20.1857 16.1898 20.3296 17.3467 19.6384 18.0379L17.8996 19.7767C17.1423 20.534 16.0322 20.8474 15.0265 20.4795C13.9369 20.0809 12.8761 19.5811 11.8584 18.9801C10.4844 18.1686 9.18922 17.1726 8.00868 15.9921C6.82814 14.8115 5.83213 13.5163 5.02064 12.1423C4.41961 11.1247 3.91981 10.0638 3.52122 8.97428C3.15331 7.96857 3.46677 6.85843 4.22401 6.10119L5.96289 4.36232C6.65403 3.67118 7.81098 3.81509 8.31174 4.65449L9.28142 6.27994C9.63333 6.86984 9.53959 7.62339 9.05389 8.10909L7.86971 9.29327Z"></path>
-              </svg>
-              <span class="shop-menu-contact-text" style="direction:ltr; text-align:right;">01124411711</span>
-            </a>
+          <!-- Rating Row -->
+          <div style="display: flex; align-items: center; gap: 12px; margin-top: 14px;">
+            <span style="font-family: 'Cairo', sans-serif; font-size: 32px; font-weight: 800; color: #ffffff; line-height: 1;">4.9</span>
+            <div style="display: flex; flex-direction: column; gap: 2px;">
+              <div style="color: #fbbf24; font-size: 16px; letter-spacing: 2px;">★★★★★</div>
+              <span style="font-family: 'Cairo', sans-serif; font-size: 12px; font-weight: 600; color: rgba(255, 255, 255, 0.8);">أكثر من 280+ استشارة وقضية موثقة</span>
+            </div>
           </div>
 
-          <!-- WhatsApp Row -->
-          <div class="shop-menu-contact-row">
-            <a href="https://wa.me/201124411711" target="_blank" rel="noopener noreferrer" class="shop-menu-contact-link">
-              <svg class="shop-menu-contact-icon" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <!-- 5 Photo Strip (Exact Shop.com Reviews Media Strip) -->
+          <div class="shop-menu-thumbs-strip" style="display: flex; gap: 8px; margin-top: 16px; overflow-x: auto;">
+            <img src="/assets/lawyer/service_1_felonies.jpg" alt="قضايا الجنايات" class="shop-menu-thumb-img">
+            <img src="/assets/lawyer/service_5_state_council.jpg" alt="مجلس الدولة" class="shop-menu-thumb-img">
+            <img src="/assets/lawyer/service_6_corporate.jpg" alt="الشركات" class="shop-menu-thumb-img">
+            <img src="/assets/lawyer/service_7_contracts.jpg" alt="العقود" class="shop-menu-thumb-img">
+            <img src="/assets/karim_hisham_portrait.jpg" alt="الأستاذ كريم" class="shop-menu-thumb-img">
+          </div>
+
+          <!-- Featured Testimonial Card (Exact Shop.com Reviews Card) -->
+          <div style="background: rgba(255, 255, 255, 0.1); border-radius: 20px; border: 0.5px solid rgba(255, 255, 255, 0.2); padding: 16px; margin-top: 16px;">
+            <div style="display: flex; align-items: flex-start; gap: 10px;">
+              <div style="width: 28px; height: 28px; border-radius: 50%; background-color: rgb(217, 123, 158); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; color: #ffffff; flex-shrink: 0;">
+                أ
+              </div>
+              <div style="flex: 1; min-width: 0;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                  <span style="font-family: 'Cairo', sans-serif; font-size: 13px; font-weight: 700; color: #ffffff;">م. أحمد الشريف</span>
+                  <div style="color: #fbbf24; font-size: 11px;">★★★★★</div>
+                </div>
+                <p style="font-family: 'Cairo', sans-serif; font-size: 11.5px; color: rgba(255, 255, 255, 0.7); margin: 1px 0 6px 0;">عميل موثق · استشارة قضايا استئناف وعقود</p>
+                <p style="font-family: 'Cairo', sans-serif; font-size: 13px; font-weight: 600; color: #ffffff; line-height: 1.5; margin: 0;">"دقة استثنائية واحترافية متناهية في المرافعة القانونية. تشرفت بالتعامل مع الأستاذ كريم هشام في نزاع قضائي معقد، وأثبت كفاءة مشهودة حتى صدور الحكم لصالحنا."</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Action Buttons Row -->
+          <div style="display: flex; gap: 10px; margin-top: 16px;">
+            <a href="tel:01124411711" class="shop-menu-action-pill shop-menu-pill-call">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>اتصال مباشر</span>
+            </a>
+            <a href="https://wa.me/201124411711" target="_blank" rel="noopener noreferrer" class="shop-menu-action-pill shop-menu-pill-wa">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
               </svg>
-              <span class="shop-menu-contact-text" style="color:#4ade80; direction:ltr; text-align:right;">+20 112 441 1711 (واتساب)</span>
+              <span>محادثة واتساب</span>
             </a>
           </div>
 
         </div>
 
-        <!-- Office Address (Exact shop.com paragraph footer) -->
-        <p class="shop-menu-contact-address">
-          شارع فيصل الرئيسي، محطة حسن محمد، برج التوحيد والنور، الدور الثاني، الجيزة، مصر
-        </p>
-      </div>
+        <!-- Island 3: Policies Island (Exact Shop.com Policies Block) -->
+        <div style="background: rgba(255, 255, 255, 0.1); border-radius: 28px; padding: 16px; margin-top: 20px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);" data-testid="store-policies-container">
+          <h2 style="font-family: 'Cairo', sans-serif; font-size: 17px; font-weight: 700; color: #ffffff; margin: 0 0 8px 0; padding: 0 8px;">السياسات والضمانات المهنية</h2>
+          
+          <button type="button" class="shop-menu-policy-btn" onclick="alert('يلتزم المكتب بأعلى معايير السرية التامة وحماية خصوصية كافة المستندات والبيانات القضائية الخاصة بالموكلين.');">
+            <span style="font-family: 'Cairo', sans-serif; font-size: 14.5px; font-weight: 600; color: #ffffff;">سرية بيانات الموكلين والملفات القضائية</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+          </button>
 
-      <!-- Drawer Footer Info -->
-      <div class="shop-menu-footer">
-        مواعيد العمل: السبت - الخميس (10 ص - 10 م) • VoroCom © 2026
-      </div>
+          <button type="button" class="shop-menu-policy-btn" onclick="alert('كافة الاستشارات والتوكيلات تخضع لعقود أتعاب قانونية واضحة ومحددة البنود مسبقاً دون أي مصاريف غير معلنة.');">
+            <span style="font-family: 'Cairo', sans-serif; font-size: 14.5px; font-weight: 600; color: #ffffff;">عقود أتعاب واضحة وشفافة بدون مفاجآت</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+          </button>
+        </div>
 
+        <!-- Island 4: Contact Island (Exact Shop.com Contact Card) -->
+        <div style="background: rgba(255, 255, 255, 0.1); border-radius: 28px; padding: 20px 24px; margin-top: 20px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);" data-testid="store-menu-contact-card">
+          <h2 style="font-family: 'Cairo', sans-serif; font-size: 17px; font-weight: 700; color: #ffffff; margin: 0 0 16px 0;">معلومات التواصل والمقر</h2>
+          
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+            
+            <!-- Facebook -->
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <a href="https://www.facebook.com/mr.karim.hisham.law" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 12px; color: #ffffff; text-decoration: none; flex: 1;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+                <span style="font-family: 'Cairo', sans-serif; font-size: 14px; font-weight: 500;">الصفحة الرسمية (فيسبوك)</span>
+              </a>
+            </div>
+
+            <!-- Email with Copy Button -->
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <a href="mailto:info@karim-lawyer.com" style="display: flex; align-items: center; gap: 12px; color: #ffffff; text-decoration: none; flex: 1; min-width: 0;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
+                  <path d="M3 8C3 6.34315 4.34315 5 6 5H18C19.6569 5 21 6.34315 21 8V16C21 17.6569 19.6569 19 18 19H6C4.34315 19 3 17.6569 3 16V8Z"></path>
+                  <path d="M4 6L10.5436 12.9526C11.3333 13.7916 12.6667 13.7916 13.4564 12.9526L20 6"></path>
+                </svg>
+                <span style="font-family: 'Cairo', sans-serif; font-size: 14px; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">info@karim-lawyer.com</span>
+              </a>
+              <button type="button" aria-label="نسخ البريد الإلكتروني" onclick="navigator.clipboard.writeText('info@karim-lawyer.com');alert('تم نسخ البريد بنجاح!');" style="background: transparent; border: none; color: #ffffff; cursor: pointer; padding: 4px; display: flex; align-items: center; justify-content: center;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M15 15V18C15 19.6569 13.6569 21 12 21H6C4.34315 21 3 19.6569 3 18V12C3 10.3431 4.34315 9 6 9H9M12 3H18C19.6569 3 21 4.34315 21 6V12C21 13.6569 19.6569 15 18 15H12C10.3431 15 9 13.6569 9 12V6C9 4.34315 10.3431 3 12 3Z"></path>
+                </svg>
+              </button>
+            </div>
+
+            <!-- Phone Number -->
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <a href="tel:01124411711" style="display: flex; align-items: center; gap: 12px; color: #ffffff; text-decoration: none; flex: 1;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7.86971 9.29327C8.59181 10.7225 9.54984 12.063 10.7438 13.257C11.9377 14.4509 13.2783 15.4089 14.7075 16.131L15.8917 14.9469C16.3774 14.4612 17.1309 14.3674 17.7208 14.7193L19.3463 15.689C20.1857 16.1898 20.3296 17.3467 19.6384 18.0379L17.8996 19.7767C17.1423 20.534 16.0322 20.8474 15.0265 20.4795C13.9369 20.0809 12.8761 19.5811 11.8584 18.9801C10.4844 18.1686 9.18922 17.1726 8.00868 15.9921C6.82814 14.8115 5.83213 13.5163 5.02064 12.1423C4.41961 11.1247 3.91981 10.0638 3.52122 8.97428C3.15331 7.96857 3.46677 6.85843 4.22401 6.10119L5.96289 4.36232C6.65403 3.67118 7.81098 3.81509 8.31174 4.65449L9.28142 6.27994C9.63333 6.86984 9.53959 7.62339 9.05389 8.10909L7.86971 9.29327Z"></path>
+                </svg>
+                <span style="font-family: 'Cairo', sans-serif; font-size: 14px; font-weight: 600; direction: ltr; text-align: right;">01124411711</span>
+              </a>
+            </div>
+
+            <!-- WhatsApp -->
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <a href="https://wa.me/201124411711" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 12px; color: #4ade80; text-decoration: none; flex: 1;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+                <span style="font-family: 'Cairo', sans-serif; font-size: 14px; font-weight: 600; direction: ltr; text-align: right;">+20 112 441 1711 (واتساب)</span>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Office Address Paragraph (Exact shop.com paragraph footer) -->
+          <p style="font-family: 'Cairo', sans-serif; font-size: 13px; color: rgba(255, 255, 255, 0.85); line-height: 1.6; margin: 16px 0 0 0; padding-top: 12px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+            شارع فيصل الرئيسي، محطة حسن محمد، برج التوحيد والنور، الدور الثاني، الجيزة، مصر
+          </p>
+        </div>
+
+        <!-- Island 5: Visit Online Store / Platform Link (Exact Shop.com Link Island) -->
+        <div style="background: rgba(255, 255, 255, 0.1); border-radius: 28px; padding: 18px 24px; margin-top: 20px; margin-bottom: 30px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);" data-testid="store-menu-website-link">
+          <a href="https://vorocom.com" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; justify-content: space-between; color: #ffffff; text-decoration: none;">
+            <span style="font-family: 'Cairo', sans-serif; font-size: 14.5px; font-weight: 700;">زيارة المنصة الرسمية VoroCom</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </a>
+        </div>
+
+      </div>
     </div>
   </div>
 </div>
